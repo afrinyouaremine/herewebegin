@@ -1,6 +1,5 @@
 # here-we-begin
 Deploying emotions to production
-<!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8">
