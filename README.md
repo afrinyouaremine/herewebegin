@@ -1,5 +1,6 @@
 # To Queen of My Heart
 Deploying emotions to production
+<!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8">
@@ -29,18 +30,20 @@ body{
     100%{background-position:0% 50%;}
 }
 
-.card{
-    backdrop-filter:blur(20px);
+.page{
+    backdrop-filter:blur(25px);
     background:rgba(255,255,255,0.25);
     padding:40px;
-    border-radius:20px;
+    border-radius:25px;
     width:90%;
     max-width:420px;
     text-align:center;
-    box-shadow:0 15px 35px rgba(0,0,0,0.2);
-    animation:fadeIn 1.5s ease forwards;
-    position:relative;
+    box-shadow:0 20px 40px rgba(0,0,0,0.25);
+    display:none;
+    animation:fadeIn 1.2s ease forwards;
 }
+
+.active{display:block;}
 
 h1{
     font-family:'Playfair Display',serif;
@@ -49,153 +52,135 @@ h1{
     color:#fff;
 }
 
-p{color:#fff;opacity:0.9;margin-bottom:12px;}
+p{color:#fff;opacity:0.95;margin-bottom:12px;}
 
 input{
-    padding:10px;
+    padding:12px;
     width:80%;
     border:none;
-    border-radius:10px;
+    border-radius:12px;
     text-align:center;
     outline:none;
 }
 
 button{
     margin-top:15px;
-    padding:8px 20px;
+    padding:10px 25px;
     border:none;
-    border-radius:20px;
+    border-radius:25px;
     background:white;
     cursor:pointer;
     font-weight:500;
+    transition:0.3s;
 }
 
-#errorMsg{
-    margin-top:10px;
-    color:#ff4d6d;
-}
+button:hover{transform:scale(1.05);}
 
-.hidden{display:none;}
+#errorMsg{margin-top:10px;color:#ff4d6d;}
 
 @keyframes fadeIn{
     from{opacity:0;transform:translateY(20px);}
     to{opacity:1;transform:translateY(0);}
-}
-
-/* Shake animation */
-@keyframes shake{
-    0%{transform:translateX(0);}
-    25%{transform:translateX(-8px);}
-    50%{transform:translateX(8px);}
-    75%{transform:translateX(-8px);}
-    100%{transform:translateX(0);}
-}
-
-.shake{
-    animation:shake 0.4s;
-}
-
-/* Floating hearts */
-.heart{
-    position:absolute;
-    font-size:18px;
-    color:white;
-    opacity:0.25;
-    animation:floatUp 7s linear infinite;
-}
-
-@keyframes floatUp{
-    from{transform:translateY(100vh);}
-    to{transform:translateY(-10vh);}
-}
-
-/* Second paragraph reveal */
-.fadeInText{
-    opacity:0;
-    transition:opacity 2s ease;
-}
-
-.show{
-    opacity:1;
 }
 </style>
 </head>
 
 <body>
 
-<script>
-// Floating hearts
-for(let i=0;i<20;i++){
-    let heart=document.createElement("div");
-    heart.className="heart";
-    heart.innerHTML="❤";
-    heart.style.left=Math.random()*100+"%";
-    heart.style.animationDuration=(Math.random()*5+5)+"s";
-    document.body.appendChild(heart);
-}
-</script>
-
-<!-- Unlock Card -->
-<div class="card" id="unlockCard">
+<!-- PAGE 1 -->
+<div class="page active" id="page1">
     <h1>Before we begin...</h1>
     <p>Tell me your name.</p>
     <input type="text" id="nameInput" placeholder="Type your name" autofocus>
     <br>
-    <button onclick="checkName()">Unlock</button>
+    <button onclick="unlockPage1()">Unlock</button>
     <p id="errorMsg"></p>
 </div>
 
-<!-- Love Card -->
-<div class="card hidden" id="loveCard">
-    <h1 id="dynamicTitle"></h1>
-    <p>If you're reading this,</p>
-    <p>then my courage finally won.</p>
-    <p>You matter to me more than I can explain.</p>
+<!-- PAGE 2 -->
+<div class="page" id="page2">
+    <h1>Catch Me If You Can</h1>
 
-    <p id="secondMessage" class="fadeInText">
-        And maybe… this is just the beginning of something beautiful.
+    <p>
+        Some words are not written to be read immediately.
     </p>
 
-    <p style="margin-top:20px;">– U ❤</p>
+    <p>
+        Some feelings hide between letters.
+    </p>
+
+    <p>
+        And sometimes… you have to decode the heart.
+    </p>
+
+    <!-- You will replace this with your ROT13 message later -->
+    <p style="margin-top:15px; font-style:italic;">
+        Gurer vf n frperg zrffntr urer...
+    </p>
+
+    <button onclick="goToPage3()">Decode Me</button>
+</div>
+
+<!-- PAGE 3 -->
+<div class="page" id="page3">
+    <h1>Final Key</h1>
+    <p>Enter the decoded message.</p>
+    <input type="text" id="codeInput" placeholder="Type the decoded text">
+    <br>
+    <button onclick="unlockPage3()">Reveal</button>
+    <p id="finalError" style="color:#ff4d6d;"></p>
+</div>
+
+<!-- FINAL MESSAGE -->
+<div class="page" id="finalPage">
+    <h1>The Beginning</h1>
+    <p id="finalMessage"></p>
+    <p style="margin-top:15px;">– U ❤</p>
 </div>
 
 <script>
-const inputField=document.getElementById("nameInput");
-const unlockCard=document.getElementById("unlockCard");
-const loveCard=document.getElementById("loveCard");
-const errorMsg=document.getElementById("errorMsg");
-const secondMessage=document.getElementById("secondMessage");
 
-// Press Enter to unlock
-inputField.addEventListener("keypress",function(e){
-    if(e.key==="Enter"){
-        checkName();
-    }
-});
+// PAGE 1 LOGIC
+function unlockPage1(){
+    const name=document.getElementById("nameInput").value.trim().toLowerCase();
+    const error=document.getElementById("errorMsg");
 
-function checkName(){
-    const name=inputField.value.trim();
-    const lower=name.toLowerCase();
-
-    if(lower==="afrin"){
-        unlockCard.classList.add("hidden");
-        loveCard.classList.remove("hidden");
-
-        // Show her name dynamically
-        document.getElementById("dynamicTitle").innerHTML=
-            "Here We Begin, " + name + " ❤";
-
-        // Reveal second paragraph after 4 seconds
-        setTimeout(()=>{
-            secondMessage.classList.add("show");
-        },4000);
-
+    if(name==="afrin"){
+        switchPage("page1","page2");
     }else{
-        errorMsg.innerHTML="Hmm… this page seems to know exactly who it's waiting for 😉";
-        unlockCard.classList.add("shake");
-        setTimeout(()=>unlockCard.classList.remove("shake"),400);
+        error.innerHTML="Hmm… this story is waiting for someone specific 😉";
     }
 }
+
+// PAGE SWITCH FUNCTION
+function switchPage(from,to){
+    document.getElementById(from).classList.remove("active");
+    document.getElementById(to).classList.add("active");
+}
+
+// PAGE 2 BUTTON
+function goToPage3(){
+    switchPage("page2","page3");
+}
+
+// PAGE 3 UNLOCK (ROT13 RESULT CHECK)
+function unlockPage3(){
+    const input=document.getElementById("codeInput").value.trim().toLowerCase();
+    const error=document.getElementById("finalError");
+
+    // Example decoded message of:
+    // "Gurer vf n frperg zrffntr urer"
+    // ROT13 → "There is a secret message here"
+
+    if(input==="there is a secret message here"){
+        switchPage("page3","finalPage");
+        document.getElementById("finalMessage").innerHTML=
+            "You found it. And maybe… you just found me too.";
+    }else{
+        error.innerHTML="Not quite… look closer between the letters 😉";
+    }
+}
+
 </script>
 
 </body>
