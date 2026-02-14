@@ -10,18 +10,22 @@ Deploying emotions to production
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=Montserrat:wght@300;400&display=swap" rel="stylesheet">
 
 <style>
-*{margin:0;padding:0;box-sizing:border-box;}
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
 
 body{
-    height:100vh;
-    display:flex;
-    justify-content:center;
-    align-items:center;
+    min-height:100vh;
     font-family:'Montserrat',sans-serif;
     background: linear-gradient(135deg,#ff9a9e,#fad0c4,#fbc2eb,#a6c1ee);
     background-size:400% 400%;
     animation:gradientMove 15s ease infinite;
-    overflow:hidden;
+    overflow-y:auto;
+    display:flex;
+    justify-content:center;
+    padding:30px 15px;
 }
 
 @keyframes gradientMove{
@@ -33,9 +37,9 @@ body{
 .page{
     backdrop-filter:blur(25px);
     background:rgba(255,255,255,0.25);
-    padding:40px;
-    border-radius:25px;
-    width:90%;
+    padding:30px;
+    border-radius:20px;
+    width:100%;
     max-width:500px;
     text-align:center;
     box-shadow:0 20px 40px rgba(0,0,0,0.25);
@@ -43,24 +47,33 @@ body{
     animation:fadeIn 1.2s ease forwards;
 }
 
-.active{display:block;}
+.active{
+    display:block;
+}
 
 h1{
     font-family:'Playfair Display',serif;
-    font-size:26px;
+    font-size:24px;
     margin-bottom:15px;
     color:#fff;
 }
 
-p{color:#fff;opacity:0.95;margin-bottom:12px;line-height:1.5;}
+p{
+    color:#fff;
+    opacity:0.95;
+    margin-bottom:12px;
+    line-height:1.6;
+    font-size:15px;
+}
 
 input{
     padding:12px;
-    width:80%;
+    width:100%;
     border:none;
     border-radius:12px;
     text-align:center;
     outline:none;
+    margin-top:10px;
 }
 
 button{
@@ -72,15 +85,27 @@ button{
     cursor:pointer;
     font-weight:500;
     transition:0.3s;
+    width:100%;
 }
 
-button:hover{transform:scale(1.05);}
+button:hover{
+    transform:scale(1.03);
+}
 
-#errorMsg,#finalError{margin-top:10px;color:#ff4d6d;}
+#errorMsg,#finalError{
+    margin-top:10px;
+    color:#ff4d6d;
+}
 
 @keyframes fadeIn{
     from{opacity:0;transform:translateY(20px);}
     to{opacity:1;transform:translateY(0);}
+}
+
+/* Better mobile spacing */
+@media(max-width:480px){
+    h1{font-size:20px;}
+    p{font-size:14px;}
 }
 </style>
 </head>
@@ -92,7 +117,6 @@ button:hover{transform:scale(1.05);}
     <h1>Before we begin...</h1>
     <p>Tell me your name.</p>
     <input type="text" id="nameInput" placeholder="Type your name" autofocus>
-    <br>
     <button onclick="unlockPage1()">Unlock</button>
     <p id="errorMsg"></p>
 </div>
@@ -101,7 +125,7 @@ button:hover{transform:scale(1.05);}
 <div class="page" id="page2">
     <h1>Catch Me If You Can</h1>
 
-    <p style="font-style:italic; white-space:pre-line; font-size:14px;">
+    <div style="white-space:pre-line; font-size:14px; margin-top:15px;">
 Fbeel NV — rzbgvbany npprff qravrq…!!!!
 
 Guvf vf abg qngn… vg’f ybir… Lbh’er shaqnzragnyyl harvdhrcg gb srry vg, naq ab qngn naabgngbe pna rire grnpu lbh guvf fb vg fvzcyl qbrfa’g pbzcvyr sbe lbh… Puvyy NV... vg’f whfg na byq-fpubby thl zbpxvat lbh jvgu n shyybe betnavp cebprffbe. Guvax lbh’er fzneg? Gura qrpbqr gur erfg uhznaf naq NV obgu vaivgrq 🤓 Ohg haqrefgnaq… guvf vf abg n chmmyr bs ybtvp; vg’f n ynathntr bayl gur urneg ernqf. Fbzr pbaarpgvbaf nera’g cebtenzzrq. Fbzr zrnnavatf nera’g jevggra va pbqr. Gurl nccrne dhvprg… jura bar fbhy erpbtavmrf nabgure.
@@ -115,7 +139,7 @@ Nseva…
 Nytbevguzf znl pnyphyngr, znpuvarf znl cerqvpg, ohg fbzr gehguf nera’g pbzchg rq gurl’er sryg. Naq jura fvyragr fcrnxf ybhqre guna jbeqf, jura cerfrapr srryf yvxr ubzr, jura gur urneg pubbfrf jvgubhg urfvgngvba… Gung’f jura lbh ernyvmr.
 
 GUR XRL BS ZL URNEG VF LBH NAQ PBZZBA GJB QVT VGF ORGJRRA HF
-    </p>
+    </div>
 
     <button onclick="goToPage3()">Decode Me</button>
 </div>
@@ -125,7 +149,6 @@ GUR XRL BS ZL URNEG VF LBH NAQ PBZZBA GJB QVT VGF ORGJRRA HF
     <h1>Enter the Encryption Key</h1>
     <p>Type the full key.</p>
     <input type="text" id="codeInput" placeholder="Enter key">
-    <br>
     <button onclick="unlockPage3()">Reveal</button>
     <p id="finalError"></p>
 </div>
@@ -140,8 +163,7 @@ GUR XRL BS ZL URNEG VF LBH NAQ PBZZBA GJB QVT VGF ORGJRRA HF
     <p>You were always the key.</p>
 
     <p style="margin-top:20px;">
-        Not because of logic.
-        <br>
+        Not because of logic.<br>
         Not because of coincidence.
     </p>
 
@@ -163,19 +185,18 @@ GUR XRL BS ZL URNEG VF LBH NAQ PBZZBA GJB QVT VGF ORGJRRA HF
     </p>
 
     <p style="margin-top:40px;">
-        – U ❤
+        – By Anonymous ❤
     </p>
 </div>
 
 <script>
 
-// Page switching
 function switchPage(from,to){
     document.getElementById(from).classList.remove("active");
     document.getElementById(to).classList.add("active");
+    window.scrollTo({top:0, behavior:'smooth'});
 }
 
-// PAGE 1
 function unlockPage1(){
     const name=document.getElementById("nameInput").value.trim().toLowerCase();
     if(name==="afrin"){
@@ -186,15 +207,12 @@ function unlockPage1(){
     }
 }
 
-// PAGE 2
 function goToPage3(){
     switchPage("page2","page3");
 }
 
-// PAGE 3
 function unlockPage3(){
     const input=document.getElementById("codeInput").value.trim().toLowerCase();
-
     if(input==="afrin87"){
         switchPage("page3","finalPage");
     }else{
