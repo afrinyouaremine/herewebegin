@@ -7,7 +7,7 @@ Deploying emotions to production
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Here We Begin</title>
 
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500&family=Poppins:wght@300&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=Montserrat:wght@300;400&display=swap" rel="stylesheet">
 
 <style>
 *{
@@ -18,195 +18,142 @@ Deploying emotions to production
 
 body{
     height:100vh;
-    background:#000;
     display:flex;
     justify-content:center;
     align-items:center;
-    color:#fff;
-    font-family:'Poppins',sans-serif;
+    font-family:'Montserrat', sans-serif;
+    background: linear-gradient(135deg, #ff9a9e, #fad0c4, #fbc2eb, #a6c1ee);
+    background-size: 400% 400%;
+    animation: gradientMove 15s ease infinite;
     overflow:hidden;
 }
 
-/* 🌌 Star Sky */
-.stars{
-    position:fixed;
-    width:100%;
-    height:100%;
-    overflow:hidden;
+/* Animated gradient */
+@keyframes gradientMove {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
 }
 
-.star{
-    position:absolute;
-    width:2px;
-    height:2px;
-    background:white;
-    border-radius:50%;
-    animation:twinkle 3s infinite alternate;
-}
-
-@keyframes twinkle{
-    from{opacity:0.2;}
-    to{opacity:1;}
-}
-
-/* Password Screen */
-.password-screen{
+/* Glass card */
+.card{
+    backdrop-filter: blur(20px);
+    background: rgba(255,255,255,0.25);
+    padding:40px;
+    border-radius:20px;
+    width:90%;
+    max-width:420px;
     text-align:center;
-    z-index:10;
+    box-shadow:0 15px 35px rgba(0,0,0,0.2);
+    animation: fadeIn 1.5s ease forwards;
+}
+
+h1{
+    font-family:'Playfair Display', serif;
+    font-size:28px;
+    margin-bottom:15px;
+    color:#fff;
+}
+
+p{
+    color:#fff;
+    opacity:0.9;
+    margin-bottom:15px;
 }
 
 input{
     padding:10px;
-    margin-top:15px;
+    width:80%;
     border:none;
-    border-radius:5px;
-    outline:none;
+    border-radius:10px;
     text-align:center;
+    outline:none;
 }
 
 button{
-    padding:8px 15px;
-    margin-top:10px;
+    margin-top:15px;
+    padding:8px 20px;
     border:none;
-    border-radius:5px;
+    border-radius:20px;
+    background:white;
     cursor:pointer;
+    font-weight:500;
 }
 
 #errorMsg{
     margin-top:10px;
-    color:#ff6b6b;
+    color:#ff4d6d;
 }
 
-/* Main Content */
-.container{
+.hidden{
     display:none;
-    text-align:center;
-    max-width:600px;
-    animation:fadeIn 2s ease-in forwards;
-    z-index:10;
-}
-
-h1{
-    font-family:'Playfair Display',serif;
-    margin-bottom:20px;
-}
-
-p{
-    margin:10px 0;
-}
-
-.heart{
-    font-size:32px;
-    margin-top:20px;
-    animation:pulse 1.5s infinite;
-}
-
-@keyframes pulse{
-    0%{transform:scale(1);}
-    50%{transform:scale(1.3);}
-    100%{transform:scale(1);}
 }
 
 @keyframes fadeIn{
-    from{opacity:0;}
-    to{opacity:1;}
+    from{opacity:0; transform:translateY(20px);}
+    to{opacity:1; transform:translateY(0);}
 }
 
-@media(max-width:600px){
-    h1{font-size:24px;}
-    p{font-size:16px;}
+/* Floating hearts */
+.heart{
+    position:absolute;
+    font-size:18px;
+    color:white;
+    opacity:0.3;
+    animation: floatUp 6s linear infinite;
+}
+
+@keyframes floatUp{
+    from{transform:translateY(100vh);}
+    to{transform:translateY(-10vh);}
 }
 </style>
 </head>
 
 <body>
 
-<div class="stars" id="stars"></div>
+<!-- Floating Hearts -->
+<script>
+for(let i=0;i<20;i++){
+    let heart=document.createElement("div");
+    heart.className="heart";
+    heart.innerHTML="❤";
+    heart.style.left=Math.random()*100+"%";
+    heart.style.animationDuration=(Math.random()*5+5)+"s";
+    document.body.appendChild(heart);
+}
+</script>
 
-<!-- 🔐 Password Screen -->
-<div class="password-screen" id="passwordScreen">
-    <h2>Before we begin...</h2>
-    <p style="opacity:0.7; margin-top:10px;">
-        Type the two digits we have in common.
-    </p>
-    <input type="password" id="passwordInput" placeholder="Two digits only">
+<!-- Unlock Card -->
+<div class="card" id="unlockCard">
+    <h1>Before we begin...</h1>
+    <p>Tell me your name.</p>
+    <input type="text" id="nameInput" placeholder="Type your name">
     <br>
-    <button onclick="checkPassword()">Unlock</button>
+    <button onclick="checkName()">Unlock</button>
     <p id="errorMsg"></p>
 </div>
 
-<!-- ❤️ Main Content -->
-<div class="container" id="mainContent">
-    <h1 id="title"></h1>
-    <p id="line1"></p>
-    <p id="line2"></p>
-    <p id="line3"></p>
-    <div class="heart">❤</div>
-    <p style="margin-top:20px;opacity:0.6;">– U</p>
+<!-- Love Message Card -->
+<div class="card hidden" id="loveCard">
+    <h1>Here We Begin</h1>
+    <p>If you're reading this,</p>
+    <p>then my courage finally won.</p>
+    <p>You matter to me more than I can explain.</p>
+    <p style="margin-top:20px;">– U ❤</p>
 </div>
 
-<audio id="bgMusic" loop>
-    <source src="https://cdn.pixabay.com/audio/2022/10/16/audio_5b0b5f7f7e.mp3" type="audio/mpeg">
-</audio>
-
 <script>
-// 🌌 Generate Stars
-for(let i=0;i<180;i++){
-    let star=document.createElement("div");
-    star.className="star";
-    star.style.top=Math.random()*100+"%";
-    star.style.left=Math.random()*100+"%";
-    star.style.animationDuration=(Math.random()*3+2)+"s";
-    document.getElementById("stars").appendChild(star);
-}
-
-// 🔐 Password Logic
-const correctPassword="87";
-
-function checkPassword(){
-    const input=document.getElementById("passwordInput").value.trim();
+function checkName(){
+    const input=document.getElementById("nameInput").value.trim().toLowerCase();
     const errorMsg=document.getElementById("errorMsg");
 
-    if(input===correctPassword){
-        document.getElementById("passwordScreen").style.display="none";
-        document.getElementById("mainContent").style.display="block";
-        document.getElementById("bgMusic").play();
-        startTyping();
+    if(input==="afrin"){
+        document.getElementById("unlockCard").classList.add("hidden");
+        document.getElementById("loveCard").classList.remove("hidden");
     }else{
-        errorMsg.innerHTML="That’s not our number 🙂";
+        errorMsg.innerHTML="Hmm… this page seems to know exactly who it's waiting for 😉";
     }
-}
-
-// ⌨️ Typewriter Effect
-const titleText="If you're reading this...";
-const lines=[
-    "Then my courage finally showed up.",
-    "Some feelings are too real to stay silent.",
-    "You are one of them."
-];
-
-function typeWriter(element,text,speed,callback){
-    let i=0;
-    function typing(){
-        if(i<text.length){
-            element.innerHTML+=text.charAt(i);
-            i++;
-            setTimeout(typing,speed);
-        }else if(callback){
-            callback();
-        }
-    }
-    typing();
-}
-
-function startTyping(){
-    typeWriter(document.getElementById("title"),titleText,50,()=>{
-        typeWriter(document.getElementById("line1"),lines[0],40,()=>{
-            typeWriter(document.getElementById("line2"),lines[1],40,()=>{
-                typeWriter(document.getElementById("line3"),lines[2],40);
-            });
-        });
-    });
 }
 </script>
 
