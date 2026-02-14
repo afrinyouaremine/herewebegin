@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Catch Me If You Can</title>
+<title>Here We Begin</title>
 
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=Poppins:wght@300;400&display=swap" rel="stylesheet">
 
@@ -16,65 +16,44 @@ body{
     justify-content:center;
     align-items:center;
     font-family:'Poppins',sans-serif;
+    transition:background 1.2s ease;
     overflow:hidden;
-    transition:background 1.5s ease;
 }
 
-/* LUXURY GRADIENTS */
-.bg1{background:linear-gradient(135deg,#2b1055,#7597de);}
-.bg2{background:linear-gradient(135deg,#3a1c71,#d76d77,#ffaf7b);}
-.bg3{background:linear-gradient(135deg,#141e30,#243b55);}
-.bg4{background:linear-gradient(135deg,#42275a,#734b6d);}
-
-/* FLOATING LIGHT PARTICLES */
-.particle{
-    position:absolute;
-    width:6px;
-    height:6px;
-    background:rgba(255,255,255,0.6);
-    border-radius:50%;
-    animation:float 12s linear infinite;
+/* Romantic Background Images (Replace with yours) */
+.bg1{
+    background:linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)),
+    url('romantic1.jpg') center/cover no-repeat;
 }
 
-@keyframes float{
-    from{transform:translateY(100vh);opacity:0;}
-    50%{opacity:0.6;}
-    to{transform:translateY(-10vh);opacity:0;}
+.bg2{
+    background:linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)),
+    url('romantic2.jpg') center/cover no-repeat;
 }
 
-/* ACRYLIC GLASS CARD */
+.bg3{
+    background:linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.6)),
+    url('romantic3.jpg') center/cover no-repeat;
+}
+
+.bg4{
+    background:linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)),
+    url('romantic4.jpg') center/cover no-repeat;
+}
+
+/* Acrylic Card */
 .page{
-    position:relative;
     width:90%;
-    max-width:480px;
+    max-width:500px;
     padding:40px;
     border-radius:25px;
+    backdrop-filter:blur(25px);
     background:rgba(255,255,255,0.12);
-    backdrop-filter:blur(30px);
     border:1px solid rgba(255,255,255,0.3);
     box-shadow:0 0 40px rgba(255,255,255,0.2);
     text-align:center;
     display:none;
-    animation:fadeIn 1.5s ease forwards;
-}
-
-/* Shine Sweep */
-.page::before{
-    content:'';
-    position:absolute;
-    top:0;
-    left:-100%;
-    width:100%;
-    height:100%;
-    background:linear-gradient(120deg,transparent,rgba(255,255,255,0.4),transparent);
-    transform:skewX(-20deg);
-    animation:shine 5s infinite;
-}
-
-@keyframes shine{
-    0%{left:-100%;}
-    50%{left:100%;}
-    100%{left:100%;}
+    animation:fadeIn 1.2s ease forwards;
 }
 
 .active{display:block;}
@@ -84,7 +63,6 @@ h1{
     font-size:26px;
     color:#fff;
     margin-bottom:20px;
-    letter-spacing:1px;
 }
 
 p{
@@ -98,7 +76,7 @@ input{
     width:100%;
     padding:12px;
     border-radius:30px;
-    border:1px solid rgba(255,255,255,0.6);
+    border:1px solid rgba(255,255,255,0.5);
     background:rgba(255,255,255,0.2);
     color:#fff;
     text-align:center;
@@ -116,7 +94,7 @@ button{
     color:#000;
     font-weight:600;
     cursor:pointer;
-    transition:0.4s;
+    transition:0.3s;
 }
 
 button:hover{
@@ -134,7 +112,7 @@ button:hover{
     to{opacity:1;transform:translateY(0);}
 }
 
-/* FINAL TEXT REVEAL */
+/* Final reveal animation */
 .reveal{
     opacity:0;
     animation:fadeIn 2s forwards;
@@ -144,23 +122,13 @@ button:hover{
 
 <body class="bg1">
 
-<script>
-/* Create floating particles */
-for(let i=0;i<40;i++){
-    let p=document.createElement("div");
-    p.className="particle";
-    p.style.left=Math.random()*100+"%";
-    p.style.animationDuration=(10+Math.random()*10)+"s";
-    document.body.appendChild(p);
-}
-</script>
-
 <!-- PAGE 1 -->
 <div class="page active" id="page1">
-    <h1>Before we begin...</h1>
+    <h1>Here We Begin</h1>
     <p>Tell me your name.</p>
     <input type="text" id="nameInput" placeholder="Type your name">
     <button onclick="unlockPage1()">Enter</button>
+    <p id="errorMsg" style="color:#ff4d6d;"></p>
 </div>
 
 <!-- PAGE 2 -->
@@ -181,6 +149,7 @@ GUR XRL BS ZL URNEG VF LBH NAQ PBZZBA GJB QVT VGF ORGJRRA HF
     <input type="text" id="codeInput" placeholder="Enter key">
     <button onclick="unlockPage3()">Reveal</button>
     <button class="backBtn" onclick="goBack(2)">Back</button>
+    <p id="finalError" style="color:#ff4d6d;"></p>
 </div>
 
 <!-- FINAL PAGE -->
@@ -193,7 +162,7 @@ GUR XRL BS ZL URNEG VF LBH NAQ PBZZBA GJB QVT VGF ORGJRRA HF
     <p class="reveal" style="animation-delay:5s;">– By Anonymous ❤</p>
 </div>
 
-<!-- VIOLIN MUSIC -->
+<!-- Violin Music -->
 <audio id="bgMusic" loop>
     <source src="violin.mp3" type="audio/mpeg">
 </audio>
@@ -210,6 +179,9 @@ function unlockPage1(){
     if(name==="afrin"){
         switchPage("page1","page2","bg2");
         document.getElementById("bgMusic").play();
+    }else{
+        document.getElementById("errorMsg").innerHTML=
+        "This page knows exactly who it’s waiting for 😉";
     }
 }
 
@@ -221,6 +193,9 @@ function unlockPage3(){
     const input=document.getElementById("codeInput").value.trim().toLowerCase();
     if(input==="afrin87"){
         switchPage("page3","page4","bg4");
+    }else{
+        document.getElementById("finalError").innerHTML=
+        "That’s not the full key… look deeper 😉";
     }
 }
 
