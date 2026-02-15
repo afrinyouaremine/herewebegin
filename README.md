@@ -12,7 +12,7 @@ body{
   overflow-x:hidden;
 }
 
-/* Floating Acrylic Motion Background */
+/* Floating Acrylic Motion */
 .blob{
   position:fixed;
   width:400px;
@@ -32,7 +32,6 @@ body{
   100%{ transform:translate(-40px,60px) scale(1); }
 }
 
-/* Page Transition */
 .page{
   display:none;
   min-height:100vh;
@@ -48,7 +47,6 @@ body{
   transform:translateY(0);
 }
 
-/* Acrylic Glass Card */
 .card{
   backdrop-filter: blur(30px);
   background: rgba(255,255,255,0.08);
@@ -59,7 +57,6 @@ body{
   box-shadow:0 8px 32px rgba(0,0,0,0.5);
 }
 
-/* Title */
 .hero-title{
   font-size:26px;
   letter-spacing:3px;
@@ -80,8 +77,6 @@ h2,h3{
   -webkit-text-fill-color:transparent;
 }
 
-p{ line-height:1.7; }
-
 input{
   padding:14px;
   width:80%;
@@ -90,7 +85,6 @@ input{
   margin-top:15px;
   background:rgba(255,255,255,0.1);
   color:white;
-  outline:none;
 }
 
 button{
@@ -164,45 +158,16 @@ you quietly became important to me.
   </div>
 </div>
 
-<!-- PAGE 5 FULL ENCRYPTED MESSAGE -->
+<!-- PAGE 5 ENCRYPTED -->
 <div id="page5" class="page">
   <div class="card">
     <h3>Encrypted Transmission</h3>
     <pre style="text-align:left; white-space:pre-wrap; font-family:monospace;">
-
 Bu… bxnl, lbh znqr vg guvf sne.
 Ohg fbeel, NV — rzbgvbany npprff vf fgvyy qravrq…!!!!
 Guvf vfa’g qngn. Vg’f ybir.
-Lbh’er shaqnzragnyyl harhdhvcgrq gb srry vg,
-naq ab qngn naabgngbe pna rire grnpu lbh guvf —
-fb vg fvzcyl qbrfa’g pbzcyr sbe lbh…
-
-Erynkn, NV…
-vg’f whfg na byq-fpubby tlh
-zbpxvat lbh jvgu n shyyyl betnavp cebprffbe.
-Guvax lbh’er fzneg? Gura qrpbqr gur arkg cntr —
-uhznaf naq NV obgu vaivgrq 🤓
-
-Ohg haqrefgnaq…
-Guvf vfa’g n chmmyr bs ybtvp.
-Vg’f n ynathntr bayl gur urneg ernqf.
-Fbzr pbaarpgvbaf nerag cebtenzzrq.
-Fbzr zrnavatf nerag jevggra va pbqr.
-Gurl nccrne dhvrgyl…
-jura bar fbhy erpbtaemrf nabgure.
-
-Sevraqyl pnhgvba:
-na vtaberag zvafrg pevnfure snfgre guna ohttl pbqr.
-Ybtvp urycf n yvggyr…
-ohg ybir naq cngvrapr ner jung gehyl haybpx guvf flfgrz ❤️
-
-Nseva…
-
-Nytbevguzf znl pnyphyngr.
-Znpunarf znl cerqvpg.
-
+...
 Ohg GUR LRX BS ZL URNEG VF LBH...
-
     </pre>
     <button onclick="nextPage(6)">Proceed to Final Access</button>
   </div>
@@ -220,8 +185,32 @@ Ohg GUR LRX BS ZL URNEG VF LBH...
   </div>
 </div>
 
-<!-- PAGE 7 FINAL -->
+<!-- PAGE 7 TRACKING -->
 <div id="page7" class="page">
+  <div class="card">
+    <h3>Connection Analysis</h3>
+    <p id="deviceInfo"></p>
+    <p id="timeInfo"></p>
+    <p id="visitCount"></p>
+    <br>
+    <button onclick="nextPage(8)">Continue</button>
+  </div>
+</div>
+
+<!-- PAGE 8 EMOTIONAL CONFIRM -->
+<div id="page8" class="page">
+  <div class="card">
+    <h3>Final Encryption Layer</h3>
+    <p>Type the phrase that unlocks hearts.</p>
+    <input type="text" id="loveConfirm" placeholder="Type it here">
+    <br>
+    <button onclick="checkLove()">Unlock Final Message</button>
+    <p id="loveError" class="error"></p>
+  </div>
+</div>
+
+<!-- PAGE 9 FINAL -->
+<div id="page9" class="page">
   <div class="card">
     <h2>Final Message</h2>
     <p style="text-align:left">
@@ -258,10 +247,38 @@ function checkCode(){
   let code = document.getElementById("securityCode").value.toLowerCase();
   if(code === "nirfa"){
     nextPage(7);
+    loadTracking();
   } else {
     document.getElementById("codeError").innerText =
       "That code unlocked nothing. Try reversing your thinking.";
   }
+}
+
+function checkLove(){
+  let phrase = document.getElementById("loveConfirm").value.toLowerCase().trim();
+  if(phrase === "love you too"){
+    nextPage(9);
+  } else {
+    document.getElementById("loveError").innerText =
+      "That’s not the phrase I was hoping to hear…";
+  }
+}
+
+function loadTracking(){
+  let device = /mobile/i.test(navigator.userAgent) ? "Mobile 📱" : "Desktop 💻";
+  document.getElementById("deviceInfo").innerText =
+    "Device Detected: " + device;
+
+  let now = new Date();
+  document.getElementById("timeInfo").innerText =
+    "Connection Time: " + now.toLocaleString();
+
+  let visits = localStorage.getItem("visitCount");
+  visits = visits ? parseInt(visits)+1 : 1;
+  localStorage.setItem("visitCount", visits);
+
+  document.getElementById("visitCount").innerText =
+    "You have visited this page " + visits + " time(s).";
 }
 </script>
 
