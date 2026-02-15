@@ -20,19 +20,57 @@ body{
     overflow:hidden;
 }
 
+/* Floating glowing hearts */
+.heart-particle{
+    position:absolute;
+    width:15px;
+    height:15px;
+    background:red;
+    transform:rotate(-45deg);
+    animation:floatUp linear infinite;
+    filter:drop-shadow(0 0 8px red);
+    opacity:0.8;
+}
+
+.heart-particle:before,
+.heart-particle:after{
+    content:"";
+    position:absolute;
+    width:15px;
+    height:15px;
+    background:red;
+    border-radius:50%;
+}
+
+.heart-particle:before{ top:-7px; left:0; }
+.heart-particle:after{ left:7px; top:0; }
+
+@keyframes floatUp{
+    0%{
+        transform:translateY(100vh) rotate(-45deg) scale(0.5);
+        opacity:0;
+    }
+    20%{opacity:1;}
+    100%{
+        transform:translateY(-10vh) rotate(-45deg) scale(1);
+        opacity:0;
+    }
+}
+
 /* Acrylic Card */
 .page{
     width:90%;
     max-width:520px;
     padding:40px;
     border-radius:25px;
-    backdrop-filter:blur(20px);
+    backdrop-filter:blur(25px);
     background:rgba(255,255,255,0.08);
-    border:1px solid rgba(255,255,255,0.2);
-    box-shadow:0 0 40px rgba(255,0,0,0.2);
+    border:1px solid rgba(255,0,0,0.3);
+    box-shadow:0 0 40px rgba(255,0,0,0.3);
     text-align:center;
     display:none;
-    animation:fadeIn 1.5s ease forwards;
+    animation:fadeIn 1.2s ease forwards;
+    z-index:10;
 }
 
 .active{display:block;}
@@ -45,8 +83,8 @@ h1{
 
 p{
     color:#ddd;
-    line-height:1.6;
-    margin-bottom:12px;
+    line-height:1.7;
+    margin-bottom:14px;
 }
 
 input{
@@ -78,73 +116,27 @@ button:hover{
     box-shadow:0 0 20px red;
 }
 
-/* Heart */
-.heart{
-    width:120px;
-    height:120px;
-    background:red;
-    position:relative;
-    transform:rotate(-45deg);
-    animation:pulse 1.2s infinite;
+.error{
+    color:#ff4d6d;
+    margin-top:12px;
 }
 
-.heart:before,
-.heart:after{
-    content:"";
-    width:120px;
-    height:120px;
-    background:red;
-    border-radius:50%;
-    position:absolute;
-}
-
-.heart:before{ top:-60px; left:0; }
-.heart:after{ left:60px; top:0; }
-
-@keyframes pulse{
-    0%{transform:rotate(-45deg) scale(1);}
-    50%{transform:rotate(-45deg) scale(1.15);}
-    100%{transform:rotate(-45deg) scale(1);}
-}
-
-/* Explosion */
-@keyframes explode{
-    0%{opacity:1; transform:scale(1);}
-    70%{transform:scale(3); opacity:1;}
-    100%{opacity:0; transform:scale(4);}
-}
-
-/* Fade */
 @keyframes fadeIn{
-    from{opacity:0; transform:translateY(20px);}
-    to{opacity:1; transform:translateY(0);}
-}
-
-/* Screen shake */
-@keyframes shake{
-    0%{transform:translateX(0);}
-    25%{transform:translateX(-10px);}
-    50%{transform:translateX(10px);}
-    75%{transform:translateX(-5px);}
-    100%{transform:translateX(0);}
+    from{opacity:0;transform:translateY(20px);}
+    to{opacity:1;transform:translateY(0);}
 }
 </style>
 </head>
 
 <body>
 
-<!-- INTRO -->
-<div id="intro" style="position:absolute;">
-    <div class="heart" id="heart"></div>
-</div>
-
 <!-- IDENTITY PAGE -->
-<div class="page" id="identityPage">
+<div class="page active" id="identityPage">
     <h1>Claim Your Gift 👑</h1>
     <p>If you are her… type your name.</p>
     <input type="text" id="nameInput" placeholder="Enter your name">
     <button onclick="checkIdentity()">Claim</button>
-    <p id="errorMsg" style="color:#ff4d6d;"></p>
+    <p id="errorMsg" class="error"></p>
 </div>
 
 <!-- MESSAGE PAGE -->
@@ -153,7 +145,7 @@ button:hover{
     <p>Okay… don’t freak out.</p>
     <p>Nothing dramatic is happening.</p>
     <p>I just decided to be bold for once.</p>
-    <p>You have this calm way of existing that shifts the room quietly.</p>
+    <p>You have this calm way of existing that quietly shifts the atmosphere.</p>
     <p>It’s impressive. Slightly unfair. But impressive.</p>
     <p>If you’re smiling right now… good.</p>
     <p>If you’re pretending not to smile… even better.</p>
@@ -166,24 +158,26 @@ button:hover{
 
 <script>
 
-/* Explosion Sequence */
-setTimeout(() => {
-    document.getElementById("heart").style.animation="explode 1.5s forwards";
-    document.body.style.animation="shake 0.5s";
-    document.getElementById("bgMusic").play();
-}, 2500);
-
-setTimeout(() => {
-    document.getElementById("intro").style.display="none";
-    document.getElementById("identityPage").classList.add("active");
-}, 4500);
+/* Generate floating hearts */
+for(let i=0; i<60; i++){
+    let heart=document.createElement("div");
+    heart.className="heart-particle";
+    heart.style.left=Math.random()*100+"%";
+    heart.style.animationDuration=(6 + Math.random()*6)+"s";
+    heart.style.animationDelay=Math.random()*5+"s";
+    heart.style.width=(10 + Math.random()*12)+"px";
+    heart.style.height=heart.style.width;
+    document.body.appendChild(heart);
+}
 
 function checkIdentity(){
     const name=document.getElementById("nameInput").value.trim().toLowerCase();
+
     if(name==="afrin"){
         document.getElementById("identityPage").classList.remove("active");
         document.getElementById("messagePage").classList.add("active");
-    }else{
+        document.getElementById("bgMusic").play();
+    } else {
         document.getElementById("errorMsg").innerHTML=
         "This throne answers to only one name… and my Queen wears another.";
     }
