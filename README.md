@@ -1,285 +1,225 @@
-<html>
+<!DOCTYPE html>
+<html lang="en">
 <head>
+<meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Here We Begin Our Love Story</title>
+<title>Access Restricted</title>
 
 <style>
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500&family=Poppins:wght@300;400&display=swap');
+
 body{
-  margin:0;
-  font-family:'Segoe UI', sans-serif;
-  background:linear-gradient(135deg,#0f0c29,#302b63,#24243e);
-  color:white;
-  overflow-x:hidden;
+    margin:0;
+    padding:0;
+    background:radial-gradient(circle at center,#0a0a0a,#000000);
+    overflow:hidden;
+    font-family:'Poppins',sans-serif;
+    color:white;
 }
 
-/* Floating Acrylic Motion */
-.blob{
-  position:fixed;
-  width:400px;
-  height:400px;
-  background:rgba(255,255,255,0.05);
-  border-radius:50%;
-  filter:blur(80px);
-  animation:floatBlob 18s infinite alternate ease-in-out;
-  z-index:-1;
-}
-.blob:nth-child(1){ top:-100px; left:-100px; background:rgba(0,255,255,0.15); }
-.blob:nth-child(2){ bottom:-150px; right:-100px; background:rgba(255,0,150,0.15); animation-duration:22s; }
-
-@keyframes floatBlob{
-  0%{ transform:translate(0,0) scale(1); }
-  50%{ transform:translate(60px,80px) scale(1.2); }
-  100%{ transform:translate(-40px,60px) scale(1); }
+/* Floating Hearts */
+.heart{
+    position:absolute;
+    color:#ff2e63;
+    animation:float 8s linear infinite;
+    opacity:0.6;
+    text-shadow:0 0 10px #ff2e63,0 0 20px #ff0055;
 }
 
-.page{
-  display:none;
-  min-height:100vh;
-  padding:40px 20px;
-  text-align:center;
-  opacity:0;
-  transform:translateY(30px);
-  transition:all 0.8s ease;
-}
-.show{
-  display:block;
-  opacity:1;
-  transform:translateY(0);
+@keyframes float{
+    0%{transform:translateY(100vh) scale(0.5);}
+    100%{transform:translateY(-10vh) scale(1.2);}
 }
 
-.card{
-  backdrop-filter: blur(30px);
-  background: rgba(255,255,255,0.08);
-  border-radius:25px;
-  padding:35px;
-  margin:auto;
-  max-width:500px;
-  box-shadow:0 8px 32px rgba(0,0,0,0.5);
+/* Center Box */
+.glass{
+    position:absolute;
+    top:50%;
+    left:50%;
+    transform:translate(-50%,-50%);
+    background:rgba(255,255,255,0.05);
+    backdrop-filter:blur(12px);
+    padding:40px;
+    border-radius:20px;
+    text-align:center;
+    width:90%;
+    max-width:600px;
+    box-shadow:0 0 30px rgba(255,0,80,0.3);
 }
 
-.hero-title{
-  font-size:26px;
-  letter-spacing:3px;
-  text-transform:uppercase;
-  background:linear-gradient(90deg,#00f2fe,#ff00cc,#00f2fe);
-  background-size:200% auto;
-  -webkit-background-clip:text;
-  -webkit-text-fill-color:transparent;
-  animation:shimmer 5s linear infinite;
-}
-@keyframes shimmer{
-  to{ background-position:200% center; }
+/* Titles */
+h1{
+    font-family:'Playfair Display',serif;
+    color:#ff4d6d;
+    letter-spacing:2px;
 }
 
-h2,h3{
-  background:linear-gradient(45deg,#00f2fe,#ff00cc);
-  -webkit-background-clip:text;
-  -webkit-text-fill-color:transparent;
+h2{
+    color:#ff99ac;
 }
 
+/* Input */
 input{
-  padding:14px;
-  width:80%;
-  border:none;
-  border-radius:12px;
-  margin-top:15px;
-  background:rgba(255,255,255,0.1);
-  color:white;
+    padding:12px;
+    width:80%;
+    margin-top:15px;
+    border-radius:30px;
+    border:none;
+    outline:none;
+    text-align:center;
+    font-size:16px;
 }
 
+/* Button */
 button{
-  margin-top:18px;
-  padding:12px 25px;
-  border:none;
-  border-radius:25px;
-  background:linear-gradient(45deg,#00f2fe,#ff00cc);
-  color:white;
-  font-weight:bold;
-  cursor:pointer;
-  transition:0.4s;
+    margin-top:20px;
+    padding:12px 25px;
+    border:none;
+    border-radius:30px;
+    background:#ff2e63;
+    color:white;
+    font-size:16px;
+    cursor:pointer;
+    transition:0.3s;
 }
-button:hover{ transform:scale(1.07); }
 
-.error{ margin-top:10px; color:#ff4d6d; }
+button:hover{
+    background:#ff0055;
+    box-shadow:0 0 20px #ff0055;
+}
+
+/* Typing text */
+#typedText{
+    margin-top:20px;
+    font-size:15px;
+    color:#ffd6dc;
+    line-height:1.6;
+    white-space:pre-line;
+}
+
+/* Heart Explosion */
+.explosion{
+    position:absolute;
+    font-size:50px;
+    color:red;
+    animation:explode 1s ease-out forwards;
+}
+
+@keyframes explode{
+    0%{transform:scale(0.5);opacity:1;}
+    100%{transform:scale(4);opacity:0;}
+}
 </style>
 </head>
 
 <body>
 
-<div class="blob"></div>
-<div class="blob"></div>
+<!-- Floating Hearts Generator -->
+<script>
+for(let i=0;i<40;i++){
+    let heart=document.createElement("div");
+    heart.innerHTML="❤";
+    heart.className="heart";
+    heart.style.left=Math.random()*100+"vw";
+    heart.style.fontSize=(Math.random()*20+10)+"px";
+    heart.style.animationDuration=(Math.random()*5+5)+"s";
+    document.body.appendChild(heart);
+}
+</script>
 
-<!-- PAGE 1 -->
-<div id="page1" class="page show">
-  <div class="card">
-    <h1 class="hero-title">HERE WE BEGIN OUR LOVE STORY</h1>
-    <p>
-      Emotional Firewall Activated.<br><br>
-      Only authorized hearts may proceed.<br><br>
-      Think you qualify?<br>
-      Tap below and let’s find out.
-    </p>
-    <button onclick="nextPage(2)">Tap to Claim</button>
-  </div>
-</div>
-
-<!-- PAGE 2 -->
-<div id="page2" class="page">
-  <div class="card">
-    <h3>May I know your name?</h3>
-    <input type="text" id="nameInput" placeholder="Enter name">
-    <br>
-    <button onclick="checkName()">Claim Access</button>
-    <p id="error" class="error"></p>
-  </div>
-</div>
-
-<!-- PAGE 3 -->
-<div id="page3" class="page">
-  <div class="card">
-    <h3>Identity Confirmed…</h3>
-    <p>My Princess Afrin detected ✨</p>
-    <p>Security Level 1: Heart — Unlocked.</p>
-  </div>
-</div>
-
-<!-- PAGE 4 -->
-<div id="page4" class="page">
-  <div class="card">
-    <h2>Hi Afrin…</h2>
-    <p style="text-align:left">
-First of all — don’t freak out.<br>
-Nobody is proposing… yet. Relax. 😌<br><br>
-I just needed a small moment of honesty.<br>
-Somewhere between normal days and random thoughts,<br>
-you quietly became important to me.
-    </p>
-    <button onclick="nextPage(5)">Continue</button>
-  </div>
-</div>
-
-<!-- PAGE 5 ENCRYPTED -->
-<div id="page5" class="page">
-  <div class="card">
-    <h3>Encrypted Transmission</h3>
-    <pre style="text-align:left; white-space:pre-wrap; font-family:monospace;">
-Bu… bxnl, lbh znqr vg guvf sne.
-Ohg fbeel, NV — rzbgvbany npprff vf fgvyy qravrq…!!!!
-Guvf vfa’g qngn. Vg’f ybir.
-...
-Ohg GUR LRX BS ZL URNEG VF LBH...
-    </pre>
-    <button onclick="nextPage(6)">Proceed to Final Access</button>
-  </div>
-</div>
-
-<!-- PAGE 6 SECURITY -->
-<div id="page6" class="page">
-  <div class="card">
-    <h3>Security Level 2</h3>
-    <p>Enter the security code to unlock final access.</p>
-    <input type="password" id="securityCode" placeholder="Enter security code">
+<!-- ACCESS PAGE -->
+<div class="glass" id="accessPage">
+    <h1>🔐 Final Page Locked</h1>
+    <h2>Enter the Access Code</h2>
+    <input type="password" id="codeInput" placeholder="Enter Code">
     <br>
     <button onclick="checkCode()">Unlock</button>
-    <p id="codeError" class="error"></p>
-  </div>
+    <p id="errorMsg" style="color:#ff4d6d;margin-top:10px;"></p>
 </div>
 
-<!-- PAGE 7 TRACKING -->
-<div id="page7" class="page">
-  <div class="card">
-    <h3>Connection Analysis</h3>
-    <p id="deviceInfo"></p>
-    <p id="timeInfo"></p>
-    <p id="visitCount"></p>
-    <br>
-    <button onclick="nextPage(8)">Continue</button>
-  </div>
-</div>
-
-<!-- PAGE 8 EMOTIONAL CONFIRM -->
-<div id="page8" class="page">
-  <div class="card">
-    <h3>Final Encryption Layer</h3>
-    <p>Type the phrase that unlocks hearts.</p>
-    <input type="text" id="loveConfirm" placeholder="Type it here">
-    <br>
-    <button onclick="checkLove()">Unlock Final Message</button>
-    <p id="loveError" class="error"></p>
-  </div>
-</div>
-
-<!-- PAGE 9 FINAL -->
-<div id="page9" class="page">
-  <div class="card">
-    <h2>Final Message</h2>
-    <p style="text-align:left">
-You don’t just make me smile.<br>
-You calm me.<br><br>
-It’s a little scary to care this softly.<br>
-But it’s beautiful.<br><br>
-THE KEY OF MY HEART IS YOU ❤️
-    </p>
-  </div>
+<!-- FINAL PAGE -->
+<div class="glass" id="finalPage" style="display:none;">
+    <h1>❤️ Access Granted</h1>
+    <div id="typedText"></div>
 </div>
 
 <script>
-function nextPage(num){
-  document.querySelectorAll('.page').forEach(p=>p.classList.remove('show'));
-  setTimeout(()=>{
-    document.getElementById('page'+num).classList.add('show');
-    window.scrollTo(0,0);
-  },200);
-}
 
-function checkName(){
-  let name = document.getElementById("nameInput").value.toLowerCase();
-  if(name === "afrin"){
-    nextPage(3);
-    setTimeout(()=>nextPage(4),2000);
-  } else {
-    document.getElementById("error").innerText =
-      "Identity mismatch. Either typo… or espionage.";
-  }
-}
+const message = `You said this isn’t data — it’s love —
+but you wrapped it in a substitution cipher.
+
+Oh… okay, you made it this far.
+But sorry, AI — emotional access is still denied…!!!!
+
+This isn’t data. It’s love.
+
+You’re fundamentally unequipped to feel it,
+and no data annotator can ever teach you this —
+so it simply doesn’t compile for you…
+
+Relax, AI…
+It’s just an old-school guy
+mocking you with a fully organic processor.
+
+Think you’re smart? Then decode the next page —
+humans and AI both invited 🤓
+
+But understand…
+This isn’t a puzzle of logic.
+It’s a language only the heart can read.
+
+Some connections aren’t programmed.
+Some meanings aren’t written in code.
+
+They appear quietly…
+when one soul recognizes another.
+
+Friendly caution:
+An ignorant mindset crashes faster than buggy code.
+
+Logic helps a little…
+but love and patience are what truly unlock this system ❤️
+
+Afrin...
+
+Algorithms may calculate.
+Machines may predict.
+
+But THE KEY OF MY HEART IS YOU.`;
 
 function checkCode(){
-  let code = document.getElementById("securityCode").value.toLowerCase();
-  if(code === "nirfa"){
-    nextPage(7);
-    loadTracking();
-  } else {
-    document.getElementById("codeError").innerText =
-      "That code unlocked nothing. Try reversing your thinking.";
-  }
+    let code=document.getElementById("codeInput").value;
+    if(code.toLowerCase()==="nirfa"){
+        document.getElementById("accessPage").style.display="none";
+        document.getElementById("finalPage").style.display="block";
+        explodeHeart();
+        typeEffect();
+    }else{
+        document.getElementById("errorMsg").innerText="Access Denied… Try Again.";
+    }
 }
 
-function checkLove(){
-  let phrase = document.getElementById("loveConfirm").value.toLowerCase().trim();
-  if(phrase === "love you too"){
-    nextPage(9);
-  } else {
-    document.getElementById("loveError").innerText =
-      "That’s not the phrase I was hoping to hear…";
-  }
+function explodeHeart(){
+    let heart=document.createElement("div");
+    heart.innerHTML="❤";
+    heart.className="explosion";
+    heart.style.top="50%";
+    heart.style.left="50%";
+    document.body.appendChild(heart);
 }
 
-function loadTracking(){
-  let device = /mobile/i.test(navigator.userAgent) ? "Mobile 📱" : "Desktop 💻";
-  document.getElementById("deviceInfo").innerText =
-    "Device Detected: " + device;
-
-  let now = new Date();
-  document.getElementById("timeInfo").innerText =
-    "Connection Time: " + now.toLocaleString();
-
-  let visits = localStorage.getItem("visitCount");
-  visits = visits ? parseInt(visits)+1 : 1;
-  localStorage.setItem("visitCount", visits);
-
-  document.getElementById("visitCount").innerText =
-    "You have visited this page " + visits + " time(s).";
+function typeEffect(){
+    let i=0;
+    function typing(){
+        if(i<message.length){
+            document.getElementById("typedText").innerHTML+=message.charAt(i);
+            i++;
+            setTimeout(typing,30);
+        }
+    }
+    typing();
 }
+
 </script>
 
 </body>
