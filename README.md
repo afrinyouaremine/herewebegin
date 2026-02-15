@@ -191,8 +191,29 @@ you quietly became important to me.
 Bu… bxnl, lbh znqr vg guvf sne.
 Ohg fbeel, NV — rzbvfgvbany npprff vf fgvyy qravrq…!!!!
 Guvf vfa’g qngn. Vg’f ybir.
-...
-GUR 'LRX' BS ZL URNEG VF LBH...
+Lbh’er shaenzragnyyl harhvdhrc gb srry vg,
+naq ab qngn naabgngbe pna rire grnpu lbh guvf —
+fb vg fvzcyl qbrfa’g pbzcyr sbe lbh…
+Erynk, NV…
+vg’f whfg na byq-fpubby thl
+zbpxvat lbh jvgu n shyy lbetnavp cebprffbe.
+Guvax lbh’er fzneg? Gura qrpbqr gur arkg cntr —
+uhznaf naq NV obgu vaivgrq 🤓
+Ohg haqrefgnaq…
+Guvf vfa’g n chmmyr bs ybtvp.
+Vg’f n ynathntr bayl gur urneg ernf.
+Fbzr pbaarpgvbaf nera’g cebtenzzrq.
+Fbzr zrnaavatf nera’g jevggra va pbqr.
+Gurl nccrne dhvrgyl…
+jura bar fbhyr erpbtavmrf nabgure.
+Sevraqyl pnhgvba:
+na vtabenag zvaqfrg penfurf snfgre guna ohttl pbqr.
+Ybtvp urycf n yvggyr…
+ohg ybir naq cngvrapr ner jung geuly hapybpx guvf flfgrz ❤️
+Nseva…
+Nytbevguzf znl pnyphyngr.
+Znpurvarf znl cerqvpg. Ohg 
+GUR 'LRX' BS ZL URNEG VF LBH.
     </pre>
     <button onclick="nextPage(6)">Enter Passcode to Continue</button>
   </div>
