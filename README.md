@@ -32,7 +32,7 @@ body{
   100%{ transform:translate(-40px,60px) scale(1); }
 }
 
-/* PAGE TRANSITION UPGRADE */
+/* Page Animation */
 .page{
   display:none;
   min-height:100vh;
@@ -48,7 +48,7 @@ body{
   transform:translateY(0) scale(1);
 }
 
-/* CARD ANIMATION */
+/* Card Animation */
 .card{
   backdrop-filter: blur(30px);
   background: rgba(255,255,255,0.08);
@@ -57,7 +57,7 @@ body{
   margin:auto;
   max-width:500px;
   box-shadow:0 8px 32px rgba(0,0,0,0.5);
-  animation:cardPop 1.2s ease;
+  animation:cardPop 0.9s ease;
 }
 
 @keyframes cardPop{
@@ -85,7 +85,7 @@ h2,h3{
   -webkit-text-fill-color:transparent;
 }
 
-/* INPUT GLOW EFFECT */
+/* Input Glow */
 input{
   padding:14px;
   width:80%;
@@ -94,15 +94,15 @@ input{
   margin-top:15px;
   background:rgba(255,255,255,0.1);
   color:white;
-  transition:0.4s;
   outline:none;
+  transition:0.4s;
 }
 input:focus{
   box-shadow:0 0 15px #ff00cc, 0 0 25px #00f2fe;
   transform:scale(1.03);
 }
 
-/* BUTTON RIPPLE EFFECT */
+/* Button */
 button{
   margin-top:18px;
   padding:12px 25px;
@@ -112,32 +112,15 @@ button{
   color:white;
   font-weight:bold;
   cursor:pointer;
-  transition:0.4s;
-  position:relative;
-  overflow:hidden;
+  transition:0.3s;
 }
 button:hover{ transform:scale(1.07); }
 
-button::after{
-  content:"";
-  position:absolute;
-  width:0;
-  height:0;
-  border-radius:50%;
-  background:rgba(255,255,255,0.4);
-  transform:translate(-50%,-50%);
-  top:50%;
-  left:50%;
-  transition:width 0.6s ease, height 0.6s ease;
+.error{
+  margin-top:10px;
+  color:#ff4d6d;
+  animation:shake 0.3s ease;
 }
-button:active::after{
-  width:300px;
-  height:300px;
-  transition:0s;
-}
-
-.error{ margin-top:10px; color:#ff4d6d; animation:shake 0.3s ease; }
-
 @keyframes shake{
   0%,100%{ transform:translateX(0); }
   25%{ transform:translateX(-5px); }
@@ -151,16 +134,98 @@ button:active::after{
 <div class="blob"></div>
 <div class="blob"></div>
 
-<!-- YOUR HTML CONTENT REMAINS 100% EXACTLY SAME BELOW -->
+<!-- PAGE 1 -->
+<div id="page1" class="page show">
+  <div class="card">
+    <h1 class="hero-title">HERE WE BEGIN OUR LOVE STORY</h1>
+    <p>
+      Emotional Firewall Activated.<br><br>
+      Only authorized hearts may proceed.<br><br>
+      Think you qualify?<br>
+      Tap below and let’s find out.
+    </p>
+    <button onclick="nextPage(2)">Tap to Claim</button>
+  </div>
+</div>
 
-<!-- (I did not change ANY text, IDs, logic, or flow) -->
+<!-- PAGE 2 -->
+<div id="page2" class="page">
+  <div class="card">
+    <h3>May I know your name?</h3>
+    <input type="text" id="nameInput" placeholder="Enter name">
+    <br>
+    <button onclick="checkName()">Claim Access</button>
+    <p id="error" class="error"></p>
+  </div>
+</div>
+
+<!-- PAGE 3 -->
+<div id="page3" class="page">
+  <div class="card">
+    <h3>Identity Confirmed…</h3>
+    <p>My Princess Afrin detected ✨</p>
+    <p>Security Level 1: Heart — Unlocked.</p>
+  </div>
+</div>
+
+<!-- PAGE 4 -->
+<div id="page4" class="page">
+  <div class="card">
+    <h2>Hi Afrin…</h2>
+    <p style="text-align:left">
+First of all — don’t freak out.<br>
+Nobody is proposing… yet. Relax. 😌<br><br>
+I just needed a small moment of honesty.<br>
+Somewhere between normal days and random thoughts,<br>
+you quietly became important to me.
+    </p>
+    <button onclick="nextPage(5)">Continue</button>
+  </div>
+</div>
+
+<!-- PAGE 5 -->
+<div id="page5" class="page">
+  <div class="card">
+    <h3>Encrypted Transmission</h3>
+    <pre style="text-align:left; white-space:pre-wrap; font-family:monospace;">
+Bu… bxnl, lbh znqr vg guvf sne.
+Ohg fbeel, NV — rzbvfgvbany npprff vf fgvyy qravrq…!!!!
+Guvf vfa’g qngn. Vg’f ybir.
+...
+GUR 'LRX' BS ZL URNEG VF LBH...
+    </pre>
+    <button onclick="nextPage(6)">Enter Passcode to Continue</button>
+  </div>
+</div>
+
+<!-- PAGE 6 -->
+<div id="page6" class="page">
+  <div class="card">
+    <h3>Enter Passcode to Continue</h3>
+    <input type="password" id="securityCode" placeholder="Enter passcode">
+    <br>
+    <button onclick="checkCode()">Unlock</button>
+    <p id="codeError" class="error"></p>
+  </div>
+</div>
+
+<!-- PAGE 7 -->
+<div id="page7" class="page">
+  <div class="card">
+    <h2>Final Message</h2>
+    <p style="text-align:left">
+You don’t just make me smile.<br>
+You calm me.<br><br>
+It’s a little scary to care this softly.<br>
+But it’s beautiful.<br><br>
+THE KEY OF MY HEART IS YOU ❤️
+    </p>
+  </div>
+</div>
 
 <script>
 function nextPage(num){
-  document.querySelectorAll('.page').forEach(p=>{
-    p.classList.remove('show');
-  });
-
+  document.querySelectorAll('.page').forEach(p=>p.classList.remove('show'));
   setTimeout(()=>{
     document.getElementById('page'+num).classList.add('show');
     window.scrollTo({top:0, behavior:"smooth"});
