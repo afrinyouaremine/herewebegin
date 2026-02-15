@@ -16,96 +16,82 @@ body{
     justify-content:center;
     align-items:center;
     font-family:'Poppins',sans-serif;
-    background:#000;
+    transition:background 1.2s ease;
     overflow:hidden;
 }
 
-/* Floating glowing hearts */
-.heart-particle{
-    position:absolute;
-    width:15px;
-    height:15px;
-    background:red;
-    transform:rotate(-45deg);
-    animation:floatUp linear infinite;
-    filter:drop-shadow(0 0 8px red);
-    opacity:0.8;
+/* Romantic Background Images (Replace with yours) */
+.bg1{
+    background:linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)),
+    url('romantic1.jpg') center/cover no-repeat;
 }
 
-.heart-particle:before,
-.heart-particle:after{
-    content:"";
-    position:absolute;
-    width:15px;
-    height:15px;
-    background:red;
-    border-radius:50%;
+.bg2{
+    background:linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)),
+    url('romantic2.jpg') center/cover no-repeat;
 }
 
-.heart-particle:before{ top:-7px; left:0; }
-.heart-particle:after{ left:7px; top:0; }
+.bg3{
+    background:linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.6)),
+    url('romantic3.jpg') center/cover no-repeat;
+}
 
-@keyframes floatUp{
-    0%{
-        transform:translateY(100vh) rotate(-45deg) scale(0.5);
-        opacity:0;
-    }
-    20%{opacity:1;}
-    100%{
-        transform:translateY(-10vh) rotate(-45deg) scale(1);
-        opacity:0;
-    }
+.bg4{
+    background:linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)),
+    url('romantic4.jpg') center/cover no-repeat;
 }
 
 /* Acrylic Card */
 .page{
     width:90%;
-    max-width:520px;
+    max-width:500px;
     padding:40px;
     border-radius:25px;
     backdrop-filter:blur(25px);
-    background:rgba(255,255,255,0.08);
-    border:1px solid rgba(255,0,0,0.3);
-    box-shadow:0 0 40px rgba(255,0,0,0.3);
+    background:rgba(255,255,255,0.12);
+    border:1px solid rgba(255,255,255,0.3);
+    box-shadow:0 0 40px rgba(255,255,255,0.2);
     text-align:center;
     display:none;
     animation:fadeIn 1.2s ease forwards;
-    z-index:10;
 }
 
 .active{display:block;}
 
 h1{
     font-family:'Playfair Display',serif;
+    font-size:26px;
     color:#fff;
     margin-bottom:20px;
 }
 
 p{
-    color:#ddd;
-    line-height:1.7;
-    margin-bottom:14px;
+    color:#f1f1f1;
+    line-height:1.6;
+    margin-bottom:12px;
+    font-size:15px;
 }
 
 input{
     width:100%;
     padding:12px;
     border-radius:30px;
-    border:1px solid rgba(255,255,255,0.4);
-    background:rgba(255,255,255,0.1);
+    border:1px solid rgba(255,255,255,0.5);
+    background:rgba(255,255,255,0.2);
     color:#fff;
     text-align:center;
+    outline:none;
     margin-top:15px;
 }
 
 button{
     margin-top:18px;
-    padding:12px;
+    padding:10px;
     width:100%;
     border-radius:30px;
     border:none;
-    background:linear-gradient(90deg,#ff0000,#b30000);
-    color:#fff;
+    background:linear-gradient(90deg,#ffd700,#ffb347);
+    color:#000;
     font-weight:600;
     cursor:pointer;
     transition:0.3s;
@@ -113,76 +99,110 @@ button{
 
 button:hover{
     transform:scale(1.05);
-    box-shadow:0 0 20px red;
+    box-shadow:0 0 20px gold;
 }
 
-.error{
-    color:#ff4d6d;
-    margin-top:12px;
+.backBtn{
+    background:rgba(255,255,255,0.3);
+    color:#fff;
 }
 
 @keyframes fadeIn{
     from{opacity:0;transform:translateY(20px);}
     to{opacity:1;transform:translateY(0);}
 }
+
+/* Final reveal animation */
+.reveal{
+    opacity:0;
+    animation:fadeIn 2s forwards;
+}
 </style>
 </head>
 
-<body>
+<body class="bg1">
 
-<!-- IDENTITY PAGE -->
-<div class="page active" id="identityPage">
-    <h1>Claim Your Gift 👑</h1>
-    <p>If you are her… type your name.</p>
-    <input type="text" id="nameInput" placeholder="Enter your name">
-    <button onclick="checkIdentity()">Claim</button>
-    <p id="errorMsg" class="error"></p>
+<!-- PAGE 1 -->
+<div class="page active" id="page1">
+    <h1>Here We Begin</h1>
+    <p>Tell me your name.</p>
+    <input type="text" id="nameInput" placeholder="Type your name">
+    <button onclick="unlockPage1()">Enter</button>
+    <p id="errorMsg" style="color:#ff4d6d;"></p>
 </div>
 
-<!-- MESSAGE PAGE -->
-<div class="page" id="messagePage">
-    <h1>Hi Afrin…</h1>
-    <p>Okay… don’t freak out.</p>
-    <p>Nothing dramatic is happening.</p>
-    <p>I just decided to be bold for once.</p>
-    <p>You have this calm way of existing that quietly shifts the atmosphere.</p>
-    <p>It’s impressive. Slightly unfair. But impressive.</p>
-    <p>If you’re smiling right now… good.</p>
-    <p>If you’re pretending not to smile… even better.</p>
-    <p style="margin-top:20px;">– By Anonymous ❤</p>
+<!-- PAGE 2 -->
+<div class="page" id="page2">
+    <h1 style="color:gold;">Catch Me If You Can</h1>
+    <p style="white-space:pre-line;font-size:14px;">
+Fbeel NV — rzbgvbany npprff qravrq…!!!!
+...
+GUR XRL BS ZL URNEG VF LBH NAQ PBZZBA GJB QVT VGF ORGJRRA HF
+    </p>
+    <button onclick="goToPage3()">Click here after decoding</button>
+    <button class="backBtn" onclick="goBack(1)">Back</button>
 </div>
 
+<!-- PAGE 3 -->
+<div class="page" id="page3">
+    <h1>Enter the Encryption Key</h1>
+    <input type="text" id="codeInput" placeholder="Enter key">
+    <button onclick="unlockPage3()">Reveal</button>
+    <button class="backBtn" onclick="goBack(2)">Back</button>
+    <p id="finalError" style="color:#ff4d6d;"></p>
+</div>
+
+<!-- FINAL PAGE -->
+<div class="page" id="page4">
+    <h1 class="reveal">The Beginning</h1>
+    <p class="reveal" style="animation-delay:1s;">You were never meant to solve a puzzle.</p>
+    <p class="reveal" style="animation-delay:2s;">You were always the key.</p>
+    <p class="reveal" style="animation-delay:3s;">Afrin…</p>
+    <p class="reveal" style="animation-delay:4s;">The key of my heart is you.</p>
+    <p class="reveal" style="animation-delay:5s;">– By Anonymous ❤</p>
+</div>
+
+<!-- Violin Music -->
 <audio id="bgMusic" loop>
     <source src="violin.mp3" type="audio/mpeg">
 </audio>
 
 <script>
-
-/* Generate floating hearts */
-for(let i=0; i<60; i++){
-    let heart=document.createElement("div");
-    heart.className="heart-particle";
-    heart.style.left=Math.random()*100+"%";
-    heart.style.animationDuration=(6 + Math.random()*6)+"s";
-    heart.style.animationDelay=Math.random()*5+"s";
-    heart.style.width=(10 + Math.random()*12)+"px";
-    heart.style.height=heart.style.width;
-    document.body.appendChild(heart);
+function switchPage(from,to,bg){
+    document.getElementById(from).classList.remove("active");
+    document.getElementById(to).classList.add("active");
+    document.body.className=bg;
 }
 
-function checkIdentity(){
+function unlockPage1(){
     const name=document.getElementById("nameInput").value.trim().toLowerCase();
-
     if(name==="afrin"){
-        document.getElementById("identityPage").classList.remove("active");
-        document.getElementById("messagePage").classList.add("active");
+        switchPage("page1","page2","bg2");
         document.getElementById("bgMusic").play();
-    } else {
+    }else{
         document.getElementById("errorMsg").innerHTML=
-        "This throne answers to only one name… and my Queen wears another.";
+        "This page knows exactly who it’s waiting for 😉";
     }
 }
 
+function goToPage3(){
+    switchPage("page2","page3","bg3");
+}
+
+function unlockPage3(){
+    const input=document.getElementById("codeInput").value.trim().toLowerCase();
+    if(input==="afrin87"){
+        switchPage("page3","page4","bg4");
+    }else{
+        document.getElementById("finalError").innerHTML=
+        "That’s not the full key… look deeper 😉";
+    }
+}
+
+function goBack(page){
+    if(page===1){switchPage("page2","page1","bg1");}
+    if(page===2){switchPage("page3","page2","bg2");}
+}
 </script>
 
 </body>
