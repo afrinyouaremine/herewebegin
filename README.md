@@ -1,7 +1,7 @@
 <html>
 <head>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Private Access</title>
+<title>Here We Begin Our Love Story</title>
 
 <style>
 body{
@@ -12,7 +12,7 @@ body{
   overflow-x:hidden;
 }
 
-/* Smooth page transition */
+/* Page Transition */
 .page{
   display:none;
   min-height:100vh;
@@ -28,7 +28,32 @@ body{
   transform:translateY(0);
 }
 
-/* Cinematic Glass Card */
+/* Cinematic Hero Title */
+.hero-title{
+  font-size:28px;
+  letter-spacing:3px;
+  text-transform:uppercase;
+  background:linear-gradient(90deg, gold, #ff4d4d, gold);
+  background-size:200% auto;
+  -webkit-background-clip:text;
+  -webkit-text-fill-color:transparent;
+  animation:shimmer 4s linear infinite, glowPulse 3s ease-in-out infinite;
+  margin-bottom:25px;
+}
+
+/* Shimmer */
+@keyframes shimmer{
+  to{ background-position:200% center; }
+}
+
+/* Glow Pulse */
+@keyframes glowPulse{
+  0%{ text-shadow:0 0 5px rgba(255,215,0,0.6); }
+  50%{ text-shadow:0 0 25px rgba(255,77,77,0.9); }
+  100%{ text-shadow:0 0 5px rgba(255,215,0,0.6); }
+}
+
+/* Glass Card */
 .card{
   backdrop-filter: blur(25px);
   background: rgba(255,255,255,0.06);
@@ -42,13 +67,14 @@ body{
   animation:fadeIn 1.2s ease;
 }
 
-/* Text Glow */
+/* Headings */
 h2, h3{
   background:linear-gradient(45deg, gold, #ff4d4d);
   -webkit-background-clip:text;
   -webkit-text-fill-color:transparent;
 }
 
+/* Paragraph */
 p{
   line-height:1.7;
 }
@@ -67,7 +93,7 @@ input{
   transition:0.3s;
 }
 input:focus{
-  box-shadow:0 0 15px gold;
+  box-shadow:0 0 20px gold;
 }
 
 /* Buttons */
@@ -85,21 +111,15 @@ button{
 }
 button:hover{
   transform:scale(1.05);
-  box-shadow:0 0 25px gold;
+  box-shadow:0 0 30px gold;
 }
 
-/* Subtle Pulse Effect */
-@keyframes pulseGlow{
-  0%{ text-shadow:0 0 5px gold; }
-  50%{ text-shadow:0 0 20px #ff4d4d; }
-  100%{ text-shadow:0 0 5px gold; }
-}
-
+/* Highlight Pulse */
 .highlight{
-  animation:pulseGlow 2.5s infinite;
+  animation:glowPulse 2.5s infinite;
 }
 
-/* Fade Animation */
+/* Fade In */
 @keyframes fadeIn{
   from{ opacity:0; transform:translateY(15px); }
   to{ opacity:1; transform:translateY(0); }
@@ -112,7 +132,7 @@ button:hover{
 <!-- PAGE 1 -->
 <div id="page1" class="page show">
   <div class="card">
-    <h2>Someone special left something here for you…</h2>
+    <h1 class="hero-title">HERE WE BEGIN OUR LOVE STORY</h1>
     <p>
       This isn’t random.<br>
       It’s intentional.<br><br>
