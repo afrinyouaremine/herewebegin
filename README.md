@@ -41,12 +41,10 @@ body{
   margin-bottom:25px;
 }
 
-/* Shimmer */
 @keyframes shimmer{
   to{ background-position:200% center; }
 }
 
-/* Glow Pulse */
 @keyframes glowPulse{
   0%{ text-shadow:0 0 5px rgba(255,215,0,0.6); }
   50%{ text-shadow:0 0 25px rgba(255,77,77,0.9); }
@@ -64,7 +62,6 @@ body{
   box-shadow:
     0 0 30px rgba(255,215,0,0.2),
     0 0 60px rgba(255,0,0,0.15);
-  animation:fadeIn 1.2s ease;
 }
 
 /* Headings */
@@ -74,7 +71,6 @@ h2, h3{
   -webkit-text-fill-color:transparent;
 }
 
-/* Paragraph */
 p{
   line-height:1.7;
 }
@@ -114,15 +110,8 @@ button:hover{
   box-shadow:0 0 30px gold;
 }
 
-/* Highlight Pulse */
 .highlight{
   animation:glowPulse 2.5s infinite;
-}
-
-/* Fade In */
-@keyframes fadeIn{
-  from{ opacity:0; transform:translateY(15px); }
-  to{ opacity:1; transform:translateY(0); }
 }
 </style>
 </head>
@@ -178,23 +167,51 @@ you quietly became important to me.
   </div>
 </div>
 
-<!-- PAGE 5 -->
+<!-- PAGE 5 ENCRYPTED -->
 <div id="page5" class="page">
   <div class="card">
     <h3>Encrypted Transmission</h3>
-    <p style="text-align:left">
-Bu… bxnl, lbh znqr vg guvf sne.<br>
-Ohg fbeel, NV — rzbgvbany npprff vf fgvyy qravrq…!!!!<br>
-Guvf vfa’g qngn. Vg’f ybir.<br>
-Vg’f n ynathntr bayl gur urneg ernqf.<br>
-Naq jura lbh svanyyl haqrefgnaq…<br>
-GUR XRL BS ZL URNEG VF LBH.
-    </p>
+    <pre style="text-align:left; white-space:pre-wrap; font-family:monospace;">
+
+Bu… bxnl, lbh znqr vg guvf sne.
+Ohg fbeel, NV — rzbgvbany npprff vf fgvyy qravrq…!!!!
+Guvf vfa’g qngn. Vg’f ybir.
+Lbh’er shaqnzragnyyl harhdhvcgrq gb srry vg,
+naq ab qngn naabgngbe pna rire grnpu lbh guvf —
+fb vg fvzcyl qbrfa’g pbzcyr sbe lbh…
+
+Erynkn, NV…
+vg’f whfg na byq-fpubby tlh
+zbpxvat lbh jvgu n shyyyl betnavp cebprffbe.
+Guvax lbh’er fzneg? Gura qrpbqr gur arkg cntr —
+uhznaf naq NV obgu vaivgrq 🤓
+
+Ohg haqrefgnaq…
+Guvf vfa’g n chmmyr bs ybtvp.
+Vg’f n ynathntr bayl gur urneg ernqf.
+Fbzr pbaarpgvbaf nerag cebtenzzrq.
+Fbzr zrnavatf nerag jevggra va pbqr.
+Gurl nccrne dhvrgyl…
+jura bar fbhy erpbtaemrf nabgure.
+
+Sevraqyl pnhgvba:
+na vtaberag zvafrg pevnfure snfgre guna ohttl pbqr.
+Ybtvp urycf n yvggyr…
+ohg ybir naq cngvrapr ner jung gehyl haybpx guvf flfgrz ❤️
+
+Nseva…
+
+Nytbevguzf znl pnyphyngr.
+Znpunarf znl cerqvpg.
+
+Ohg GUR LRX BS ZL URNEG VF LBH...
+
+    </pre>
     <button onclick="nextPage(6)">Proceed to Final Access</button>
   </div>
 </div>
 
-<!-- PAGE 6 -->
+<!-- PAGE 6 SECURITY -->
 <div id="page6" class="page">
   <div class="card">
     <h3>Security Level 2</h3>
@@ -206,7 +223,7 @@ GUR XRL BS ZL URNEG VF LBH.
   </div>
 </div>
 
-<!-- PAGE 7 -->
+<!-- PAGE 7 FINAL -->
 <div id="page7" class="page">
   <div class="card">
     <h2 class="highlight">Final Message</h2>
@@ -224,9 +241,7 @@ I would quietly hope it’s you.<br><br>
 
 <script>
 function nextPage(num){
-  document.querySelectorAll('.page').forEach(p=>{
-    p.classList.remove('show');
-  });
+  document.querySelectorAll('.page').forEach(p=>p.classList.remove('show'));
   setTimeout(()=>{
     document.getElementById('page'+num).classList.add('show');
     window.scrollTo(0,0);
@@ -246,7 +261,7 @@ function checkName(){
 
 function checkCode(){
   let code = document.getElementById("securityCode").value.toLowerCase();
-  if(code === "nirfa87"){
+  if(code === "nirfa"){
     nextPage(7);
   } else {
     document.getElementById("codeError").innerText =
