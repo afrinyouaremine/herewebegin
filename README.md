@@ -166,35 +166,36 @@ you quietly became important to me.
 Bu… bxnl, lbh znqr vg guvf sne.
 Ohg fbeel, NV — rzbgvbany npprff vf fgvyy qravrq…!!!!
 Guvf vfa’g qngn. Vg’f ybir.
-Lbh’er shaqnznragnyyl harpdhvccrq gb srry vg,
-naq ab qngn naabgngbe pna rire grnpu lbh guvf —
-fb vg fvycyl qbrfa’g pbzcvyr sbe lbh…
-Eryn k, NV…
-vg’f whfg na byq-fpubby thl
-zbpxvat lbh jvgu n shyy beqnavp cebprffbe.
-Guvax lbh’er fzneg? Gura qrpbqr gur arkg cntr —
-uhznaf naq NV obgu vaivgrq 🤓
-Ohg haqrefgnaq…
-Guvf vfa’g n chmmyr bs ybtvp.
-Vg’f n ynathntr bayl gur urneg ernqf.
-Fbzr pbaarpgvbaf nera’g cebtenzzrq.
-Fbzr zrnavatf nera’g jevggra va pbqr.
-Gurl nccrne dhvgryl…
-jura bar fbhy erpbttavmrf nabgure.
-Sevraqyl pnhgvba:
-na vtaberag zvaqfrg penfuref snfgre guna ohttl pbqr.
-Ybtvp urycf n yvggyr…
-ohg ybir naq cngvrapr ner jung ge hyl haybpx guvf flfgrz ❤️
-Nseva…
-Nytbevguzf znl pnyphyngr.
-Znpurvarf znl cerqvpg.
 GUR XRL BS ZL URNEG VF LBH...
     </pre>
-    <button onclick="nextPage(6)">Proceed to Final Access</button>
+    <button onclick="nextPage(6)">Enter Passcode to Continue</button>
   </div>
 </div>
 
-<!-- Remaining pages unchanged exactly as your original -->
+<!-- PAGE 6 PASSCODE -->
+<div id="page6" class="page">
+  <div class="card">
+    <h3>Enter Passcode to Continue</h3>
+    <input type="password" id="securityCode" placeholder="Enter passcode">
+    <br>
+    <button onclick="checkCode()">Unlock</button>
+    <p id="codeError" class="error"></p>
+  </div>
+</div>
+
+<!-- PAGE 7 FINAL -->
+<div id="page7" class="page">
+  <div class="card">
+    <h2>Final Message</h2>
+    <p style="text-align:left">
+You don’t just make me smile.<br>
+You calm me.<br><br>
+It’s a little scary to care this softly.<br>
+But it’s beautiful.<br><br>
+THE KEY OF MY HEART IS YOU ❤️
+    </p>
+  </div>
+</div>
 
 <script>
 function nextPage(num){
@@ -220,38 +221,10 @@ function checkCode(){
   let code = document.getElementById("securityCode").value.toLowerCase();
   if(code === "nirfa"){
     nextPage(7);
-    loadTracking();
   } else {
     document.getElementById("codeError").innerText =
-      "That code unlocked nothing. Try reversing your thinking.";
+      "That code unlocked nothing.";
   }
-}
-
-function checkLove(){
-  let phrase = document.getElementById("loveConfirm").value.toLowerCase().trim();
-  if(phrase === "love you too"){
-    nextPage(9);
-  } else {
-    document.getElementById("loveError").innerText =
-      "That’s not the phrase I was hoping to hear…";
-  }
-}
-
-function loadTracking(){
-  let device = /mobile/i.test(navigator.userAgent) ? "Mobile 📱" : "Desktop 💻";
-  document.getElementById("deviceInfo").innerText =
-    "Device Detected: " + device;
-
-  let now = new Date();
-  document.getElementById("timeInfo").innerText =
-    "Connection Time: " + now.toLocaleString();
-
-  let visits = localStorage.getItem("visitCount");
-  visits = visits ? parseInt(visits)+1 : 1;
-  localStorage.setItem("visitCount", visits);
-
-  document.getElementById("visitCount").innerText =
-    "You have visited this page " + visits + " time(s).";
 }
 </script>
 
