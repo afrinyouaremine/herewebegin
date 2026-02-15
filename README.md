@@ -5,203 +5,206 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Here We Begin</title>
 
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=Poppins:wght@300;400&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500&family=Poppins:wght@300&display=swap" rel="stylesheet">
 
 <style>
-*{margin:0;padding:0;box-sizing:border-box;}
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
 
 body{
-    min-height:100vh;
+    height:100vh;
+    background:#000;
     display:flex;
     justify-content:center;
     align-items:center;
+    color:#fff;
     font-family:'Poppins',sans-serif;
-    transition:background 1.2s ease;
     overflow:hidden;
 }
 
-/* Romantic Background Images (Replace with yours) */
-.bg1{
-    background:linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)),
-    url('romantic1.jpg') center/cover no-repeat;
+/* 🌌 Star Sky */
+.stars{
+    position:fixed;
+    width:100%;
+    height:100%;
+    overflow:hidden;
 }
 
-.bg2{
-    background:linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)),
-    url('romantic2.jpg') center/cover no-repeat;
+.star{
+    position:absolute;
+    width:2px;
+    height:2px;
+    background:white;
+    border-radius:50%;
+    animation:twinkle 3s infinite alternate;
 }
 
-.bg3{
-    background:linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.6)),
-    url('romantic3.jpg') center/cover no-repeat;
+@keyframes twinkle{
+    from{opacity:0.2;}
+    to{opacity:1;}
 }
 
-.bg4{
-    background:linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)),
-    url('romantic4.jpg') center/cover no-repeat;
-}
-
-/* Acrylic Card */
-.page{
-    width:90%;
-    max-width:500px;
-    padding:40px;
-    border-radius:25px;
-    backdrop-filter:blur(25px);
-    background:rgba(255,255,255,0.12);
-    border:1px solid rgba(255,255,255,0.3);
-    box-shadow:0 0 40px rgba(255,255,255,0.2);
+/* Password Screen */
+.password-screen{
     text-align:center;
-    display:none;
-    animation:fadeIn 1.2s ease forwards;
+    z-index:10;
 }
 
-.active{display:block;}
+input{
+    padding:10px;
+    margin-top:15px;
+    border:none;
+    border-radius:5px;
+    outline:none;
+    text-align:center;
+}
+
+button{
+    padding:8px 15px;
+    margin-top:10px;
+    border:none;
+    border-radius:5px;
+    cursor:pointer;
+}
+
+#errorMsg{
+    margin-top:10px;
+    color:#ff6b6b;
+}
+
+/* Main Content */
+.container{
+    display:none;
+    text-align:center;
+    max-width:600px;
+    animation:fadeIn 2s ease-in forwards;
+    z-index:10;
+}
 
 h1{
     font-family:'Playfair Display',serif;
-    font-size:26px;
-    color:#fff;
     margin-bottom:20px;
 }
 
 p{
-    color:#f1f1f1;
-    line-height:1.6;
-    margin-bottom:12px;
-    font-size:15px;
+    margin:10px 0;
 }
 
-input{
-    width:100%;
-    padding:12px;
-    border-radius:30px;
-    border:1px solid rgba(255,255,255,0.5);
-    background:rgba(255,255,255,0.2);
-    color:#fff;
-    text-align:center;
-    outline:none;
-    margin-top:15px;
+.heart{
+    font-size:32px;
+    margin-top:20px;
+    animation:pulse 1.5s infinite;
 }
 
-button{
-    margin-top:18px;
-    padding:10px;
-    width:100%;
-    border-radius:30px;
-    border:none;
-    background:linear-gradient(90deg,#ffd700,#ffb347);
-    color:#000;
-    font-weight:600;
-    cursor:pointer;
-    transition:0.3s;
-}
-
-button:hover{
-    transform:scale(1.05);
-    box-shadow:0 0 20px gold;
-}
-
-.backBtn{
-    background:rgba(255,255,255,0.3);
-    color:#fff;
+@keyframes pulse{
+    0%{transform:scale(1);}
+    50%{transform:scale(1.3);}
+    100%{transform:scale(1);}
 }
 
 @keyframes fadeIn{
-    from{opacity:0;transform:translateY(20px);}
-    to{opacity:1;transform:translateY(0);}
+    from{opacity:0;}
+    to{opacity:1;}
 }
 
-/* Final reveal animation */
-.reveal{
-    opacity:0;
-    animation:fadeIn 2s forwards;
+@media(max-width:600px){
+    h1{font-size:24px;}
+    p{font-size:16px;}
 }
 </style>
 </head>
 
-<body class="bg1">
+<body>
 
-<!-- PAGE 1 -->
-<div class="page active" id="page1">
-    <h1>Here We Begin</h1>
-    <p>Tell me your name.</p>
-    <input type="text" id="nameInput" placeholder="Type your name">
-    <button onclick="unlockPage1()">Enter</button>
-    <p id="errorMsg" style="color:#ff4d6d;"></p>
-</div>
+<div class="stars" id="stars"></div>
 
-<!-- PAGE 2 -->
-<div class="page" id="page2">
-    <h1 style="color:gold;">Catch Me If You Can</h1>
-    <p style="white-space:pre-line;font-size:14px;">
-Fbeel NV — rzbgvbany npprff qravrq…!!!!
-...
-GUR XRL BS ZL URNEG VF LBH NAQ PBZZBA GJB QVT VGF ORGJRRA HF
+<!-- 🔐 Password Screen -->
+<div class="password-screen" id="passwordScreen">
+    <h2>Before we begin...</h2>
+    <p style="opacity:0.7; margin-top:10px;">
+        Type the two digits we have in common.
     </p>
-    <button onclick="goToPage3()">Click here after decoding</button>
-    <button class="backBtn" onclick="goBack(1)">Back</button>
+    <input type="password" id="passwordInput" placeholder="Two digits only">
+    <br>
+    <button onclick="checkPassword()">Unlock</button>
+    <p id="errorMsg"></p>
 </div>
 
-<!-- PAGE 3 -->
-<div class="page" id="page3">
-    <h1>Enter the Encryption Key</h1>
-    <input type="text" id="codeInput" placeholder="Enter key">
-    <button onclick="unlockPage3()">Reveal</button>
-    <button class="backBtn" onclick="goBack(2)">Back</button>
-    <p id="finalError" style="color:#ff4d6d;"></p>
+<!-- ❤️ Main Content -->
+<div class="container" id="mainContent">
+    <h1 id="title"></h1>
+    <p id="line1"></p>
+    <p id="line2"></p>
+    <p id="line3"></p>
+    <div class="heart">❤</div>
+    <p style="margin-top:20px;opacity:0.6;">– U</p>
 </div>
 
-<!-- FINAL PAGE -->
-<div class="page" id="page4">
-    <h1 class="reveal">The Beginning</h1>
-    <p class="reveal" style="animation-delay:1s;">You were never meant to solve a puzzle.</p>
-    <p class="reveal" style="animation-delay:2s;">You were always the key.</p>
-    <p class="reveal" style="animation-delay:3s;">Afrin…</p>
-    <p class="reveal" style="animation-delay:4s;">The key of my heart is you.</p>
-    <p class="reveal" style="animation-delay:5s;">– By Anonymous ❤</p>
-</div>
-
-<!-- Violin Music -->
 <audio id="bgMusic" loop>
-    <source src="violin.mp3" type="audio/mpeg">
+    <source src="https://cdn.pixabay.com/audio/2022/10/16/audio_5b0b5f7f7e.mp3" type="audio/mpeg">
 </audio>
 
 <script>
-function switchPage(from,to,bg){
-    document.getElementById(from).classList.remove("active");
-    document.getElementById(to).classList.add("active");
-    document.body.className=bg;
+// 🌌 Generate Stars
+for(let i=0;i<180;i++){
+    let star=document.createElement("div");
+    star.className="star";
+    star.style.top=Math.random()*100+"%";
+    star.style.left=Math.random()*100+"%";
+    star.style.animationDuration=(Math.random()*3+2)+"s";
+    document.getElementById("stars").appendChild(star);
 }
 
-function unlockPage1(){
-    const name=document.getElementById("nameInput").value.trim().toLowerCase();
-    if(name==="afrin"){
-        switchPage("page1","page2","bg2");
+// 🔐 Password Logic
+const correctPassword="87";
+
+function checkPassword(){
+    const input=document.getElementById("passwordInput").value.trim();
+    const errorMsg=document.getElementById("errorMsg");
+
+    if(input===correctPassword){
+        document.getElementById("passwordScreen").style.display="none";
+        document.getElementById("mainContent").style.display="block";
         document.getElementById("bgMusic").play();
+        startTyping();
     }else{
-        document.getElementById("errorMsg").innerHTML=
-        "This page knows exactly who it’s waiting for 😉";
+        errorMsg.innerHTML="That’s not our number 🙂";
     }
 }
 
-function goToPage3(){
-    switchPage("page2","page3","bg3");
-}
+// ⌨️ Typewriter Effect
+const titleText="If you're reading this...";
+const lines=[
+    "Then my courage finally showed up.",
+    "Some feelings are too real to stay silent.",
+    "You are one of them."
+];
 
-function unlockPage3(){
-    const input=document.getElementById("codeInput").value.trim().toLowerCase();
-    if(input==="afrin87"){
-        switchPage("page3","page4","bg4");
-    }else{
-        document.getElementById("finalError").innerHTML=
-        "That’s not the full key… look deeper 😉";
+function typeWriter(element,text,speed,callback){
+    let i=0;
+    function typing(){
+        if(i<text.length){
+            element.innerHTML+=text.charAt(i);
+            i++;
+            setTimeout(typing,speed);
+        }else if(callback){
+            callback();
+        }
     }
+    typing();
 }
 
-function goBack(page){
-    if(page===1){switchPage("page2","page1","bg1");}
-    if(page===2){switchPage("page3","page2","bg2");}
+function startTyping(){
+    typeWriter(document.getElementById("title"),titleText,50,()=>{
+        typeWriter(document.getElementById("line1"),lines[0],40,()=>{
+            typeWriter(document.getElementById("line2"),lines[1],40,()=>{
+                typeWriter(document.getElementById("line3"),lines[2],40);
+            });
+        });
+    });
 }
 </script>
 
