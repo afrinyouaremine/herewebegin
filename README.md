@@ -14,16 +14,16 @@ body{
     background:radial-gradient(circle at center,#0a0a0a,#000000);
     overflow:hidden;
     font-family:'Poppins',sans-serif;
-    color:white;
+    color:#f5f5f5;
 }
 
 /* Floating Hearts */
 .heart{
     position:absolute;
-    color:#ff2e63;
+    color:#ff1744;
     animation:float 8s linear infinite;
-    opacity:0.6;
-    text-shadow:0 0 10px #ff2e63,0 0 20px #ff0055;
+    opacity:0.5;
+    text-shadow:0 0 8px #ff1744;
 }
 
 @keyframes float{
@@ -31,7 +31,7 @@ body{
     100%{transform:translateY(-10vh) scale(1.2);}
 }
 
-/* Center Box */
+/* Center Glass Box */
 .glass{
     position:absolute;
     top:50%;
@@ -43,19 +43,20 @@ body{
     border-radius:20px;
     text-align:center;
     width:90%;
-    max-width:600px;
-    box-shadow:0 0 30px rgba(255,0,80,0.3);
+    max-width:650px;
+    box-shadow:0 0 25px rgba(255,23,68,0.25);
 }
 
 /* Titles */
 h1{
     font-family:'Playfair Display',serif;
-    color:#ff4d6d;
-    letter-spacing:2px;
+    color:#ff3d5a;
+    letter-spacing:1px;
 }
 
 h2{
-    color:#ff99ac;
+    color:#ff8fa3;
+    font-weight:400;
 }
 
 /* Input */
@@ -68,6 +69,8 @@ input{
     outline:none;
     text-align:center;
     font-size:16px;
+    background:#1a1a1a;
+    color:#ffffff;
 }
 
 /* Button */
@@ -76,7 +79,7 @@ button{
     padding:12px 25px;
     border:none;
     border-radius:30px;
-    background:#ff2e63;
+    background:#ff1744;
     color:white;
     font-size:16px;
     cursor:pointer;
@@ -84,24 +87,30 @@ button{
 }
 
 button:hover{
-    background:#ff0055;
-    box-shadow:0 0 20px #ff0055;
+    background:#ff0033;
+    box-shadow:0 0 15px #ff1744;
 }
 
 /* Typing text */
 #typedText{
     margin-top:20px;
     font-size:15px;
-    color:#ffd6dc;
-    line-height:1.6;
+    color:#e0e0e0;
+    line-height:1.7;
     white-space:pre-line;
+}
+
+/* Highlight final line */
+.highlight{
+    color:#ff3d5a;
+    font-weight:600;
 }
 
 /* Heart Explosion */
 .explosion{
     position:absolute;
-    font-size:50px;
-    color:red;
+    font-size:60px;
+    color:#ff1744;
     animation:explode 1s ease-out forwards;
 }
 
@@ -114,9 +123,8 @@ button:hover{
 
 <body>
 
-<!-- Floating Hearts Generator -->
 <script>
-for(let i=0;i<40;i++){
+for(let i=0;i<35;i++){
     let heart=document.createElement("div");
     heart.innerHTML="❤";
     heart.className="heart";
@@ -134,7 +142,7 @@ for(let i=0;i<40;i++){
     <input type="password" id="codeInput" placeholder="Enter Code">
     <br>
     <button onclick="checkCode()">Unlock</button>
-    <p id="errorMsg" style="color:#ff4d6d;margin-top:10px;"></p>
+    <p id="errorMsg" style="color:#ff3d5a;margin-top:10px;"></p>
 </div>
 
 <!-- FINAL PAGE -->
@@ -219,7 +227,6 @@ function typeEffect(){
     }
     typing();
 }
-
 </script>
 
 </body>
