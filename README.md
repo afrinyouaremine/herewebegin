@@ -177,120 +177,24 @@ button:hover{ transform:scale(1.07); }
 <!-- PAGE 3 -->
 <div id="page3" class="page">
   <div class="card">
-    <h3>Identity Confirmed…</h5>
+    <h3>Identity Confirmed…</h3>
     <p> Princess of my heart detected ✨</p>
     <p>Security Level 1: Heart — Unlocked.</p>
   </div>
 </div>
 
-<!-- PAGE 4 -->
-<div id="page4" class="page">
-  <div class="card">
-    <h2>Hi Afrin…</h2>
-    <p style="text-align:left">
-First of all — don’t freak out.<br>
-Nobody is proposing… yet. Relax. 😌<br><br>
-I just needed a small moment of honesty.<br>
-I Don't know how,when,where.... <br><br>
-you quietly became important to me. </p>
-    <button onclick="nextPage(5)">Continue</button>
-  </div>
-</div>
-
-<!-- PAGE 5 -->
-<div id="page5" class="page">
-  <div class="card">
-    <h3>Encrypted Transmission</h3>
-    <pre style="text-align:left; white-space:pre-wrap; font-family:monospace;">
-Bu… bxnl, lbh znqr vg guvf sne.
-Ohg fbeel, NV — rzbvfgvbany npprff vf fgvyy qravrq…!!!!
-Guvf vfa’g qngn. Vg’f ybir.
-Lbh’er shaenzragnyyl harhvdhrc gb srry vg,
-naq ab qngn naabgngbe pna rire grnpu lbh guvf —
-fb vg fvzcyl qbrfa’g pbzcyr sbe lbh…
-Erynk, NV…
-vg’f whfg na byq-fpubby thl
-zbpxvat lbh jvgu n shyy lbetnavp cebprffbe.
-Guvax lbh’er fzneg? Gura qrpbqr gur arkg cntr —
-uhznaf naq NV obgu vaivgrq 🤓
-    </pre>
-    <button onclick="nextPage(6)">Enter Passcode to Continue </button>
-  </div>
-</div>
-
-<!-- PAGE 6 -->
+<!-- PAGE 6 FIX -->
 <div id="page6" class="page">
   <div class="card">
     <h3>Enter Passcode to Continue</h3>
     <input type="password" id="securityCode" placeholder="Enter passcode">
     <br>
     <button onclick="checkCode()">Unlock</button>
-    <p id="Decode previous message for the hint " class="error"></p>
-  </div>
-</div>
-
-<!-- PAGE 7 -->
-<div id="page7" class="page">
-  <div class="card">
-    <h2> DECODE MY HEART IF YOU CAN </h2>
-    <p style="text-align:left">
-Afrin..
-
-Qs ldiwq,
-
-Lswd y xhgu zpczvl. Lrpq qp x dbtzxgbr ilhgirqb llvjl...
-(Your FULL encrypted letter continues here exactly as you wrote it)
-— Khdgpzhf lfh kzmdk dhmd gtdm td’kk dsdmt zfldg rg 🤍
-    </p>
-    <br><br>
-    <button onclick="nextPage(8)">DECODE HINT</button>
-  </div>
-</div>
-
-<!-- PAGE 8 -->
-<div id="page8" class="page">
-  <div class="card">
-    <h3> ENNOOD PARA I LOVE YOU NU..</h3>
-    <input type="text" id="loveMessage" placeholder="Type here...">
-    <br>
-    <button onclick="checkLoveMessage()">Submit</button>
-    <p id="loveError" class="error"></p>
-  </div>
-</div>
-
-<!-- PAGE 9 -->
-<div id="page9" class="page">
-  <div class="card">
-    <h2>Hint Revealing...</h2>
-    <div id="hintText" class="reveal-text">
-      Almost you got me right..? It's two digit common between us
-please don't share it with anyone the letter is too personal...
-
-If you couldn't figure it out stay tuned for another hint
-    </div>
+    <p id="codeError" class="error"></p>
   </div>
 </div>
 
 <script>
-function nextPage(num){
-  document.querySelectorAll('.page').forEach(p=>p.classList.remove('show'));
-  setTimeout(()=>{
-    document.getElementById('page'+num).classList.add('show');
-    window.scrollTo({top:0, behavior:"smooth"});
-  },300);
-}
-
-function checkName(){
-  let name = document.getElementById("nameInput").value.toLowerCase();
-  if(name === "afrin"){
-    nextPage(3);
-    setTimeout(()=>nextPage(4),2000);
-  } else {
-    document.getElementById("error").innerText =
-      "Identity mismatch. Either typo… or espionage.";
-  }
-}
-
 function checkCode(){
   let code = document.getElementById("securityCode").value.toLowerCase();
   if(code === "nirfa"){
@@ -298,20 +202,6 @@ function checkCode(){
   } else {
     document.getElementById("codeError").innerText =
       "SAY I LOVE YOU...";
-  }
-}
-
-function checkLoveMessage(){
-  let message = document.getElementById("loveMessage").value.trim().toLowerCase();
-  
-  if(message === "i love you"){
-    nextPage(9);
-    setTimeout(()=>{
-      document.getElementById("hintText").classList.add("glow");
-    },800);
-  } else {
-    document.getElementById("loveError").innerText =
-      "Hint veno..? enna ennood para i love you n.";
   }
 }
 </script>
