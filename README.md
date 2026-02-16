@@ -1,3 +1,4 @@
+<!DOCTYPE html>
 <html>
 <head>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -40,7 +41,7 @@ body{
   text-align:center;
   opacity:0;
   transform:translateY(40px) scale(0.98);
-  transition:all 0.9s cubic-bezier(.23,1.01,.32,1);
+  transition:all 0.5s ease;
 }
 .show{
   display:block;
@@ -57,34 +58,14 @@ body{
   margin:auto;
   max-width:500px;
   box-shadow:0 8px 32px rgba(0,0,0,0.5);
-  animation:cardPop 0.9s ease;
-}
-@keyframes cardPop{
-  0%{ transform:scale(0.9); opacity:0; }
-  100%{ transform:scale(1); opacity:1; }
 }
 
 .hero-title{
-  font-size:26px;
-  letter-spacing:3px;
+  font-size:24px;
+  letter-spacing:2px;
   text-transform:uppercase;
-  background:linear-gradient(90deg,#00f2fe,#ff00cc,#00f2fe);
-  background-size:200% auto;
-  -webkit-background-clip:text;
-  -webkit-text-fill-color:transparent;
-  animation:shimmer 5s linear infinite;
-}
-@keyframes shimmer{
-  to{ background-position:200% center; }
 }
 
-h2,h3{
-  background:linear-gradient(45deg,#00f2fe,#ff00cc);
-  -webkit-background-clip:text;
-  -webkit-text-fill-color:transparent;
-}
-
-/* Input */
 input{
   padding:14px;
   width:80%;
@@ -94,14 +75,8 @@ input{
   background:rgba(255,255,255,0.1);
   color:white;
   outline:none;
-  transition:0.4s;
-}
-input:focus{
-  box-shadow:0 0 15px #ff00cc, 0 0 25px #00f2fe;
-  transform:scale(1.03);
 }
 
-/* Button */
 button{
   margin-top:18px;
   padding:12px 25px;
@@ -111,9 +86,7 @@ button{
   color:white;
   font-weight:bold;
   cursor:pointer;
-  transition:0.3s;
 }
-button:hover{ transform:scale(1.07); }
 
 .error{
   margin-top:10px;
@@ -144,4 +117,40 @@ button:hover{ transform:scale(1.07); }
 <!-- PAGE 2 -->
 <div id="page2" class="page">
   <div class="card">
-    <h
+    <h3>May I know your name?</h3>
+    <input type="text" id="nameInput" placeholder="Enter name">
+    <br>
+    <button onclick="checkName()">Claim Access</button>
+    <p id="error" class="error"></p>
+  </div>
+</div>
+
+<!-- PAGE 3 -->
+<div id="page3" class="page">
+  <div class="card">
+    <h3>Identity Confirmed…</h3>
+    <p>Princess of my heart detected ✨</p>
+    <p>Security Level 1: Heart — Unlocked.</p>
+  </div>
+</div>
+
+<script>
+function nextPage(num){
+  document.querySelectorAll('.page').forEach(p=>p.classList.remove('show'));
+  document.getElementById('page'+num).classList.add('show');
+  window.scrollTo({top:0});
+}
+
+function checkName(){
+  let name = document.getElementById("nameInput").value.toLowerCase();
+  if(name === "afrin"){
+    nextPage(3);
+  } else {
+    document.getElementById("error").innerText =
+      "Identity mismatch. Either typo… or espionage.";
+  }
+}
+</script>
+
+</body>
+</html>
