@@ -176,7 +176,7 @@ button:hover{ transform:scale(1.07); }
 <div id="page3" class="page">
   <div class="card">
     <h3>Identity Confirmed…</h3>
-    <p> Princess of my heart detected ✨</p>
+    <p> Queen of my heart detected ✨</p>
     <p>Security Level 1: Heart — Unlocked.</p>
     <button onclick="nextPage(2)">Back</button>
   </div>
@@ -191,7 +191,11 @@ First of all — don’t freak out.<br>
 Nobody is proposing… yet. Relax. 😌<br><br>
 I just needed a small moment of honesty.<br>
 I Don't know how,when,where ,<br>
-you quietly became important to me.
+you quietly became important to me.<br><br>
+So.. This is a small gift… now it belongs to you.
+I don’t expect anything in return.
+I just wanted to see a smile on your face — that’s all.
+And if you really want to know who I am… tap to continue.
     </p>
     <button onclick="nextPage(5)">Continue</button>
     <button onclick="nextPage(3)">Back</button>
@@ -239,7 +243,7 @@ Qs ldiwq,
 <!-- PAGE 8 -->
 <div id="page8" class="page">
   <div class="card">
-    <h3>Type this to unlock the hint</h3>
+    <h3>This vault unlocks only when love is mutual.<br>Say I love you too</h3>
     <input type="text" id="loveMessage" placeholder="Type here...">
     <br>
     <button onclick="checkLoveMessage()">Submit</button>
@@ -298,7 +302,7 @@ function checkLoveMessage(){
     },800);
   } else {
     document.getElementById("loveError").innerText =
-      "That's not the magic phrase.";
+      "Ennood para I love you n..";
   }
 }
 </script>
