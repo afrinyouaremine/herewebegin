@@ -187,15 +187,16 @@ button:hover{ transform:scale(1.07); }
   <div class="card">
     <h2>Hi Afrin…</h2>
     <p style="text-align:left">
-First of all — don’t freak out.<br>
-Nobody is proposing… yet. Relax. 😌<br><br>
-I just needed a small moment of honesty.<br>
-I Don't know how,when,where ,<br>
-you quietly became important to me.<br><br>
-So.. This is a small gift… now it belongs to you.
-I don’t expect anything in return.
-I just wanted to see a smile on your face — that’s all.
-And if you really want to know who I am… tap to continue.
+First of all — don’t freak out.
+Nobody’s proposing… yet. Relax. 😌
+I don’t know how or when it happened,
+but somewhere along the way,
+you quietly became important to me.
+So this is just a small gift. It’s yours now.
+I don’t expect anything in return —
+I just wanted to see you smile.
+And if you really want to know who I am…
+tap to continue..
     </p>
     <button onclick="nextPage(5)">Continue</button>
     <button onclick="nextPage(3)">Back</button>
