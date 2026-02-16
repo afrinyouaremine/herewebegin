@@ -263,7 +263,8 @@ Lswd y xhgu zpczvl. Lrpq qp x dbtzxgbr ilhgirqb llvjl...
   <div class="card">
     <h2>Hint Revealing...</h2>
     <div id="hintText" class="reveal-text">
-      It's two digit common between us.
+      Almost you got me right..? It's two digit common between us
+please don't share it with anyone the letter is too personal...
     </div>
   </div>
 </div>
@@ -294,7 +295,7 @@ function checkCode(){
     nextPage(7);
   } else {
     document.getElementById("codeError").innerText =
-      "PLING..!!!!.";
+      "ENNOOD PARA I LOVE YOU N...";
   }
 }
 
