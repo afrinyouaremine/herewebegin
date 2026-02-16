@@ -155,8 +155,8 @@ button:hover{ transform:scale(1.07); }
     <h1 class="hero-title">HERE WE BEGIN OUR LOVE STORY</h1>
     <p>
       Emotional Firewall Activated.<br><br>
-      Only authorized hearts may proceed.<br><br>
-      Think you qualify?<br>
+      Only The Love of Life may proceed.<br><br>
+      Think you are the one?<br>
       Tap below and let’s find out.
     </p>
     <button onclick="nextPage(2)">YES I'M THE ONE YOU WAITING FOR</button>
