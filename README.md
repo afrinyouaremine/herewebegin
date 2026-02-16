@@ -297,7 +297,7 @@ function checkCode(){
     nextPage(7);
   } else {
     document.getElementById("codeError").innerText =
-      "ENNOOD PARA I LOVE YOU N...";
+      "SAY I LOVE YOU...";
   }
 }
 
@@ -311,7 +311,7 @@ function checkLoveMessage(){
     },800);
   } else {
     document.getElementById("loveError").innerText =
-      "That's not the magic phrase.";
+      "Hint veno..? enna ennood para i love you n.";
   }
 }
 </script>
