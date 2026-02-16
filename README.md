@@ -1,4 +1,3 @@
-<!DOCTYPE html>
 <html>
 <head>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -160,7 +159,7 @@ button:hover{ transform:scale(1.07); }
       Think you qualify?<br>
       Tap below and let’s find out.
     </p>
-    <button onclick="nextPage(2)">YES I'M THE ONE YOU WAITINGFOR</button>
+    <button onclick="nextPage(2)">YES I'M THE ONE YOU WAITING FOR</button>
   </div>
 </div>
 
@@ -192,9 +191,8 @@ button:hover{ transform:scale(1.07); }
 First of all — don’t freak out.<br>
 Nobody is proposing… yet. Relax. 😌<br><br>
 I just needed a small moment of honesty.<br>
-I Don't know how,when,where ,<br>
-you quietly became important to me.
-    </p>
+I Don't know how,when,where.... <br><br>
+you quietly became important to me. </p>
     <button onclick="nextPage(5)">Continue</button>
   </div>
 </div>
@@ -252,7 +250,7 @@ Lswd y xhgu zpczvl. Lrpq qp x dbtzxgbr ilhgirqb llvjl...
 <!-- PAGE 8 -->
 <div id="page8" class="page">
   <div class="card">
-    <h3>Type this to unlock the hint</h3>
+    <h3> ENNOOD PARA I LOVE YOU NU..</h3>
     <input type="text" id="loveMessage" placeholder="Type here...">
     <br>
     <button onclick="checkLoveMessage()">Submit</button>
@@ -296,14 +294,14 @@ function checkCode(){
     nextPage(7);
   } else {
     document.getElementById("codeError").innerText =
-      "That code unlocked nothing.";
+      "PLING..!!!!.";
   }
 }
 
 function checkLoveMessage(){
   let message = document.getElementById("loveMessage").value.trim().toLowerCase();
   
-  if(message === "i love you too"){
+  if(message === "i love you"){
     nextPage(9);
     setTimeout(()=>{
       document.getElementById("hintText").classList.add("glow");
