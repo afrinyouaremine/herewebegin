@@ -265,6 +265,8 @@ Lswd y xhgu zpczvl. Lrpq qp x dbtzxgbr ilhgirqb llvjl...
     <div id="hintText" class="reveal-text">
       Almost you got me right..? It's two digit common between us
 please don't share it with anyone the letter is too personal...
+
+If you couldn't figure it out stay tuned for another hint
     </div>
   </div>
 </div>
