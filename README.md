@@ -1,3 +1,4 @@
+<!DOCTYPE html>
 <html>
 <head>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -12,71 +13,51 @@ body{
   overflow:hidden;
 }
 
-/* Cinematic Fade In */
+/* Fade In */
 body{
-  animation:cinemaIntro 1.5s ease forwards;
+  animation:fadeIn 1.5s ease forwards;
 }
-@keyframes cinemaIntro{
-  from{ opacity:0; }
-  to{ opacity:1; }
+@keyframes fadeIn{
+  from{opacity:0;}
+  to{opacity:1;}
 }
 
-/* Floating Acrylic Motion */
-.blob{
+/* Floating Romantic Particles */
+.particle{
   position:fixed;
-  width:400px;
-  height:400px;
+  width:6px;
+  height:6px;
+  background:rgba(255,255,255,0.5);
   border-radius:50%;
-  filter:blur(100px);
-  animation:floatBlob 20s infinite alternate ease-in-out;
+  animation:floatUp 10s linear infinite;
   z-index:-1;
 }
-.blob:nth-child(1){ top:-100px; left:-100px; background:rgba(0,255,255,0.18); }
-.blob:nth-child(2){ bottom:-150px; right:-100px; background:rgba(255,0,150,0.18); }
-
-@keyframes floatBlob{
-  0%{ transform:translate(0,0) scale(1); }
-  50%{ transform:translate(80px,60px) scale(1.2); }
-  100%{ transform:translate(-60px,80px) scale(1); }
+@keyframes floatUp{
+  0%{transform:translateY(100vh) scale(0.5); opacity:0;}
+  50%{opacity:1;}
+  100%{transform:translateY(-10vh) scale(1.2); opacity:0;}
 }
 
-/* Page Transition */
-.page{
-  position:absolute;
-  width:100%;
-  min-height:100vh;
-  padding:40px 20px;
-  display:flex;
-  justify-content:center;
-  align-items:center;
-  text-align:center;
-  opacity:0;
-  transform:scale(1.05);
-  transition:all 0.8s ease;
-}
-.show{
-  opacity:1;
-  transform:scale(1);
-  z-index:2;
-}
-
-/* Premium Glass Card */
+/* Glass Card */
 .card{
   backdrop-filter: blur(40px);
   background: rgba(255,255,255,0.08);
-  border-radius:28px;
+  border-radius:30px;
   padding:40px 25px;
   width:90%;
   max-width:520px;
-  box-shadow:0 15px 40px rgba(0,0,0,0.6);
-  animation:cardZoom 1s ease;
+  margin:auto;
+  margin-top:20vh;
+  box-shadow:0 20px 50px rgba(0,0,0,0.6);
+  animation:zoomIn 1s ease;
+  text-align:center;
 }
-@keyframes cardZoom{
-  from{ transform:scale(0.9); opacity:0; }
-  to{ transform:scale(1); opacity:1; }
+@keyframes zoomIn{
+  from{transform:scale(0.9); opacity:0;}
+  to{transform:scale(1); opacity:1;}
 }
 
-/* Titles */
+/* Title Shimmer */
 .hero-title{
   font-size:22px;
   letter-spacing:3px;
@@ -91,31 +72,17 @@ body{
   to{ background-position:200% center; }
 }
 
-h2,h3{
-  background:linear-gradient(45deg,#00f2fe,#ff00cc);
-  -webkit-background-clip:text;
-  -webkit-text-fill-color:transparent;
+/* Heartbeat Effect */
+.heartbeat{
+  font-size:40px;
+  animation:beat 1.2s infinite;
+}
+@keyframes beat{
+  0%,100%{transform:scale(1);}
+  50%{transform:scale(1.2);}
 }
 
-/* Inputs */
-input{
-  padding:16px;
-  width:85%;
-  border:none;
-  border-radius:14px;
-  margin-top:15px;
-  background:rgba(255,255,255,0.12);
-  color:white;
-  font-size:16px;
-  outline:none;
-  transition:0.4s;
-}
-input:focus{
-  box-shadow:0 0 20px #ff00cc, 0 0 35px #00f2fe;
-  transform:scale(1.04);
-}
-
-/* Buttons */
+/* Button */
 button{
   margin-top:20px;
   padding:14px 28px;
@@ -130,82 +97,100 @@ button{
 }
 button:hover{ transform:scale(1.1); }
 
-.error{
-  margin-top:10px;
-  color:#ff4d6d;
+/* Decode Text */
+.decode{
+  font-family:monospace;
+  white-space:pre-wrap;
+  font-size:15px;
+  text-align:left;
+  min-height:120px;
+  margin-top:20px;
 }
 
-/* Cinematic Text Reveal */
-.reveal-text{
-  font-size:20px;
-  opacity:0;
-  transform:translateY(20px);
-}
-.glow{
-  animation:cinematicReveal 2s ease forwards;
-}
-@keyframes cinematicReveal{
-  0%{ opacity:0; transform:translateY(30px); text-shadow:0 0 0px #fff; }
-  50%{ opacity:0.6; text-shadow:0 0 30px #ff00cc; }
-  100%{ opacity:1; transform:translateY(0); text-shadow:0 0 50px #00f2fe; }
-}
 </style>
 </head>
 
 <body>
 
-<div class="blob"></div>
-<div class="blob"></div>
+<!-- Background Music -->
+<audio id="bgMusic" loop>
+  <source src="https://cdn.pixabay.com/download/audio/2022/03/15/audio_c8c8a73467.mp3?filename=romantic-ambient-piano-110624.mp3" type="audio/mpeg">
+</audio>
 
-<!-- PAGE 1 -->
-<div id="page1" class="page show">
-  <div class="card">
-    <h1 class="hero-title">HERE WE BEGIN OUR LOVE STORY</h1>
-    <p id="typeText"></p>
-    <button onclick="nextPage(2)">YES I'M THE ONE YOU WAITING FOR</button>
-  </div>
+<div class="card" id="page1">
+  <h1 class="hero-title">HERE WE BEGIN OUR LOVE STORY</h1>
+  <p id="typeText"></p>
+  <div class="heartbeat">❤️</div>
+  <button onclick="startLove()">YES I'M THE ONE YOU WAITING FOR</button>
 </div>
 
-<!-- PAGE 9 FINAL -->
-<div id="page9" class="page">
-  <div class="card">
-    <h2>Hint Revealing...</h2>
-    <div id="hintText" class="reveal-text">
-      Almost you got me right..? It's two digit common between us.
-    </div>
-  </div>
+<div class="card" id="page2" style="display:none;">
+  <h2>Decrypting Message...</h2>
+  <div id="decodeText" class="decode"></div>
+  <button onclick="revealFinal()">Continue</button>
+</div>
+
+<div class="card" id="page3" style="display:none;">
+  <h2>Hint Revealing...</h2>
+  <p style="font-size:18px;">
+    Almost you got me right..? It's two digit common between us.
+  </p>
 </div>
 
 <script>
 
-/* Cinematic Typing Effect */
-const text = "Emotional Firewall Activated...\nOnly The Love of Life may proceed.";
+/* Start Music on First Click (Mobile Safe) */
+function startLove(){
+  document.getElementById("bgMusic").play();
+  document.getElementById("page1").style.display="none";
+  document.getElementById("page2").style.display="block";
+  decodeEffect();
+}
+
+/* Typing Intro */
+const introText = "Emotional Firewall Activated...\nOnly The Love of Life may proceed.";
 let i = 0;
 function typeWriter(){
-  if(i < text.length){
-    document.getElementById("typeText").innerHTML += text.charAt(i);
+  if(i < introText.length){
+    document.getElementById("typeText").innerHTML += introText.charAt(i);
     i++;
     setTimeout(typeWriter,40);
   }
 }
 typeWriter();
 
-/* Smooth Page Transition */
-function nextPage(num){
-  document.querySelectorAll('.page').forEach(p=>p.classList.remove('show'));
-  setTimeout(()=>{
-    document.getElementById('page'+num).classList.add('show');
-    window.scrollTo({top:0});
-  },400);
+/* Romantic Particles */
+for(let i=0;i<30;i++){
+  let p = document.createElement("div");
+  p.className="particle";
+  p.style.left=Math.random()*100+"vw";
+  p.style.animationDuration=(6+Math.random()*6)+"s";
+  document.body.appendChild(p);
 }
 
-/* Dramatic Glow Trigger */
-function revealHint(){
-  nextPage(9);
-  setTimeout(()=>{
-    document.getElementById("hintText").classList.add("glow");
-  },800);
+/* Decoding Animation */
+const encrypted = 
+"Bu… bxnl, lbh znqr vg guvf sne.\nGuvf vfa’g qngn. Vg’f ybir.\nDecode it if you can...";
+let index=0;
+
+function decodeEffect(){
+  let output="";
+  let interval=setInterval(()=>{
+    output += encrypted.charAt(index);
+    document.getElementById("decodeText").innerText=output;
+    index++;
+    if(index>=encrypted.length){
+      clearInterval(interval);
+    }
+  },35);
 }
+
+/* Final Reveal */
+function revealFinal(){
+  document.getElementById("page2").style.display="none";
+  document.getElementById("page3").style.display="block";
+}
+
 </script>
 
 </body>
