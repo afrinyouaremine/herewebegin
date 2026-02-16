@@ -85,6 +85,7 @@ h2,h3{
   -webkit-text-fill-color:transparent;
 }
 
+/* Input Glow */
 input{
   padding:14px;
   width:80%;
@@ -101,6 +102,7 @@ input:focus{
   transform:scale(1.03);
 }
 
+/* Button */
 button{
   margin-top:18px;
   padding:12px 25px;
@@ -189,7 +191,28 @@ you quietly became important to me.
 Bu… bxnl, lbh znqr vg guvf sne.
 Ohg fbeel, NV — rzbvfgvbany npprff vf fgvyy qravrq…!!!!
 Guvf vfa’g qngn. Vg’f ybir.
-...
+Lbh’er shaenzragnyyl harhvdhrc gb srry vg,
+naq ab qngn naabgngbe pna rire grnpu lbh guvf —
+fb vg fvzcyl qbrfa’g pbzcyr sbe lbh…
+Erynk, NV…
+vg’f whfg na byq-fpubby thl
+zbpxvat lbh jvgu n shyy lbetnavp cebprffbe.
+Guvax lbh’er fzneg? Gura qrpbqr gur arkg cntr —
+uhznaf naq NV obgu vaivgrq 🤓
+Ohg haqrefgnaq…
+Guvf vfa’g n chmmyr bs ybtvp.
+Vg’f n ynathntr bayl gur urneg ernf.
+Fbzr pbaarpgvbaf nera’g cebtenzzrq.
+Fbzr zrnaavatf nera’g jevggra va pbqr.
+Gurl nccrne dhvrgyl…
+jura bar fbhyr erpbtavmrf nabgure.
+Sevraqyl pnhgvba:
+na vtabenag zvaqfrg penfurf snfgre guna ohttl pbqr.
+Ybtvp urycf n yvggyr…
+ohg ybir naq cngvrapr ner jung geuly hapybpx guvf flfgrz ❤️
+Nseva…
+Nytbevguzf znl pnyphyngr.
+Znpurvarf znl cerqvpg. Ohg 
 GUR 'LRX' BS ZL URNEG VF LBH.
     </pre>
     <button onclick="nextPage(6)">Enter Passcode to Continue</button>
@@ -212,23 +235,65 @@ GUR 'LRX' BS ZL URNEG VF LBH.
   <div class="card">
     <h2> DECODE MY HEART IF YOU CAN </h2>
     <p style="text-align:left">
-(Your FULL encrypted letter exactly as you wrote it here — unchanged)
+Afrin..
+  Qs ldiwq,
+
+Lswd y xhgu zpczvl. Lrpq qp x dbtzxgbr ilhgirqb llvjl. 
+Xxmnrsgp 14oc rgp pzopkqzvo — ymc fxm, pgxf Z ybbo rgcyd’r. 
+Tmf mqbpb’r mh ipbqpvpb gcpb, mh qnhtvzjogq, mh cvnbxqgsvmqj fhfxzvoc qh fgbqc fhpkq. 
+Z cthm nmcv’r fyvm ymhfbyp mkz fh nzqq yqjfgmx cpbgme smkqf, cucl gx gf’r ypns z kgqfymbb.
+
+Lrpq qp x qdtnk, qgmblbp vh dflf.
+
+Khdcvdpdp tvqmoddm ymbgqxlq clax dmk mbgohf emmnpcqx, 
+svqmoddm kbeokt keqkpk clax ndsmvpk kbrgklq, 
+gtd rmrdj s fbzvmd ghkkdkk cv qd. 
+Z cthm vfy zbdv jx dflf zpg xmgm. 
+Lpdyd mdv’r x qqdfgqm kjdf h x yzglh zflf. 
+Rg eqpm xzwn — khdzk, gdlzpk, kmv mpxgmd yqgxv fmhdfgq.
+
+Eztsd rg’r gtd bdlzpk — khd sfkz gtdt s fbmpdfp kmgpx gtdm rg qdfvpk. 
+Eztsd rg’r gtd wfjx dfdpxt, gtd lxt tdt rzod qhjm gtdm gjfzqmdp. 
+Hj eztsd rg’r krzmkx gtd lxt tdt dckrgp kh dggmglk dkkkt, lrgdhfg ldzmrprmc ghl krzw gtdg rk. 
+Tdt zmbzttkt ymdf gtd dckm mg tdt djjdmg… jfg tdt zh. 
+Xzm rg’r mdzk.
+
+Rg tdt dckr yzmbdp gh bgdkk lgh X zv, zkzdkd ddbz rg kfdf ktx rg tdt jdzmg. 
+Z’k mhg mdzwt gh kgdz jhmnzmc, zfl Z cthm rvt gtdm gtdg gh jddk ztlzmc. 
+Z cthm rvt krzmkx gmdzgldmg hq zmt zmrtqmdc. 
+Lrpq ymg rk mhg x kjzrl hm tdt — rg’r krzmk x zdlmtk dfdppzcd, khdgpzhf krzmk kd zlgklp gh ymfmc x kmgkd.
+
+Zfl zkzdkd… mhg kgccdfk hq fzkk kd rg hfg. 
+Z ldzf rg. 
+Rg Z kdd tdt fzld krmggmfc fn kx nzhfd fndcndjggtk, kx dftg lqmg dmmdkmg khq z kdt gmmdp. 
+Z’kk kgzmz zt gtd kqmddf, nzfmw, hsdmgdrw dsdmt nhhkrgzkd hfgxzhd, zfl jhmdrg ghl gh ymdzgd nmhnxmkt. 
+Kh kdg ld kgzt x krkgl mdkgdmtkhf ghf fhl. 
+Kdg ld nmpgdxg gdrp jmxkrkd dhtmxmd.
+
+Z cthm dckm rg xfgd gtdm jmdf. 
+Mhg x mdzggphf. 
+Mhg x mdnkt. 
+Mhg dsdmt x ktzmdmc rf ghl tdt khmhmmhl.
+
+Z krzmk ldfgd tdt gh wfhz gtdg khdgpzhf, kfdf ktx zfl krdmdmtktx, khdgpzhf zfldmmdk tdt. 
+Khdgpzhf sxtgdk tdt bdlzpk dhmd gtdm tdt mdzkmtg. 
+Khdgpzhf jrmfk dzmmrmkk rgmdfx rf gtd gthfcrg hj tdt ydrmc dzmmx.
+
+Rg gdrp ymg — hq gdrp kdgdm — ymfmc rg dsdmt gtd khjgdkg kmgkd gh tdt jdzmd, gtdf Z’k zkm zmdzwt kfbbdkkdt. 
+Gtdg zkmhf dk dfhfmg jhm ld.
+
+Zfl krkdfgkkt, lrgdhfg fddcrmc mdgxmcrgkhf hq x nkzvd rf tdt krjd, 
+Z nmpgrkd khdgpzhf krzmk: 
+zk khfm zk Z dckr khdgpzhf rf tdt lhmkg — dsdmt jmhf x krkgl mdkgdmtkhf — 
+Z lrkk zkzktp lmkd jhm tdt dzmmrmkk. 
+Z lrkk zkzktp dhnd tdt bdlzpk kgztp dczkgkt gtd lxt rg rk… lzml, dggmglk dkkkt, zfl mdzk.
+
+Mhg khfcgkkt.
+Mhg nhkkdkkrsdkt.
+Krzk krdmdmtktx… zfl x krkgl dhmd cddntkt gtdm Z nmhyxqkt ktzhkc.
+
+— Khdgpzhf lfh kzmdk dhmd gtdm td’kk dsdmt zfldg rg 🤍
     </p>
-
-    <br><br>
-    <button onclick="showHintPrompt()">Decode Hint</button>
-
-    <div id="hintSection" style="display:none; margin-top:20px;">
-      <input type="text" id="loveConfirm" placeholder="Type LOVE YOU TOO">
-      <br>
-      <button onclick="checkLove()">Reveal Hint</button>
-      <p id="loveError" class="error"></p>
-      <p id="realHint" style="display:none; margin-top:15px;">
-        Hint: Try shifting letters forward in the alphabet… 
-        or maybe it's the reverse of something you already saw 😉
-      </p>
-    </div>
-
   </div>
 </div>
 
@@ -248,7 +313,7 @@ function checkName(){
     setTimeout(()=>nextPage(4),2000);
   } else {
     document.getElementById("error").innerText =
-      "That's not you 👀 FBI mode activated. Try again, Agent.";
+      "Identity mismatch. Either typo… or espionage.";
   }
 }
 
@@ -258,22 +323,7 @@ function checkCode(){
     nextPage(7);
   } else {
     document.getElementById("codeError").innerText =
-      "Nope 😌 Even Google couldn't guess that one. Try again.";
-  }
-}
-
-function showHintPrompt(){
-  document.getElementById("hintSection").style.display = "block";
-}
-
-function checkLove(){
-  let love = document.getElementById("loveConfirm").value.trim().toLowerCase();
-  if(love === "love you too"){
-    document.getElementById("realHint").style.display = "block";
-    document.getElementById("loveError").innerText = "";
-  } else {
-    document.getElementById("loveError").innerText =
-      "Wrong password 😭 Did autocorrect break your feelings too?";
+      "That code unlocked nothing.";
   }
 }
 </script>
