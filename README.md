@@ -1,4 +1,3 @@
-<!DOCTYPE html>
 <html>
 <head>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -85,7 +84,6 @@ h2,h3{
   -webkit-text-fill-color:transparent;
 }
 
-/* Input */
 input{
   padding:14px;
   width:80%;
@@ -102,7 +100,6 @@ input:focus{
   transform:scale(1.03);
 }
 
-/* Button */
 button{
   margin-top:12px;
   padding:12px 25px;
@@ -127,7 +124,6 @@ button:hover{ transform:scale(1.07); }
   75%{ transform:translateX(5px); }
 }
 
-/* Dramatic Reveal */
 .reveal-text{
   font-size:22px;
   margin-top:20px;
@@ -219,20 +215,9 @@ zbpxvat lbh jvgu n shyy lbetnavp cebprffbe.
 Guvax lbh’er fzneg? Gura qrpbqr gur arkg cntr —
 uhznaf naq NV obgu vaivgrq 🤓
     </pre>
-    <button onclick="nextPage(6)">Enter Passcode to Continue</button>
+    <button onclick="checkPassword()">Love Letter</button>
     <button onclick="nextPage(4)">Back</button>
-  </div>
-</div>
-
-<!-- PAGE 6 -->
-<div id="page6" class="page">
-  <div class="card">
-    <h3>Enter Passcode to Continue</h3>
-    <input type="password" id="securityCode" placeholder="Enter passcode">
-    <br>
-    <button onclick="checkCode()">Unlock</button>
-    <button onclick="nextPage(5)">Back</button>
-    <p id="codeError" class="error"></p>
+    <p id="passError" class="error"></p>
   </div>
 </div>
 
@@ -247,7 +232,7 @@ Qs ldiwq,
 (Encrypted letter continues)
     </p>
     <button onclick="nextPage(8)">DECODE HINT</button>
-    <button onclick="nextPage(6)">Back</button>
+    <button onclick="nextPage(5)">Back</button>
   </div>
 </div>
 
@@ -294,13 +279,13 @@ function checkName(){
   }
 }
 
-function checkCode(){
-  let code = document.getElementById("securityCode").value.toLowerCase();
-  if(code === "nirfa"){
+function checkPassword(){
+  let entered = prompt("Enter the password");
+  if(entered === "nirfa"){
     nextPage(7);
   } else {
-    document.getElementById("codeError").innerText =
-      "That code unlocked nothing.";
+    document.getElementById("passError").innerText =
+      "Plot twist..!! Decode the message first it contains the password hint";
   }
 }
 
