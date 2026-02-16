@@ -104,7 +104,7 @@ input:focus{
 
 /* Button */
 button{
-  margin-top:18px;
+  margin-top:12px;
   padding:12px 25px;
   border:none;
   border-radius:25px;
@@ -160,7 +160,7 @@ button:hover{ transform:scale(1.07); }
       Think you qualify?<br>
       Tap below and let’s find out.
     </p>
-    <button onclick="nextPage(2)">YES I'M THE ONE YOU WAITINGFOR</button>
+    <button onclick="nextPage(2)">YES I'M THE ONE YOU WAITING FOR</button>
   </div>
 </div>
 
@@ -171,6 +171,7 @@ button:hover{ transform:scale(1.07); }
     <input type="text" id="nameInput" placeholder="Enter name">
     <br>
     <button onclick="checkName()">Claim Access</button>
+    <button onclick="nextPage(1)">Back</button>
     <p id="error" class="error"></p>
   </div>
 </div>
@@ -181,6 +182,7 @@ button:hover{ transform:scale(1.07); }
     <h3>Identity Confirmed…</h3>
     <p> Princess of my heart detected ✨</p>
     <p>Security Level 1: Heart — Unlocked.</p>
+    <button onclick="nextPage(2)">Back</button>
   </div>
 </div>
 
@@ -196,6 +198,7 @@ I Don't know how,when,where ,<br>
 you quietly became important to me.
     </p>
     <button onclick="nextPage(5)">Continue</button>
+    <button onclick="nextPage(3)">Back</button>
   </div>
 </div>
 
@@ -217,6 +220,7 @@ Guvax lbh’er fzneg? Gura qrpbqr gur arkg cntr —
 uhznaf naq NV obgu vaivgrq 🤓
     </pre>
     <button onclick="nextPage(6)">Enter Passcode to Continue</button>
+    <button onclick="nextPage(4)">Back</button>
   </div>
 </div>
 
@@ -227,6 +231,7 @@ uhznaf naq NV obgu vaivgrq 🤓
     <input type="password" id="securityCode" placeholder="Enter passcode">
     <br>
     <button onclick="checkCode()">Unlock</button>
+    <button onclick="nextPage(5)">Back</button>
     <p id="codeError" class="error"></p>
   </div>
 </div>
@@ -239,13 +244,10 @@ uhznaf naq NV obgu vaivgrq 🤓
 Afrin..
 
 Qs ldiwq,
-
-Lswd y xhgu zpczvl. Lrpq qp x dbtzxgbr ilhgirqb llvjl...
-(Your FULL encrypted letter continues here exactly as you wrote it)
-— Khdgpzhf lfh kzmdk dhmd gtdm td’kk dsdmt zfldg rg 🤍
+(Encrypted letter continues)
     </p>
-    <br><br>
     <button onclick="nextPage(8)">DECODE HINT</button>
+    <button onclick="nextPage(6)">Back</button>
   </div>
 </div>
 
@@ -256,6 +258,7 @@ Lswd y xhgu zpczvl. Lrpq qp x dbtzxgbr ilhgirqb llvjl...
     <input type="text" id="loveMessage" placeholder="Type here...">
     <br>
     <button onclick="checkLoveMessage()">Submit</button>
+    <button onclick="nextPage(7)">Back</button>
     <p id="loveError" class="error"></p>
   </div>
 </div>
@@ -267,6 +270,7 @@ Lswd y xhgu zpczvl. Lrpq qp x dbtzxgbr ilhgirqb llvjl...
     <div id="hintText" class="reveal-text">
       It's two digit common between us.
     </div>
+    <button onclick="nextPage(8)">Back</button>
   </div>
 </div>
 
@@ -280,13 +284,13 @@ function nextPage(num){
 }
 
 function checkName(){
-  let name = document.getElementById("nameInput").value.toLowerCase();
-  if(name === "afrin"){
+  let name = document.getElementById("nameInput").value;
+  if(name === "afrin" || name === "Afrin" || name === "AFRIN"){
     nextPage(3);
     setTimeout(()=>nextPage(4),2000);
   } else {
     document.getElementById("error").innerText =
-      "Identity mismatch. Either typo… or espionage.";
+      "YOU MAY BEAUTIFUL NOT THE ONE I CHOOSE TO LOVE";
   }
 }
 
@@ -302,7 +306,6 @@ function checkCode(){
 
 function checkLoveMessage(){
   let message = document.getElementById("loveMessage").value.trim().toLowerCase();
-  
   if(message === "i love you too"){
     nextPage(9);
     setTimeout(()=>{
