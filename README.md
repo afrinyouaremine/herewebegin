@@ -237,7 +237,20 @@ uhznaf naq NV obgu vaivgrq 🤓
     <p style="text-align:left">
 Afrin..
 
-Qs ldiwq,
+Krbl r jcfn siverk. Kyzj zj e kirdrktz gifgfjzex jtvez. Wvsilrip 14ky yrj rcivrjjvu — reu pvk, nyrc Z wvvc yrje’k. Slk kyviv’j ef givjjliv yviv, ef jgfkczxyk, ef vogvtkkrkzfej rkkrt yvu kf kyvjv nfiu j. Z aljk uzue’k nrek refkyvi urp kf grjj nzkyflk svzex yfevjk, vmve zw zk’j wifd r uzjkre tv.
+Kyzj zj aljk r jdrcc, jzetviv df dvek.
+Jfdvnyviv svknvve fiuzerip urpj reu ireufd tfemvijrkzfej, svknvve jzdgcv jdzcvj reu lefkztvu c kkc v uvkrzcj, pfl hlzv k cp svtrdv zdgfikrek kf dv. Z ufe’k votrkcp nye zk yrggvevu. Kyviv nej’k r jgv tzwzt urkv fi r xireu kliezex gfzek. Zk aljk xivn — jfwkcp, xvekcp, nzkyflk rjbzex wfi rkkvekzfe.
+Drpsv zk’j pfl i jdzcv — kyv bz e u ky rk czexvij ze jfdvfev’j dzeu cfexvi ky re zk jyflcu. Drpsv zk’j pfl i trcd ve vixp, kyv nrp pfl drbv kyzexj wvvc czxykvi nzkyflk vmve kipzex. Fi drpsv zk’j jzdgcp kyv nrp pfl vo zj k jf vwwfikc vjjcp, nzkyflk ivrczqzex yfn jgvtzrc ky rk zj. Pfl gif srs cp ufe’k jvv kyv vwwvt k pfl yrmv… slk pfl uf. Reu zk’j ivrc.
+Zw pfl vmvi yrggve kf xl vjj nyf Z rd, gcv rjv b vvg zk hlzv k cp ze pfl i yvrik. Z’d efk ivrup kf j kvg wfinri u, reu Z ufe’k nrek re pk yzex kf wvvc rnbnri u fi uzwwviv ek. Z ufe’k nrek jgvtzrc kivr kdvek fi rep giz mzcvxv. Kyzj xzwk zj e’k r tcrzd fe pfl — zk’j aljk r xv ekcv xvjk liv, jfdvkyzex jdrcc dvrek kf s izex r jdzcv kf pfl i wr tv.
+Reu gcv rjv… ufe’k jluuve cp trcc dv zw pfl wzxliv zk flk. Z d vre zk. Zw Z jvv pfl i er dv czxykzex lg dp gyfev levogvt kv ucp, dp yvrik dzxyk xvelze v cp cfjv tfekifc wfi r wvn jvtfeuj. Z’cc jkriv rk kyv jti vve, grezt, fmvikyzeb vmvip gfjjzs c v flktf dv, reu wfixvk yfn kf sivrkyp gif gvicp. Jf cvk dv jkrp r czkkcv dpjkvi zflj wfi efn. Cvk dv gifkvt k kyzj wirxzc v tflirxv.
+Z ufe’k vogvtk re pk yzex wifd pfl. Efk r ivrtkzfe. Efk r ivgcp. Efk vmve r tyrexv ze yfn pfl cffb rk kfd fii fn.
+Z aljk nrekvu pfl kf befn kyrk jfdvnyviv, hlzv k cp reu jzetviv cp, jfdvfev rudz ivj pfl. Jfdvfev mrc lvj pfl i jdzcv dfiv ky re pfl ivrczqv. Jfdvfev wzeuj yrg gzevjj jzdgcp ze kyv kyflxyk fw pfl svzex yrg gp.
+Zw kyzj xzwk — fi kyzj cvkkvi — s izexj vmve kyv jfwk vjk jdzcv kf pfl i wr tv, kyve Z’m rc ivrup jlt tvvuvu. Kyrk rcf ev zj ve flxy wfi dv.
+Reu jzcvekcp, nzkyflk evvuzex ivtfxezkzfe fi r gcrtv ze pfl i cz wv, Z gifdzjv jfdvkyzex jzdgcv: rj cfex rj Z vo zj k jfdvnyviv ze pfl i nf i cu — vmve wifd r uzjkre tv — Z nzcc rcnr pj nzjy wfi pfl i yrg gzevjj. Z nzcc rcnr pj yfgv pfl i jdzcv jkrpj votrkcp kyv nrp zk zj… n rid, vwwfikc vjj, reu ivrc.
+Efk cflucp.
+Efk gfjjvjjz m vcp.
+Aljk jzetviv cp… reu r czkkcv dfiv uvvg cp ky re Z gif srs cp jyflcu.
+— Jfdvfev nyf tri vj dfiv ky re yv’cc vmvi rudz k zk 🤍
 (Encrypted letter continues)
     </p>
     <button onclick="nextPage(8)">DECODE HINT</button>
