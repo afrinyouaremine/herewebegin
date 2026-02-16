@@ -193,10 +193,14 @@ I don’t know how or when it happened,
 but somewhere along the way,
 you quietly became important to me.
 So this is just a small gift. It’s yours now.
-I don’t expect anything in return —
-I just wanted to see you smile.
+I don’t expect anything in return 
+not even special treatment or any kind of privilege from you.
+I just wanted to see you smile. That’s all.
+And trust me… if you were ever mine,
+I’d protect that smile at any cost 
+until my last breath.
 And if you really want to know who I am…
-tap to continue..
+tap to continue.
     </p>
     <button onclick="nextPage(5)">Continue</button>
     <button onclick="nextPage(3)">Back</button>
