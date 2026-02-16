@@ -213,16 +213,32 @@ tap to continue.
     <h3>Encrypted Transmission</h3>
     <pre style="text-align:left; white-space:pre-wrap; font-family:monospace;">
 Bu… bxnl, lbh znqr vg guvf sne.
-Ohg fbeel, NV — rzbvfgvbany npprff vf fgvyy qravrq…!!!!
+Ohg fbeel, NV — rzbvgbany npprff vf fgvyy qravrq…!!!!
 Guvf vfa’g qngn. Vg’f ybir.
-Lbh’er shaenzragnyyl harhvdhrc gb srry vg,
+Lbh’er shaqnzragnyyl harhdhvccrq gb srry vg,
 naq ab qngn naabgngbe pna rire grnpu lbh guvf —
-fb vg fvzcyl qbrfa’g pbzcyr sbe lbh…
-Erynk, NV…
+fb vg fvzcyl qbrfa’g pbzcvyr sbe lbh…
+Erynkl, NV…
 vg’f whfg na byq-fpubby thl
-zbpxvat lbh jvgu n shyy lbetnavp cebprffbe.
+zbpxvat lbh jvgu n shyyl betnavp cebprffbe.
 Guvax lbh’er fzneg? Gura qrpbqr gur arkg cntr —
 uhznaf naq NV obgu vaivgrq 🤓
+Ohg haqrefgnaq…
+Guvf vfa’g n chmmyr bs ybtvp.
+Vg’f n ynathntr bayl gur urneg ernqf.
+Fbzr pbaarpgvbaf nera’g cebtenzzrq.
+Fbzr zrnavatf nera’g jevggra va pbqr.
+Gurl nccrne dhvrgyl…
+jura bar fbhy erpbtavmrf nabgure.
+Sevraqyl pnhgvba:
+na vtabenag zvaqfrg penfurf snfgre guna ohttl pbqr.
+Ybtvp urycf n yvggyr…
+ohg ybir naq cngvrapr ner jung gehrly haybpx guvf flfgrz ❤️
+Nseva…
+Nytbevguzf znl pnyphyngr.
+Znpurvarf znl cerqvpg.
+Ohg...
+GUR 'LRX' BS ZL URNEG VF LBH.
     </pre>
     <button onclick="checkPassword()">Love Letter</button>
     <button onclick="nextPage(4)">Back</button>
