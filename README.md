@@ -236,10 +236,63 @@ GUR 'LRX' BS ZL URNEG VF LBH.
     <h2> DECODE MY HEART IF YOU CAN </h2>
     <p style="text-align:left">
 Afrin..
-  Krbl r jcfn siverk. Kyzj zj e kirdrktz gifgfjzex jtvez. Wvsilrip 14ky yrj rcivrjjvu — reu pvk, nyrc Z wvvc yrje’k. Slk kyviv’j ef givjjliv yviv, ef jgfkczxyk, ef vogvtkkrkzfej rkkrt yvu kf kyvjv nfiu j. Z aljk uzue’k nrek refkyvi urp kf grjj nzkyflk svzex yfevjk, vmve zw zk’j wifd r uzjkre tv.
-Kyzj zj aljk r jdrcc, jzetviv df dvek.
-Jfdvnyviv svknvve fiuzerip urpj reu ireufd tfemvijrkzfej, svknvve jzdgcv jdzcvj reu lefkztvu c kkc v uvkrzcj, pfl hlzv k cp svtrdv zdgfikrek kf dv...
-(Your full encrypted letter continues exactly as you wrote it)
+  Qs ldiwq,
+
+Lswd y xhgu zpczvl. Lrpq qp x dbtzxgbr ilhgirqb llvjl. 
+Xxmnrsgp 14oc rgp pzopkqzvo — ymc fxm, pgxf Z ybbo rgcyd’r. 
+Tmf mqbpb’r mh ipbqpvpb gcpb, mh qnhtvzjogq, mh cvnbxqgsvmqj fhfxzvoc qh fgbqc fhpkq. 
+Z cthm nmcv’r fyvm ymhfbyp mkz fh nzqq yqjfgmx cpbgme smkqf, cucl gx gf’r ypns z kgqfymbb.
+
+Lrpq qp x qdtnk, qgmblbp vh dflf.
+
+Khdcvdpdp tvqmoddm ymbgqxlq clax dmk mbgohf emmnpcqx, 
+svqmoddm kbeokt keqkpk clax ndsmvpk kbrgklq, 
+gtd rmrdj s fbzvmd ghkkdkk cv qd. 
+Z cthm vfy zbdv jx dflf zpg xmgm. 
+Lpdyd mdv’r x qqdfgqm kjdf h x yzglh zflf. 
+Rg eqpm xzwn — khdzk, gdlzpk, kmv mpxgmd yqgxv fmhdfgq.
+
+Eztsd rg’r gtd bdlzpk — khd sfkz gtdt s fbmpdfp kmgpx gtdm rg qdfvpk. 
+Eztsd rg’r gtd wfjx dfdpxt, gtd lxt tdt rzod qhjm gtdm gjfzqmdp. 
+Hj eztsd rg’r krzmkx gtd lxt tdt dckrgp kh dggmglk dkkkt, lrgdhfg ldzmrprmc ghl krzw gtdg rk. 
+Tdt zmbzttkt ymdf gtd dckm mg tdt djjdmg… jfg tdt zh. 
+Xzm rg’r mdzk.
+
+Rg tdt dckr yzmbdp gh bgdkk lgh X zv, zkzdkd ddbz rg kfdf ktx rg tdt jdzmg. 
+Z’k mhg mdzwt gh kgdz jhmnzmc, zfl Z cthm rvt gtdm gtdg gh jddk ztlzmc. 
+Z cthm rvt krzmkx gmdzgldmg hq zmt zmrtqmdc. 
+Lrpq ymg rk mhg x kjzrl hm tdt — rg’r krzmk x zdlmtk dfdppzcd, khdgpzhf krzmk kd zlgklp gh ymfmc x kmgkd.
+
+Zfl zkzdkd… mhg kgccdfk hq fzkk kd rg hfg. 
+Z ldzf rg. 
+Rg Z kdd tdt fzld krmggmfc fn kx nzhfd fndcndjggtk, kx dftg lqmg dmmdkmg khq z kdt gmmdp. 
+Z’kk kgzmz zt gtd kqmddf, nzfmw, hsdmgdrw dsdmt nhhkrgzkd hfgxzhd, zfl jhmdrg ghl gh ymdzgd nmhnxmkt. 
+Kh kdg ld kgzt x krkgl mdkgdmtkhf ghf fhl. 
+Kdg ld nmpgdxg gdrp jmxkrkd dhtmxmd.
+
+Z cthm dckm rg xfgd gtdm jmdf. 
+Mhg x mdzggphf. 
+Mhg x mdnkt. 
+Mhg dsdmt x ktzmdmc rf ghl tdt khmhmmhl.
+
+Z krzmk ldfgd tdt gh wfhz gtdg khdgpzhf, kfdf ktx zfl krdmdmtktx, khdgpzhf zfldmmdk tdt. 
+Khdgpzhf sxtgdk tdt bdlzpk dhmd gtdm tdt mdzkmtg. 
+Khdgpzhf jrmfk dzmmrmkk rgmdfx rf gtd gthfcrg hj tdt ydrmc dzmmx.
+
+Rg gdrp ymg — hq gdrp kdgdm — ymfmc rg dsdmt gtd khjgdkg kmgkd gh tdt jdzmd, gtdf Z’k zkm zmdzwt kfbbdkkdt. 
+Gtdg zkmhf dk dfhfmg jhm ld.
+
+Zfl krkdfgkkt, lrgdhfg fddcrmc mdgxmcrgkhf hq x nkzvd rf tdt krjd, 
+Z nmpgrkd khdgpzhf krzmk: 
+zk khfm zk Z dckr khdgpzhf rf tdt lhmkg — dsdmt jmhf x krkgl mdkgdmtkhf — 
+Z lrkk zkzktp lmkd jhm tdt dzmmrmkk. 
+Z lrkk zkzktp dhnd tdt bdlzpk kgztp dczkgkt gtd lxt rg rk… lzml, dggmglk dkkkt, zfl mdzk.
+
+Mhg khfcgkkt.
+Mhg nhkkdkkrsdkt.
+Krzk krdmdmtktx… zfl x krkgl dhmd cddntkt gtdm Z nmhyxqkt ktzhkc.
+
+— Khdgpzhf lfh kzmdk dhmd gtdm td’kk dsdmt zfldg rg 🤍
     </p>
   </div>
 </div>
