@@ -177,7 +177,7 @@ button:hover{ transform:scale(1.07); }
 <!-- PAGE 3 -->
 <div id="page3" class="page">
   <div class="card">
-    <h3>Identity Confirmed…</h3>
+    <h3>Identity Confirmed…</h5>
     <p> Princess of my heart detected ✨</p>
     <p>Security Level 1: Heart — Unlocked.</p>
   </div>
@@ -214,7 +214,7 @@ zbpxvat lbh jvgu n shyy lbetnavp cebprffbe.
 Guvax lbh’er fzneg? Gura qrpbqr gur arkg cntr —
 uhznaf naq NV obgu vaivgrq 🤓
     </pre>
-    <button onclick="nextPage(6)">Enter Passcode to Continue</button>
+    <button onclick="nextPage(6)">Enter Passcode to Continue </button>
   </div>
 </div>
 
@@ -225,7 +225,7 @@ uhznaf naq NV obgu vaivgrq 🤓
     <input type="password" id="securityCode" placeholder="Enter passcode">
     <br>
     <button onclick="checkCode()">Unlock</button>
-    <p id="codeError" class="error"></p>
+    <p id="Decode previous message for the hint " class="error"></p>
   </div>
 </div>
 
