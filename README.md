@@ -1,7 +1,7 @@
 <html>
 <head>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Here We Begin Our Love Story</title>
+<title>THE PATRIOTIC LOVE STORY/title>
 
 <style>
 body{
@@ -144,7 +144,7 @@ button:hover{ transform:scale(1.07); }
       Think you qualify?<br>
       Tap below and let’s find out.
     </p>
-    <button onclick="nextPage(2)">Tap to Claim</button>
+    <button onclick="nextPage(2)">YES I'M THE ONE YOU WAITINGFOR</button>
   </div>
 </div>
 
@@ -163,7 +163,7 @@ button:hover{ transform:scale(1.07); }
 <div id="page3" class="page">
   <div class="card">
     <h3>Identity Confirmed…</h3>
-    <p>My Princess Afrin detected ✨</p>
+    <p> Princess of my heart detected ✨</p>
     <p>Security Level 1: Heart — Unlocked.</p>
   </div>
 </div>
@@ -176,7 +176,7 @@ button:hover{ transform:scale(1.07); }
 First of all — don’t freak out.<br>
 Nobody is proposing… yet. Relax. 😌<br><br>
 I just needed a small moment of honesty.<br>
-Somewhere between normal days and random thoughts,<br>
+I Don't know how,when,where ,<br>
 you quietly became important to me.
     </p>
     <button onclick="nextPage(5)">Continue</button>
@@ -233,10 +233,10 @@ GUR 'LRX' BS ZL URNEG VF LBH.
 <!-- PAGE 7 -->
 <div id="page7" class="page">
   <div class="card">
-    <h2> The words from my heart </h2>
+    <h2> DECODE MY HEART IF YOU CAN </h2>
     <p style="text-align:left">
 Afrin..
-Krbl r jcfn siverk. Kyzj zj e kirdrktz gifgfjzex jtvez. Wvsilrip 14ky yrj rcivrjjvu — reu pvk, nyrc Z wvvc yrje’k. Slk kyviv’j ef givjjliv yviv, ef jgfkczxyk, ef vogvtkkrkzfej rkkrt yvu kf kyvjv nfiu j. Z aljk uzue’k nrek refkyvi urp kf grjj nzkyflk svzex yfevjk, vmve zw zk’j wifd r uzjkre tv.
+  Krbl r jcfn siverk. Kyzj zj e kirdrktz gifgfjzex jtvez. Wvsilrip 14ky yrj rcivrjjvu — reu pvk, nyrc Z wvvc yrje’k. Slk kyviv’j ef givjjliv yviv, ef jgfkczxyk, ef vogvtkkrkzfej rkkrt yvu kf kyvjv nfiu j. Z aljk uzue’k nrek refkyvi urp kf grjj nzkyflk svzex yfevjk, vmve zw zk’j wifd r uzjkre tv.
 Kyzj zj aljk r jdrcc, jzetviv df dvek.
 Jfdvnyviv svknvve fiuzerip urpj reu ireufd tfemvijrkzfej, svknvve jzdgcv jdzcvj reu lefkztvu c kkc v uvkrzcj, pfl hlzv k cp svtrdv zdgfikrek kf dv. Z ufe’k votrkcp nye zk yrggvevu. Kyviv nej’k r jgv tzwzt urkv fi r xireu kliezex gfzek. Zk aljk xivn — jfwkcp, xvekcp, nzkyflk rjbzex wfi rkkvekzfe.
 Drpsv zk’j pfl i jdzcv — kyv bz e u ky rk czexvij ze jfdvfev’j dzeu cfexvi ky re zk jyflcu. Drpsv zk’j pfl i trcd ve vixp, kyv nrp pfl drbv kyzexj wvvc czxykvi nzkyflk vmve kipzex. Fi drpsv zk’j jzdgcp kyv nrp pfl vo zj k jf vwwfikc vjjcp, nzkyflk ivrczqzex yfn jgvtzrc ky rk zj. Pfl gif srs cp ufe’k jvv kyv vwwvt k pfl yrmv… slk pfl uf. Reu zk’j ivrc.
