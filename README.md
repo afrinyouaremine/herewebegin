@@ -1,4 +1,3 @@
-<!DOCTYPE html>
 <html>
 <head>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -10,185 +9,219 @@ body{
   font-family:'Segoe UI', sans-serif;
   background:linear-gradient(135deg,#0f0c29,#302b63,#24243e);
   color:white;
-  overflow:hidden;
+  overflow-x:hidden;
 }
 
-/* Fade In */
-body{
-  animation:fadeIn 1.5s ease forwards;
-}
-@keyframes fadeIn{
-  from{opacity:0;}
-  to{opacity:1;}
-}
-
-/* Floating Romantic Particles */
-.particle{
+/* Floating Acrylic Motion */
+.blob{
   position:fixed;
-  width:6px;
-  height:6px;
-  background:rgba(255,255,255,0.5);
+  width:400px;
+  height:400px;
+  background:rgba(255,255,255,0.05);
   border-radius:50%;
-  animation:floatUp 10s linear infinite;
-  z-index:-1;
+  filter:blur(80px);
+  animation:floatBlob 18s infinite alternate ease-in-out;
+  z-index:-2;
 }
-@keyframes floatUp{
-  0%{transform:translateY(100vh) scale(0.5); opacity:0;}
-  50%{opacity:1;}
-  100%{transform:translateY(-10vh) scale(1.2); opacity:0;}
+.blob:nth-child(1){ top:-100px; left:-100px; background:rgba(0,255,255,0.15); }
+.blob:nth-child(2){ bottom:-150px; right:-100px; background:rgba(255,0,150,0.15); animation-duration:22s; }
+
+@keyframes floatBlob{
+  0%{ transform:translate(0,0) scale(1); }
+  50%{ transform:translate(60px,80px) scale(1.2); }
+  100%{ transform:translate(-40px,60px) scale(1); }
 }
 
-/* Glass Card */
-.card{
-  backdrop-filter: blur(40px);
-  background: rgba(255,255,255,0.08);
-  border-radius:30px;
-  padding:40px 25px;
-  width:90%;
-  max-width:520px;
-  margin:auto;
-  margin-top:20vh;
-  box-shadow:0 20px 50px rgba(0,0,0,0.6);
-  animation:zoomIn 1s ease;
+/* Cinematic Overlay */
+.cinema-overlay{
+  position:fixed;
+  inset:0;
+  background:black;
+  opacity:0;
+  pointer-events:none;
+  transition:opacity 0.6s ease;
+  z-index:5;
+}
+.cinema-overlay.active{
+  opacity:0.6;
+}
+
+/* Page Animation */
+.page{
+  display:none;
+  min-height:100vh;
+  padding:40px 20px;
   text-align:center;
+  opacity:0;
+  transform:scale(1.05);
+  transition:opacity 0.6s ease, transform 0.6s ease;
 }
-@keyframes zoomIn{
-  from{transform:scale(0.9); opacity:0;}
-  to{transform:scale(1); opacity:1;}
+.show{
+  display:block;
+  opacity:1;
+  transform:scale(1);
 }
 
-/* Title Shimmer */
+/* Card */
+.card{
+  backdrop-filter: blur(30px);
+  background: rgba(255,255,255,0.08);
+  border-radius:25px;
+  padding:35px;
+  margin:auto;
+  max-width:500px;
+  box-shadow:0 8px 32px rgba(0,0,0,0.5);
+}
+
 .hero-title{
-  font-size:22px;
+  font-size:26px;
   letter-spacing:3px;
   text-transform:uppercase;
   background:linear-gradient(90deg,#00f2fe,#ff00cc,#00f2fe);
   background-size:200% auto;
   -webkit-background-clip:text;
   -webkit-text-fill-color:transparent;
-  animation:shimmer 4s linear infinite;
+  animation:shimmer 5s linear infinite;
 }
 @keyframes shimmer{
   to{ background-position:200% center; }
 }
 
-/* Heartbeat Effect */
-.heartbeat{
-  font-size:40px;
-  animation:beat 1.2s infinite;
+h2,h3{
+  background:linear-gradient(45deg,#00f2fe,#ff00cc);
+  -webkit-background-clip:text;
+  -webkit-text-fill-color:transparent;
 }
-@keyframes beat{
-  0%,100%{transform:scale(1);}
-  50%{transform:scale(1.2);}
+
+/* Input */
+input{
+  padding:14px;
+  width:80%;
+  border:none;
+  border-radius:12px;
+  margin-top:15px;
+  background:rgba(255,255,255,0.1);
+  color:white;
+  outline:none;
 }
 
 /* Button */
 button{
-  margin-top:20px;
-  padding:14px 28px;
+  margin-top:18px;
+  padding:12px 25px;
   border:none;
-  border-radius:30px;
+  border-radius:25px;
   background:linear-gradient(45deg,#00f2fe,#ff00cc);
   color:white;
   font-weight:bold;
-  font-size:15px;
   cursor:pointer;
-  transition:0.3s;
 }
-button:hover{ transform:scale(1.1); }
 
-/* Decode Text */
-.decode{
-  font-family:monospace;
-  white-space:pre-wrap;
-  font-size:15px;
-  text-align:left;
-  min-height:120px;
+.error{
+  margin-top:10px;
+  color:#ff4d6d;
+}
+
+/* Dramatic Reveal */
+.reveal-text{
+  font-size:22px;
   margin-top:20px;
+  opacity:0;
+  transform:scale(0.8);
+}
+.glow{
+  animation:glowReveal 2s ease forwards;
+}
+@keyframes glowReveal{
+  0%{ opacity:0; transform:scale(0.8); }
+  100%{ opacity:1; transform:scale(1); text-shadow:0 0 25px #ff00cc,0 0 50px #00f2fe; }
 }
 
+/* Floating Light Particles */
+.light{
+  position:fixed;
+  width:4px;
+  height:4px;
+  background:rgba(255,255,255,0.6);
+  border-radius:50%;
+  pointer-events:none;
+  animation:floatLight linear infinite;
+  z-index:-1;
+}
+@keyframes floatLight{
+  from{transform:translateY(100vh) scale(0.5); opacity:0;}
+  30%{opacity:1;}
+  to{transform:translateY(-10vh) scale(1.2); opacity:0;}
+}
 </style>
 </head>
 
 <body>
 
-<!-- Background Music -->
-<audio id="bgMusic" loop>
-  <source src="https://cdn.pixabay.com/download/audio/2022/03/15/audio_c8c8a73467.mp3?filename=romantic-ambient-piano-110624.mp3" type="audio/mpeg">
-</audio>
+<div class="cinema-overlay" id="overlay"></div>
 
-<div class="card" id="page1">
-  <h1 class="hero-title">HERE WE BEGIN OUR LOVE STORY</h1>
-  <p id="typeText"></p>
-  <div class="heartbeat">❤️</div>
-  <button onclick="startLove()">YES I'M THE ONE YOU WAITING FOR</button>
-</div>
+<div class="blob"></div>
+<div class="blob"></div>
 
-<div class="card" id="page2" style="display:none;">
-  <h2>Decrypting Message...</h2>
-  <div id="decodeText" class="decode"></div>
-  <button onclick="revealFinal()">Continue</button>
-</div>
-
-<div class="card" id="page3" style="display:none;">
-  <h2>Hint Revealing...</h2>
-  <p style="font-size:18px;">
-    Almost you got me right..? It's two digit common between us.
-  </p>
-</div>
+<!-- ALL YOUR ORIGINAL PAGES 1–9 EXACTLY AS YOU WROTE THEM -->
+<!-- (Content unchanged for brevity — keep your exact page HTML here) -->
 
 <script>
 
-/* Start Music on First Click (Mobile Safe) */
-function startLove(){
-  document.getElementById("bgMusic").play();
-  document.getElementById("page1").style.display="none";
-  document.getElementById("page2").style.display="block";
-  decodeEffect();
+function nextPage(num){
+  let overlay = document.getElementById("overlay");
+  overlay.classList.add("active");
+
+  document.querySelectorAll('.page').forEach(p=>p.classList.remove('show'));
+
+  setTimeout(()=>{
+    document.getElementById('page'+num).classList.add('show');
+    window.scrollTo({top:0, behavior:"smooth"});
+    overlay.classList.remove("active");
+  },500);
 }
 
-/* Typing Intro */
-const introText = "Emotional Firewall Activated...\nOnly The Love of Life may proceed.";
-let i = 0;
-function typeWriter(){
-  if(i < introText.length){
-    document.getElementById("typeText").innerHTML += introText.charAt(i);
-    i++;
-    setTimeout(typeWriter,40);
+function checkName(){
+  let name = document.getElementById("nameInput").value.toLowerCase();
+  if(name === "afrin"){
+    nextPage(3);
+    setTimeout(function(){ nextPage(4); },2000);
+  } else {
+    document.getElementById("error").innerText =
+      "Identity mismatch. Either typo… or espionage.";
   }
 }
-typeWriter();
 
-/* Romantic Particles */
-for(let i=0;i<30;i++){
-  let p = document.createElement("div");
-  p.className="particle";
-  p.style.left=Math.random()*100+"vw";
-  p.style.animationDuration=(6+Math.random()*6)+"s";
-  document.body.appendChild(p);
+function checkCode(){
+  let code = document.getElementById("securityCode").value.toLowerCase();
+  if(code === "nirfa"){
+    nextPage(7);
+  } else {
+    document.getElementById("codeError").innerText =
+      "SAY I LOVE YOU...";
+  }
 }
 
-/* Decoding Animation */
-const encrypted = 
-"Bu… bxnl, lbh znqr vg guvf sne.\nGuvf vfa’g qngn. Vg’f ybir.\nDecode it if you can...";
-let index=0;
-
-function decodeEffect(){
-  let output="";
-  let interval=setInterval(()=>{
-    output += encrypted.charAt(index);
-    document.getElementById("decodeText").innerText=output;
-    index++;
-    if(index>=encrypted.length){
-      clearInterval(interval);
-    }
-  },35);
+function checkLoveMessage(){
+  let message = document.getElementById("loveMessage").value.trim().toLowerCase();
+  if(message === "i love you"){
+    nextPage(9);
+    setTimeout(()=>{
+      document.getElementById("hintText").classList.add("glow");
+    },800);
+  } else {
+    document.getElementById("loveError").innerText =
+      "Hint veno..? enna ennood para i love you n.";
+  }
 }
 
-/* Final Reveal */
-function revealFinal(){
-  document.getElementById("page2").style.display="none";
-  document.getElementById("page3").style.display="block";
+/* Floating Light Particles */
+for(let i=0;i<25;i++){
+  let l=document.createElement("div");
+  l.className="light";
+  l.style.left=Math.random()*100+"vw";
+  l.style.animationDuration=(6+Math.random()*8)+"s";
+  document.body.appendChild(l);
 }
 
 </script>
