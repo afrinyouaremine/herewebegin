@@ -118,28 +118,6 @@ button:hover{ transform:scale(1.07); }
 .error{
   margin-top:10px;
   color:#ff4d6d;
-  animation:shake 0.3s ease;
-}
-@keyframes shake{
-  0%,100%{ transform:translateX(0); }
-  25%{ transform:translateX(-5px); }
-  75%{ transform:translateX(5px); }
-}
-
-/* Dramatic Reveal */
-.reveal-text{
-  font-size:22px;
-  margin-top:20px;
-  opacity:0;
-  transform:scale(0.8);
-}
-.glow{
-  animation:glowReveal 2s ease forwards;
-}
-@keyframes glowReveal{
-  0%{ opacity:0; transform:scale(0.8); text-shadow:0 0 0px #fff; }
-  50%{ opacity:0.6; text-shadow:0 0 20px #ff00cc,0 0 40px #00f2fe; }
-  100%{ opacity:1; transform:scale(1); text-shadow:0 0 25px #ff00cc,0 0 50px #00f2fe; }
 }
 </style>
 </head>
@@ -166,45 +144,4 @@ button:hover{ transform:scale(1.07); }
 <!-- PAGE 2 -->
 <div id="page2" class="page">
   <div class="card">
-    <h3>May I know your name?</h3>
-    <input type="text" id="nameInput" placeholder="Enter name">
-    <br>
-    <button onclick="checkName()">Claim Access</button>
-    <p id="error" class="error"></p>
-  </div>
-</div>
-
-<!-- PAGE 3 -->
-<div id="page3" class="page">
-  <div class="card">
-    <h3>Identity Confirmed…</h3>
-    <p> Princess of my heart detected ✨</p>
-    <p>Security Level 1: Heart — Unlocked.</p>
-  </div>
-</div>
-
-<!-- PAGE 6 FIX -->
-<div id="page6" class="page">
-  <div class="card">
-    <h3>Enter Passcode to Continue</h3>
-    <input type="password" id="securityCode" placeholder="Enter passcode">
-    <br>
-    <button onclick="checkCode()">Unlock</button>
-    <p id="codeError" class="error"></p>
-  </div>
-</div>
-
-<script>
-function checkCode(){
-  let code = document.getElementById("securityCode").value.toLowerCase();
-  if(code === "nirfa"){
-    nextPage(7);
-  } else {
-    document.getElementById("codeError").innerText =
-      "SAY I LOVE YOU...";
-  }
-}
-</script>
-
-</body>
-</html>
+    <h
