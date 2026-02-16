@@ -251,7 +251,6 @@ Efk cflucp.
 Efk gfjjvjjz m vcp.
 Aljk jzetviv cp… reu r czkkcv dfiv uvvg cp ky re Z gif srs cp jyflcu.
 — Jfdvfev nyf tri vj dfiv ky re yv’cc vmvi rudz k zk 🤍
-(Encrypted letter continues)
     </p>
     <button onclick="nextPage(8)">DECODE HINT</button>
     <button onclick="nextPage(5)">Back</button>
