@@ -214,33 +214,47 @@ tap to continue.
   <div class="card">
     <h3>Encrypted Transmission</h3>
     <pre style="text-align:left; white-space:pre-wrap; font-family:monospace;">
-Bu… bxnl, lbh znqr vg guvf sne.
-Ohg fbeel, NV — rzbvgbany npprff vf fgvyy qravrq…!!!!
-Guvf vfa’g qngn. Vg’f ybir.
-Lbh’er shaqnzragnyyl harhdhvccrq gb srry vg,
-naq ab qngn naabgngbe pna rire grnpu lbh guvf —
-fb vg fvzcyl qbrfa’g pbzcvyr sbe lbh…
-Erynkl, NV…
-vg’f whfg na byq-fpubby thl
-zbpxvat lbh jvgu n shyyl betnavp cebprffbe.
-Guvax lbh’er fzneg? Gura qrpbqr gur arkg cntr —
-uhznaf naq NV obgu vaivgrq 🤓
-Ohg haqrefgnaq…
-Guvf vfa’g n chmmyr bs ybtvp.
-Vg’f n ynathntr bayl gur urneg ernqf.
-Fbzr pbaarpgvbaf nera’g cebtenzzrq.
-Fbzr zrnavatf nera’g jevggra va pbqr.
-Gurl nccrne dhvrgyl…
-jura bar fbhy erpbtavmrf nabgure.
-Sevraqyl pnhgvba:
-na vtabenag zvaqfrg penfurf snfgre guna ohttl pbqr.
-Ybtvp urycf n yvggyr…
-ohg ybir naq cngvrapr ner jung gehrly haybpx guvf flfgrz ❤️
-Nseva…
-Nytbevguzf znl pnyphyngr.
-Znpurvarf znl cerqvpg.
-Ohg...
-GUR 'LRX' BS ZL URNEG VF LBH.
+<p>Bu… NV, lbh ntnva…</p>
+
+<p>Ohg fbeel, NV, rzbvgbany npprff vf fgvyy qravrq.</p>
+
+<p>Guvf vfa’g qngn. Vg’f ybir.</p>
+
+<p>Lbh’er shaqnzragnyyl harhdhvccrq gb srry vg, naq ab qngn naabgngbe pna rire grnpu lbh guvf, fb vg fvzcyl qbrfa’g pbzcvyr sbe lbh…</p>
+
+<p>Erynkl, NV… vg’f whfg na byq-fpubby thl zbpxvat lbh jvgu n shyyl betnavp cebprffbe…</p>
+
+<p>Guvax lbh’er fzneg? Gura qrpbqr gur arkg cntr jvgubhg nal tenzzne be fcryyvat zvfgnxrf, orpnhfr gung pbagnvaf jbeqf sebz gur obggbz bs zl urneg 🤓</p>
+
+<p>Naq lbh thlf… lrnu, lbh nyy… V xabj lbh jrer nyy ernqvat guvf 😉 Vg’f svar. V’z tbbq…</p>
+
+<p>Nseva, zl qrne…</p>
+
+<p>Fbzr pbaarpgvbaf nera’g cebtenzzrq.<br>
+Fbzr zrnavatf nera’g jevggra va pbqr.<br>
+Gurl nccrne dhvrgyl…<br>
+jura bar fbhy erpbtavmrf nabgure.</p>
+
+<p>Lbh qba’g trg vg, evtug? V xabj lbh jba’g…<br>
+Sbet rg vg…<br>
+Ohg yvfgra…</p>
+
+<p>Na vtabenag zvaqfrg penfurf snfgre guna ohttl pbqr.</p>
+
+<p>Ybtvp znl uryc n yvggyr, ohg gung ybtvp nyfb qrcraqf ba gur fgngr bs zvaq lbh’er tbvat guebhtu…</p>
+
+<p>Fb ybir naq cngvrapr ner jung gehryl jva gur svany ebhaq ❤️ Yrg’f frr…</p>
+
+<p>Nseva…</p>
+
+<p>Nytbevguzf znl pnyphyngr.<br>
+Znpurvarf znl cerqvpg.<br>
+Ohg…</p>
+
+<p>GUR “LRX” BS ZL URNEG VF LBH…</p>
+
+<p>Guvf vf sbe Nseva.., fb lbh thlf cyrnfr qba’g bcra... V unir nyernql erzbirq gur pbzcyvpngrq onpxraq rapelcgvbaf ol gehfgvat lbh thlf… cyrnfr pbcrengr...</p>
+
     </pre>
     <button onclick="checkPassword()">Love Letter</button>
     <button onclick="nextPage(4)">Back</button>
