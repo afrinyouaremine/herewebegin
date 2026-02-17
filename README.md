@@ -187,18 +187,20 @@ button:hover{ transform:scale(1.07); }
   <div class="card">
     <h2>Hi Afrin…</h2>
     <p style="text-align:left">
-First of all — don’t freak out.
+First of all, please don’t freak out..
 Nobody’s proposing… yet. Relax. 😌
-I don’t know how or when it happened,
+Honestly, I don’t know how or when it happened,
 but somewhere along the way,
 you quietly became important to me.
-So this is just a small gift. It’s yours now.
-I don’t expect anything in return 
-not even special treatment or any kind of privilege from you.
-I just wanted to see you smile. That’s all.
-And trust me… if you were ever mine,
-I’d protect that smile at any cost 
-until my last breath.
+So I wanted to show you how I feel.
+This is just a small gift for you… please accept it.
+(In fact, you don’t really have another option 😉)
+I don’t expect anything in return not special treatment,
+not privileges, not even a change in the way you see me.
+I just wanted to make you smile. That’s all. And trust me…
+
+if you were ever mine,I would protect that smile at any cost
+until my very last breath.
 And if you really want to know who I am…
 tap to continue.
     </p>
@@ -252,21 +254,74 @@ GUR 'LRX' BS ZL URNEG VF LBH.
     <h2> DECODE MY HEART IF YOU CAN </h2>
     <p style="text-align:left">
 Afrin..
-
-Krbl r jcfn siverk. Kyzj zj e kirdrktz gifgfjzex jtvez. Wvsilrip 14ky yrj rcivrjjvu — reu pvk, nyrc Z wvvc yrje’k. Slk kyviv’j ef givjjliv yviv, ef jgfkczxyk, ef vogvtkkrkzfej rkkrt yvu kf kyvjv nfiu j. Z aljk uzue’k nrek refkyvi urp kf grjj nzkyflk svzex yfevjk, vmve zw zk’j wifd r uzjkre tv.
-Kyzj zj aljk r jdrcc, jzetviv df dvek.
-Jfdvnyviv svknvve fiuzerip urpj reu ireufd tfemvijrkzfej, svknvve jzdgcv jdzcvj reu lefkztvu c kkc v uvkrzcj, pfl hlzv k cp svtrdv zdgfikrek kf dv. Z ufe’k votrkcp nye zk yrggvevu. Kyviv nej’k r jgv tzwzt urkv fi r xireu kliezex gfzek. Zk aljk xivn — jfwkcp, xvekcp, nzkyflk rjbzex wfi rkkvekzfe.
-Drpsv zk’j pfl i jdzcv — kyv bz e u ky rk czexvij ze jfdvfev’j dzeu cfexvi ky re zk jyflcu. Drpsv zk’j pfl i trcd ve vixp, kyv nrp pfl drbv kyzexj wvvc czxykvi nzkyflk vmve kipzex. Fi drpsv zk’j jzdgcp kyv nrp pfl vo zj k jf vwwfikc vjjcp, nzkyflk ivrczqzex yfn jgvtzrc ky rk zj. Pfl gif srs cp ufe’k jvv kyv vwwvt k pfl yrmv… slk pfl uf. Reu zk’j ivrc.
-Zw pfl vmvi yrggve kf xl vjj nyf Z rd, gcv rjv b vvg zk hlzv k cp ze pfl i yvrik. Z’d efk ivrup kf j kvg wfinri u, reu Z ufe’k nrek re pk yzex kf wvvc rnbnri u fi uzwwviv ek. Z ufe’k nrek jgvtzrc kivr kdvek fi rep giz mzcvxv. Kyzj xzwk zj e’k r tcrzd fe pfl — zk’j aljk r xv ekcv xvjk liv, jfdvkyzex jdrcc dvrek kf s izex r jdzcv kf pfl i wr tv.
-Reu gcv rjv… ufe’k jluuve cp trcc dv zw pfl wzxliv zk flk. Z d vre zk. Zw Z jvv pfl i er dv czxykzex lg dp gyfev levogvt kv ucp, dp yvrik dzxyk xvelze v cp cfjv tfekifc wfi r wvn jvtfeuj. Z’cc jkriv rk kyv jti vve, grezt, fmvikyzeb vmvip gfjjzs c v flktf dv, reu wfixvk yfn kf sivrkyp gif gvicp. Jf cvk dv jkrp r czkkcv dpjkvi zflj wfi efn. Cvk dv gifkvt k kyzj wirxzc v tflirxv.
-Z ufe’k vogvtk re pk yzex wifd pfl. Efk r ivrtkzfe. Efk r ivgcp. Efk vmve r tyrexv ze yfn pfl cffb rk kfd fii fn.
-Z aljk nrekvu pfl kf befn kyrk jfdvnyviv, hlzv k cp reu jzetviv cp, jfdvfev rudz ivj pfl. Jfdvfev mrc lvj pfl i jdzcv dfiv ky re pfl ivrczqv. Jfdvfev wzeuj yrg gzevjj jzdgcp ze kyv kyflxyk fw pfl svzex yrg gp.
-Zw kyzj xzwk — fi kyzj cvkkvi — s izexj vmve kyv jfwk vjk jdzcv kf pfl i wr tv, kyve Z’m rc ivrup jlt tvvuvu. Kyrk rcf ev zj ve flxy wfi dv.
-Reu jzcvekcp, nzkyflk evvuzex ivtfxezkzfe fi r gcrtv ze pfl i cz wv, Z gifdzjv jfdvkyzex jzdgcv: rj cfex rj Z vo zj k jfdvnyviv ze pfl i nf i cu — vmve wifd r uzjkre tv — Z nzcc rcnr pj nzjy wfi pfl i yrg gzevjj. Z nzcc rcnr pj yfgv pfl i jdzcv jkrpj votrkcp kyv nrp zk zj… n rid, vwwfikc vjj, reu ivrc.
-Efk cflucp.
-Efk gfjjvjjz m vcp.
-Aljk jzetviv cp… reu r czkkcv dfiv uvvg cp ky re Z gif srs cp jyflcu.
-— Jfdvfev nyf tri vj dfiv ky re yv’cc vmvi rudz k zk 🤍
+By now, I’m 87% sure you know it’s me.
+The other 13% is just me hoping I still have some mystery left.
+Relax.
+No dramatic background score.
+No slow-motion walking scene.
+No pigeons flying in the background.
+Just me and honesty.
+I didn’t want to stay quiet anymore.
+Not because I’m impatient.
+Not because I expect anything.
+But because pretending I don’t feel something is honestly too much hard work.
+This isn’t pressure.
+This isn’t a demand.
+This is just me admitting that something has been quietly living in my heart rent-free for a while now.
+Somewhere between random conversations and “just another normal day,” you became not-so-normal to me.
+No fireworks.
+No Bollywood climax.
+More like background music slowly increasing in volume until I realised,
+“Wait… how did she become my favourite dream?”
+Maybe it’s your smile.
+Maybe it’s your energy.
+Maybe it’s that dangerous combo of softness and attitude you carry like it’s licensed and registered.
+And yes, we need to revisit that legendary dialogue.
+“Who the hell are you…?”
+First of all, Oscar-level iconic delivery.
+Confidence level 100.
+Emotional damage manageable.
+I wasn’t offended.
+I was impressed. Slightly attacked. But impressed.
+Your words stick, and not everyone’s do.
+There were moments I got confused too.
+Unread messages.
+Missed calls.
+Distance that felt heavier than it logically should have been.
+Even small things, like not being allowed to keep your photo, felt like my dramatic brain had just been denied a government approval stamp.
+And here’s the funniest part.
+While writing this, even AI asked me,
+“Bro… are you sure she likes you?”
+Imagine.
+Even artificial intelligence questioning my natural intelligence.
+But here’s the difference.
+AI reads patterns.
+I read vibes.
+And my vibe is still choosing you. Calmly. Confidently. Slightly stubbornly.
+I’m not writing this so you panic call me.
+Please don’t suddenly ring me like it’s an emergency meeting.
+I’m not writing this expecting a reply.
+No pressure, no deadline, not even an emotional EMI.
+I’m writing this because I respect you enough to be honest.
+And I respect myself enough not to beg.
+If one day you look at me differently,
+I’ll be there. Properly. Not half-hearted.
+If not,
+I’ll still wish you happiness from a safe, slightly dramatic but very dignified distance.
+I don’t want special treatment.
+I don’t want VIP access.
+I just wanted you to know that someone sees you.
+The emotional you.
+The strong you.
+The confusing you.
+The “who the hell are you” you.
+And still says,
+“Yeah… I like her. No software update needed.”
+If my presence ever feels safe to you, I’ll protect that space.
+If it doesn’t, I’ll step back like a gentleman exiting a room, smooth and calm, no door slamming.
+Just sincerity.
+Someone who cares
+and knows exactly what he’s doing. 💖 🤍
     </p>
     <button onclick="nextPage(8)">DECODE HINT</button>
     <button onclick="nextPage(5)">Back</button>
