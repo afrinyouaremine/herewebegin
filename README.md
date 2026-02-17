@@ -361,7 +361,7 @@ and knows exactly what he’s doing. 💖</p>
 <!-- PAGE 9 -->
 <div id="page9" class="page">
   <div class="card">
-    <h2>Revealing somthing...</h2>
+    <h2>Revealing something...</h2>
     <div id="hintText" class="reveal-text">
       Nooki irunno ipo varum...
     </div>
