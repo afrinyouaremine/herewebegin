@@ -1,3 +1,4 @@
+
 <html>
 <head>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -96,4 +97,65 @@ input{
   transition:0.4s;
 }
 input:focus{
-  box-shadow:0 0 15px #ff00
+  box-shadow:0 0 15px #ff00cc, 0 0 25px #00f2fe;
+  transform:scale(1.03);
+}
+
+button{
+  margin-top:12px;
+  padding:12px 25px;
+  border:none;
+  border-radius:25px;
+  background:linear-gradient(45deg,#00f2fe,#ff00cc);
+  color:white;
+  font-weight:bold;
+  cursor:pointer;
+  transition:0.3s;
+}
+button:hover{ transform:scale(1.07); }
+
+.error{
+  margin-top:10px;
+  color:#ff4d6d;
+  animation:shake 0.3s ease;
+}
+@keyframes shake{
+  0%,100%{ transform:translateX(0); }
+  25%{ transform:translateX(-5px); }
+  75%{ transform:translateX(5px); }
+}
+
+.reveal-text{
+  font-size:22px;
+  margin-top:20px;
+  opacity:0;
+  transform:scale(0.8);
+}
+.glow{
+  animation:glowReveal 2s ease forwards;
+}
+@keyframes glowReveal{
+  0%{ opacity:0; transform:scale(0.8); text-shadow:0 0 0px #fff; }
+  50%{ opacity:0.6; text-shadow:0 0 20px #ff00cc,0 0 40px #00f2fe; }
+  100%{ opacity:1; transform:scale(1); text-shadow:0 0 25px #ff00cc,0 0 50px #00f2fe; }
+}
+
+/* HEART RAIN */
+.heart{
+  position:fixed;
+  font-size:22px;
+  animation:fall 4s linear forwards;
+  z-index:9999;
+}
+@keyframes fall{
+  to{ transform:translateY(100vh); opacity:0; }
+}
+</style>
+</head>
+
+<body>
+
+<div class="blob"></div>
+<div class="blob"></div>
+
+<!-- ================= ALL YOUR ORIGINAL PAGES EXACTLY AS YOU WROTE ================= -->
