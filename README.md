@@ -187,7 +187,7 @@ button:hover{ transform:scale(1.07); }
   <div class="card">
     <h2>Hi Afrin…</h2>
     <p style="text-align:left">
-<p>First of all… relax. Don’t freak out. Nobody’s proposing — at least not today. 😌</p>
+<p>First of all… please Don’t freak out. Nobody’s proposing — at least not today. 😌</p>
 
 <p>I honestly don’t know when it happened or how it happened… but somewhere along the way, you quietly became important to me.</p>
 
