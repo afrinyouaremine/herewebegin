@@ -266,75 +266,98 @@ Ohg…</p>
   <div class="card">
     <h2> DECODE MY HEART IF YOU CAN </h2>
     <p style="text-align:left">
-Afrin..
-By now, I’m 87% sure you know it’s me.
-The other 13% is just me hoping I still have some mystery left.
-Relax.
-No dramatic background score.
-No slow-motion walking scene.
-No pigeons flying in the background.
-Just me and honesty.
-I didn’t want to stay quiet anymore.
-Not because I’m impatient.
-Not because I expect anything.
-But because pretending I don’t feel something is honestly too much hard work.
-This isn’t pressure.
-This isn’t a demand.
-This is just me admitting that something has been quietly living in my heart rent-free for a while now.
-Somewhere between random conversations and “just another normal day,” you became not-so-normal to me.
-No fireworks.
-No Bollywood climax.
-More like background music slowly increasing in volume until I realised,
-“Wait… how did she become my favourite dream?”
-Maybe it’s your smile.
-Maybe it’s your energy.
-Maybe it’s that dangerous combo of softness and attitude you carry like it’s licensed and registered.
-And yes, we need to revisit that legendary dialogue.
-“Who the hell are you…?”
-First of all, Oscar-level iconic delivery.
-Confidence level 100.
-Emotional damage manageable.
-I wasn’t offended.
-I was impressed. Slightly attacked. But impressed.
-Your words stick, and not everyone’s do.
-There were moments I got confused too.
-Unread messages.
-Missed calls.
-Distance that felt heavier than it logically should have been.
-Even small things, like not being allowed to keep your photo, felt like my dramatic brain had just been denied a government approval stamp.
-And here’s the funniest part.
-While writing this, even AI asked me,
-“Bro… are you sure she likes you?”
-Imagine.
-Even artificial intelligence questioning my natural intelligence.
-But here’s the difference.
-AI reads patterns.
-I read vibes.
-And my vibe is still choosing you. Calmly. Confidently. Slightly stubbornly.
-I’m not writing this so you panic call me.
-Please don’t suddenly ring me like it’s an emergency meeting.
-I’m not writing this expecting a reply.
-No pressure, no deadline, not even an emotional EMI.
-I’m writing this because I respect you enough to be honest.
-And I respect myself enough not to beg.
-If one day you look at me differently,
-I’ll be there. Properly. Not half-hearted.
-If not,
-I’ll still wish you happiness from a safe, slightly dramatic but very dignified distance.
-I don’t want special treatment.
-I don’t want VIP access.
-I just wanted you to know that someone sees you.
-The emotional you.
-The strong you.
-The confusing you.
-The “who the hell are you” you.
-And still says,
-“Yeah… I like her. No software update needed.”
-If my presence ever feels safe to you, I’ll protect that space.
-If it doesn’t, I’ll step back like a gentleman exiting a room, smooth and calm, no door slamming.
-Just sincerity.
-Someone who cares
-and knows exactly what he’s doing. 💖 🤍
+ <h1>Afrin,</h1>
+
+<p>By now, I’m sure you almost know it’s me.<br>
+But I’m just hoping I still have some mystery left.</p>
+
+<p>Relax.<br>
+No dramatic background score here.<br>
+No slow-motion walking scene. There are no pigeons flying in the background.<br>
+Just me and my true love.</p>
+
+<p>I didn’t want to stay quiet anymore.<br>
+Not because I’m impatient.<br>
+Neither am I expecting anything.<br>
+But because pretending I don’t feel something is honestly too much hard work.</p>
+
+<p>This isn’t pressure or demand.<br>
+This is just me admitting that something has been quietly living in my heart rent-free for a while now.</p>
+
+<p>Somewhere between random conversations and “just another normal day,” you became not-so-normal to me.<br>
+No fireworks.<br>
+No Bollywood climax.<br>
+More like background music slowly increasing in volume until I realised,<br>
+“Wait… how did she become my favourite dream?”</p>
+
+<p>Maybe it’s your smile.<br>
+Maybe it’s your energy.<br>
+Maybe it’s that dangerous combo of softness and attitude you carry like it’s licensed and registered.</p>
+
+<p>And yes, we need to revisit that legendary dialogue.<br>
+“Who the hell are you…?”</p>
+
+<p>First of all, Oscar-level iconic delivery.<br>
+Confidence level 100.<br>
+Emotional damage manageable…</p>
+
+<p>I wasn’t offended. I won’t lie — it stayed with me.<br>
+But I was impressed. Slightly attacked. But impressed.<br>
+Your words stick, and not everyone’s do.</p>
+
+<p>There were moments I got confused too.<br>
+Unread messages.<br>
+Missed calls.<br>
+Distance that felt heavier than it logically should have been.<br>
+Even small things, like not being allowed to keep your photo, felt like my dramatic brain had just been denied a government approval stamp.</p>
+
+<p>And here’s the funniest part.<br>
+While writing this, even AI asked me,<br>
+“Bro… are you sure she likes you? Is this really the girl you want?”</p>
+
+<p>Imagine.<br>
+Even artificial intelligence questioning my natural intelligence.</p>
+
+<p>But here’s the difference.<br>
+AI reads patterns.<br>
+I read vibes.<br>
+And my vibe is still choosing you. Calmly. Confidently. Slightly stubbornly.</p>
+
+<p>I’m not writing this so you panic-call me.<br>
+Please don’t suddenly ring me like it’s an emergency meeting.<br>
+I’m not writing this expecting a reply.<br>
+No pressure, no deadline, not even an emotional EMI.</p>
+
+<p>I’m writing this because I respect you enough to be honest.<br>
+And I respect myself enough not to beg.</p>
+
+<p>If one day you look at me differently,<br>
+I’ll be there. Properly. Not half-hearted.</p>
+
+<p>If not,<br>
+I’ll still wish you happiness from a safe, slightly dramatic but very dignified distance.</p>
+
+<p>I don’t want special treatment.<br>
+I don’t want VIP access.<br>
+I just wanted you to know that someone sees you.</p>
+
+<p>The emotional you.<br>
+The strong you.<br>
+The confusing you.<br>
+The “who the hell are you” you.</p>
+
+<p>And still says,<br>
+“Yeah… I like her. No software update needed.”</p>
+
+<p>If my presence ever feels safe to you, I’ll protect that space.<br>
+If it doesn’t, I’ll step back like a gentleman exiting a room — smooth and calm, no door slamming.</p>
+
+<p>Just sincerity.</p>
+
+<div class="signature">
+<p>Someone who cares<br>
+and knows exactly what he’s doing. 💖</p>
+</div>
     </p>
     <button onclick="nextPage(8)">DECODE HINT</button>
     <button onclick="nextPage(5)">Back</button>
