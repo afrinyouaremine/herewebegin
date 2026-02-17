@@ -258,7 +258,97 @@ and knows exactly what he’s doing. 💖</p>
 
 <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
 
+<script><script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
+
 <script>
+document.addEventListener("DOMContentLoaded", function(){
+
+function nextPage(num){
+  document.querySelectorAll('.page').forEach(function(p){
+    p.classList.remove('show');
+  });
+  setTimeout(function(){
+    document.getElementById('page'+num).classList.add('show');
+    window.scrollTo({top:0, behavior:"smooth"});
+  },300);
+}
+window.nextPage = nextPage;
+
+/* Flash Effect */
+function flash(){
+  document.body.style.background="white";
+  setTimeout(function(){
+    document.body.style.background="linear-gradient(135deg,#0f0c29,#302b63,#24243e)";
+  },200);
+}
+
+/* Heart Rain */
+function hearts(){
+  for(let i=0;i<30;i++){
+    let h=document.createElement("div");
+    h.className="heart";
+    h.innerHTML="❤️";
+    h.style.left=Math.random()*100+"vw";
+    h.style.top="-20px";
+    document.body.appendChild(h);
+    setTimeout(function(){ h.remove(); },4000);
+  }
+}
+
+/* Name Check */
+function checkName(){
+  let name=document.getElementById("nameInput").value.trim().toLowerCase();
+  if(name==="afrin"){
+    flash();
+    confetti({
+      particleCount:200,
+      spread:120,
+      origin:{y:0.6}
+    });
+    hearts();
+    setTimeout(function(){
+      nextPage(3);
+      setTimeout(function(){
+        nextPage(4);
+      },2000);
+    },1500);
+  }else{
+    document.getElementById("error").innerText =
+    "YOU MAY BEAUTIFUL BUT NOT THE ONE I CHOOSE TO LOVE";
+  }
+}
+window.checkName = checkName;
+
+/* Password */
+function checkPassword(){
+  let entered=prompt("Enter the password");
+  if(entered==="nirfa"){
+    nextPage(7);
+  }else{
+    document.getElementById("passError").innerText=
+    "Plot twist..!! Decode the message first it contains the password hint";
+  }
+}
+window.checkPassword = checkPassword;
+
+/* Love Message */
+function checkLoveMessage(){
+  let message=document.getElementById("loveMessage").value.trim().toLowerCase();
+  if(message==="i love you too"){
+    nextPage(9);
+    setTimeout(function(){
+      document.getElementById("hintText").classList.add("glow");
+    },800);
+  }else{
+    document.getElementById("loveError").innerText=
+    "Ennood para I love you n..";
+  }
+}
+window.checkLoveMessage = checkLoveMessage;
+
+});
+</script>
+
 function nextPage(num){
   document.querySelectorAll('.page').forEach(p=>p.classList.remove('show'));
   setTimeout(()=>{ document.getElementById('page'+num).classList.add('show'); },300);
