@@ -248,7 +248,7 @@ Gur ybir yrggre vf sbe Nseva, fb lbh thlf cyrnfr qba’g gel gb ernq vg… lbh z
 <!-- PAGE 7 -->
 <div id="page7" class="page">
   <div class="card">
-    <h2> DECODE MY HEART IF YOU CAN </h2>
+    <h2> Yeah.. this is the letter.. </h2>
     <p style="text-align:left">
  <h1>Afrin,</h1>
 
@@ -343,7 +343,7 @@ If it doesn’t, I’ll step back like a gentleman exiting a room — smooth and
 and knows exactly what he’s doing. 💖</p>
 </div>
     </p>
-    <button onclick="nextPage(8)">DECODE HINT</button>
+    <button onclick="nextPage(8)">i love you...</button>
     <button onclick="nextPage(5)">Back</button>
   </div>
 </div>
@@ -363,9 +363,9 @@ and knows exactly what he’s doing. 💖</p>
 <!-- PAGE 9 -->
 <div id="page9" class="page">
   <div class="card">
-    <h2>Hint Revealing...</h2>
+    <h2>Revealing somthing...</h2>
     <div id="hintText" class="reveal-text">
-      It's two digit common between us.
+      Nooki irunno ipo varum...
     </div>
     <button onclick="nextPage(8)">Back</button>
   </div>
@@ -387,7 +387,7 @@ function checkName(){
     setTimeout(()=>nextPage(4),2000);
   } else {
     document.getElementById("error").innerText =
-      "YOU MAY BEAUTIFUL NOT THE ONE I CHOOSE TO LOVE";
+      "YOU MAY BEAUTIFUL BUT NOT THE ONE I CHOOSE TO LOVE";
   }
 }
 
