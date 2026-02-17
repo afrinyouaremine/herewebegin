@@ -187,35 +187,19 @@ button:hover{ transform:scale(1.07); }
   <div class="card">
     <h2>Hi Afrin…</h2>
     <p style="text-align:left">
-<h1>First of all… please don’t freak out 😌</h1>
+<p>First of all… please... Don’t freak out. Nobody’s proposing  at least not now.. 😌</p>
 
-  <p>
-  Nobody’s proposing… at least not now.<br><br>
+<p>I honestly don’t know when it happened or how it happened… but somewhere along the way, you quietly became important to me.</p>
 
-  I honestly don’t know when it happened or how it happened…
-  but somewhere along the way, you quietly became important to me.<br><br>
+<p>So this? This is just a small gift. Nothing heavy. Nothing dramatic. Ah.. okey sorry little dramatic I just wanted to show you how I feel. Please accept it… (and let’s be honest, you don’t really have another option 😉).</p>
 
-  So this? This is just a small gift. Nothing heavy. Nothing dramatic.
-  Okay… maybe a little dramatic.<br><br>
+<p>I’m not expecting anything in return. No special treatment. No privileges. Not even a change in the way you see me.</p>
 
-  I just wanted to show you how I feel. Please accept it…
-  (and let’s be honest, you don’t really have another option 😉).<br><br>
+<p>I just wanted to make you smile. That’s it.</p>
 
-  I’m not expecting anything in return.
-  No special treatment. No privileges.
-  Not even a change in the way you see me.<br><br>
+<p>And trust me… if you were ever mine, I’d protect that smile at any cost until my last breath.</p>
 
-  I just wanted to make you smile. That’s it.
-  </p>
-
-  <button onclick="showMessage()">Tap to continue</button>
-
-  <div class="hidden" id="finalMessage">
-    <p>
-    And trust me… if you were ever mine,
-    I’d protect that smile at any cost until my last breath.<br><br>
-
-    And if you’re still wondering who I am…<br><br>
+<p>And if you’re still wondering who I am…</p>
 
 <p><strong>Tap to continue.</strong></p>
     </p>
