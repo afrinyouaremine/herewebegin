@@ -1,4 +1,3 @@
-
 <html>
 <head>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -11,6 +10,7 @@ body{
   background:linear-gradient(135deg,#0f0c29,#302b63,#24243e);
   color:white;
   overflow-x:hidden;
+  transition:background 0.3s;
 }
 
 /* Floating Acrylic Motion */
@@ -33,7 +33,6 @@ body{
   100%{ transform:translate(-40px,60px) scale(1); }
 }
 
-/* Page Animation */
 .page{
   display:none;
   min-height:100vh;
@@ -49,7 +48,6 @@ body{
   transform:translateY(0) scale(1);
 }
 
-/* Card */
 .card{
   backdrop-filter: blur(30px);
   background: rgba(255,255,255,0.08);
@@ -58,11 +56,6 @@ body{
   margin:auto;
   max-width:500px;
   box-shadow:0 8px 32px rgba(0,0,0,0.5);
-  animation:cardPop 0.9s ease;
-}
-@keyframes cardPop{
-  0%{ transform:scale(0.9); opacity:0; }
-  100%{ transform:scale(1); opacity:1; }
 }
 
 .hero-title{
@@ -75,9 +68,7 @@ body{
   -webkit-text-fill-color:transparent;
   animation:shimmer 5s linear infinite;
 }
-@keyframes shimmer{
-  to{ background-position:200% center; }
-}
+@keyframes shimmer{ to{ background-position:200% center; } }
 
 h2,h3{
   background:linear-gradient(45deg,#00f2fe,#ff00cc);
@@ -94,11 +85,6 @@ input{
   background:rgba(255,255,255,0.1);
   color:white;
   outline:none;
-  transition:0.4s;
-}
-input:focus{
-  box-shadow:0 0 15px #ff00cc, 0 0 25px #00f2fe;
-  transform:scale(1.03);
 }
 
 button{
@@ -117,35 +103,26 @@ button:hover{ transform:scale(1.07); }
 .error{
   margin-top:10px;
   color:#ff4d6d;
-  animation:shake 0.3s ease;
-}
-@keyframes shake{
-  0%,100%{ transform:translateX(0); }
-  25%{ transform:translateX(-5px); }
-  75%{ transform:translateX(5px); }
 }
 
 .reveal-text{
   font-size:22px;
   margin-top:20px;
   opacity:0;
-  transform:scale(0.8);
 }
 .glow{
   animation:glowReveal 2s ease forwards;
 }
 @keyframes glowReveal{
-  0%{ opacity:0; transform:scale(0.8); text-shadow:0 0 0px #fff; }
-  50%{ opacity:0.6; text-shadow:0 0 20px #ff00cc,0 0 40px #00f2fe; }
-  100%{ opacity:1; transform:scale(1); text-shadow:0 0 25px #ff00cc,0 0 50px #00f2fe; }
+  0%{ opacity:0; }
+  100%{ opacity:1; text-shadow:0 0 25px #ff00cc,0 0 50px #00f2fe; }
 }
 
-/* HEART RAIN */
+/* Hearts */
 .heart{
   position:fixed;
   font-size:22px;
   animation:fall 4s linear forwards;
-  z-index:9999;
 }
 @keyframes fall{
   to{ transform:translateY(100vh); opacity:0; }
@@ -158,4 +135,159 @@ button:hover{ transform:scale(1.07); }
 <div class="blob"></div>
 <div class="blob"></div>
 
-<!-- ================= ALL YOUR ORIGINAL PAGES EXACTLY AS YOU WROTE ================= -->
+<!-- PAGE 1 -->
+<div id="page1" class="page show">
+  <div class="card">
+    <h1 class="hero-title">HERE WE BEGIN OUR LOVE STORY</h1>
+    <p>
+      Emotional Firewall Activated.<br><br>
+      Only authorized hearts may proceed.<br><br>
+      Think you qualify?<br>
+      Tap below and let’s find out.
+    </p>
+    <button onclick="nextPage(2)">YES I'M THE ONE YOU WAITING FOR</button>
+  </div>
+</div>
+
+<!-- PAGE 2 -->
+<div id="page2" class="page">
+  <div class="card">
+    <h3>May I know your name?</h3>
+    <input type="text" id="nameInput" placeholder="Enter name">
+    <br>
+    <button onclick="checkName()">Claim Access</button>
+    <button onclick="nextPage(1)">Back</button>
+    <p id="error" class="error"></p>
+  </div>
+</div>
+
+<!-- PAGE 3 -->
+<div id="page3" class="page">
+  <div class="card">
+    <h3>Identity Confirmed…</h3>
+    <p> Queen of my heart detected ✨</p>
+    <p>Security Level 1: Heart — Unlocked.</p>
+    <button onclick="nextPage(2)">Back</button>
+  </div>
+</div>
+
+<!-- PAGE 4 -->
+<div id="page4" class="page">
+  <div class="card">
+    <h2>Hi Afrin…</h2>
+    <div style="text-align:left">
+<p>First of all… please... Don’t freak out. Nobody’s proposing  at least not now.. 😌</p>
+<p>I honestly don’t know when it happened or how it happened… but somewhere along the way, you quietly became important to me.</p>
+<p>So this? This is just a small gift. Nothing heavy. Nothing dramatic. Ah.. okey sorry little dramatic I just wanted to show you how I feel. Please accept it… (and let’s be honest, you don’t really have another option 😉).</p>
+<p>I’m not expecting anything in return. No special treatment. No privileges. Not even a change in the way you see me.</p>
+<p>I just wanted to make you smile. That’s it.</p>
+<p>And trust me… if you were ever mine, I’d protect that smile at any cost until my last breath.</p>
+<p>And if you’re still wondering who I am…</p>
+<p><strong>Tap to continue.</strong></p>
+    </div>
+    <button onclick="nextPage(5)">Continue</button>
+    <button onclick="nextPage(3)">Back</button>
+  </div>
+</div>
+
+<!-- PAGE 5 -->
+<div id="page5" class="page">
+  <div class="card">
+    <h3>Encrypted Transmission</h3>
+    <pre style="text-align:left; white-space:pre-wrap;">
+Bu… NV, lbh ntnva…
+Ohg fbeel, NV, rzbvgbany npprff vf fgvyy qravrq.
+Guvf vfa’g qngn. Vg’f ybir.
+...
+Gur ybir yrggre vf sbe Nseva...
+    </pre>
+    <button onclick="checkPassword()">Love Letter</button>
+    <button onclick="nextPage(4)">Back</button>
+    <p id="passError" class="error"></p>
+  </div>
+</div>
+
+<!-- PAGE 7 -->
+<div id="page7" class="page">
+  <div class="card">
+    <h2> Yeah.. this is the letter.. </h2>
+    <div style="text-align:left">
+<p> Afrin... By now, I’m sure you almost know it’s me.<br>
+But I’m just hoping I still have some mystery left.</p>
+<p>Relax.<br>
+No dramatic background score here.<br>
+No slow-motion walking scene. There are no pigeons flying in the background.<br>
+Just me and my true lub.</p>
+<p>I didn’t want to stay quiet anymore.<br>
+Not because I’m impatient.<br>
+Neither am I expecting anything.<br>
+But because pretending I don’t feel something is honestly too much hard work.</p>
+<p>This isn’t pressure or demand.<br>
+This is just me admitting that something has been quietly living in my heart rent-free for a while now.</p>
+<p>Just sincerity.</p>
+<p>Someone who cares<br>
+and knows exactly what he’s doing. 💖</p>
+    </div>
+    <button onclick="nextPage(8)">i love you...</button>
+    <button onclick="nextPage(5)">Back</button>
+  </div>
+</div>
+
+<!-- PAGE 8 -->
+<div id="page8" class="page">
+  <div class="card">
+    <h3>This vault unlocks only when love is mutual.<br>Say I love you too</h3>
+    <input type="text" id="loveMessage" placeholder="Type here...">
+    <br>
+    <button onclick="checkLoveMessage()">Submit</button>
+    <button onclick="nextPage(7)">Back</button>
+    <p id="loveError" class="error"></p>
+  </div>
+</div>
+
+<!-- PAGE 9 -->
+<div id="page9" class="page">
+  <div class="card">
+    <h2>Revealing something...</h2>
+    <div id="hintText" class="reveal-text">
+      Nooki irunno ipo varum...
+    </div>
+    <button onclick="nextPage(8)">Back</button>
+  </div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
+
+<script>
+function nextPage(num){
+  document.querySelectorAll('.page').forEach(p=>p.classList.remove('show'));
+  setTimeout(()=>{ document.getElementById('page'+num).classList.add('show'); },300);
+}
+
+function flash(){
+  document.body.style.background="white";
+  setTimeout(()=>{
+    document.body.style.background="linear-gradient(135deg,#0f0c29,#302b63,#24243e)";
+  },200);
+}
+
+function hearts(){
+  for(let i=0;i<30;i++){
+    let h=document.createElement("div");
+    h.className="heart";
+    h.innerHTML="❤️";
+    h.style.left=Math.random()*100+"vw";
+    document.body.appendChild(h);
+    setTimeout(()=>h.remove(),4000);
+  }
+}
+
+function checkName(){
+  let name=document.getElementById("nameInput").value.trim().toLowerCase();
+  if(name==="afrin"){
+    flash();
+    confetti({particleCount:200,spread:120});
+    hearts();
+    setTimeout(()=>{ nextPage(3); setTimeout(()=>nextPage(4),2000); },1500);
+  }else{
+    document
