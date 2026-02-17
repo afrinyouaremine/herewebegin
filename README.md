@@ -250,15 +250,13 @@ Gur ybir yrggre vf sbe Nseva, fb lbh thlf cyrnfr qba’g gel gb ernq vg… lbh z
   <div class="card">
     <h2> Yeah.. this is the letter.. </h2>
     <p style="text-align:left">
- <h1>Afrin,</h1>
-
-<p>By now, I’m sure you almost know it’s me.<br>
+<p> Afrin... By now, I’m sure you almost know it’s me.<br>
 But I’m just hoping I still have some mystery left.</p>
 
 <p>Relax.<br>
 No dramatic background score here.<br>
 No slow-motion walking scene. There are no pigeons flying in the background.<br>
-Just me and my true love.</p>
+Just me and my true lub.</p>
 
 <p>I didn’t want to stay quiet anymore.<br>
 Not because I’m impatient.<br>
