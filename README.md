@@ -33,18 +33,11 @@ p{
     font-weight:500;
 }
 
-@keyframes pulse {
-    0% { opacity:1; }
-    50% { opacity:0.6; }
-    100% { opacity:1; }
-}
-</style>
-</head>
-
-<body>
-
-<h1>Mission two loading...</h1>
-<p>Imotions deploying to production</p>
-
-</body>
-</html>
+a{
+    margin-top:25px;
+    padding:12px 30px;
+    background:white;
+    color:red;
+    text-decoration:none;
+    font-weight:bold;
+    border-radius:
