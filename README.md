@@ -187,13 +187,13 @@ button:hover{ transform:scale(1.07); }
   <div class="card">
     <h2>Hi Afrin…</h2>
     <p style="text-align:left">
-<p>First of all… please... Don’t freak out. Nobody’s proposing  at least not now.. 😌</p>
+<p>First of all… please... Don’t freak out. Nobody’s proposing... at least not now.. 😌</p>
 
-<p>I honestly don’t know when it happened or how it happened… but somewhere along the way, you quietly became important to me.</p>
+<p>I honestly don’t know when it happened and how but somewhere along the way, you quietly became important to me... </p>
 
-<p>So this? This is just a small gift. Nothing heavy. Nothing dramatic. Ah.. okey sorry little dramatic I just wanted to show you how I feel. Please accept it… (and let’s be honest, you don’t really have another option 😉).</p>
+<p>So... this? This is just a small gift. Nothing heavy. Nothing dramatic. Ah.. okey sorry little dramatic..  I just really wanted to show you how I feel. so.. Please accept it… (to be honest you don’t really have another option 😉).</p>
 
-<p>I’m not expecting anything in return. No special treatment. No privileges. Not even a change in the way you see me.</p>
+<p>I’m not expecting anything in return. No special treatment and privileges. Not even a change in the way you see me.</p>
 
 <p>I just wanted to make you smile. That’s it.</p>
 
@@ -212,6 +212,7 @@ button:hover{ transform:scale(1.07); }
 <div id="page5" class="page">
   <div class="card">
     <h3>Encrypted Transmission</h3>
+<button onclick="checkPassword()">Love Letter</button>
     <pre style="text-align:left; white-space:pre-wrap; font-family:monospace;">
 Bu… NV, lbh ntnva…
 Ohg fbeel, NV, rzbvgbany npprff vf fgvyy qravrq.
@@ -239,7 +240,7 @@ GUR “LRX” BS ZL URNEG VF LBH…
 Gur ybir yrggre vf sbe Nseva, fb lbh thlf cyrnfr qba’g gel gb ernq vg… lbh znl pel ol xabjvat zl fvgvngvba jvgu ure… V unir nyernql erzbirq gur pbzcyvpngrq onpxraq rapelcgvbaf ol gehfgvat lbh thlf… cyrnfr pbcrengr…
 
     </pre>
-    <button onclick="checkPassword()">Love Letter</button>
+    
     <button onclick="nextPage(4)">Back</button>
     <p id="passError" class="error"></p>
   </div>
