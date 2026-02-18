@@ -12,7 +12,7 @@ body{
   background:linear-gradient(135deg,#0f0c29,#302b63,#24243e);
   color:white;
   overflow-x:hidden;
-  padding-bottom:100px;
+  padding-bottom:120px;
 }
 
 /* Enhanced Floating Acrylic Blobs */
@@ -53,13 +53,14 @@ body{
 .page{
   display:none;
   min-height:100vh;
-  padding:50px 25px;
+  padding:40px 20px;
   text-align:center;
   opacity:0;
   transform:translate3d(0,60px,0) scale3d(0.95,0.95,0.95);
   transition:all 1.1s cubic-bezier(0.23,1,0.32,1);
   position:relative;
   width:100%;
+  overflow-y:auto;
 }
 .page.show{
   display:block;
@@ -67,21 +68,22 @@ body{
   transform:translate3d(0,0,0) scale3d(1,1,1);
 }
 
-/* MOBILE WIDE & SMOOTH */
+/* WIDER MOBILE-FRIENDLY & SCROLL FRIENDLY */
 @media (max-width:768px){
-  .page{ padding:60px 20px; }
-  body{ padding-bottom:120px; }
+  .page{ padding:50px 15px; }
+  body{ padding-bottom:140px; }
 }
 
-/* ACRYLIC GLASS CARDS WITH ANIMATION */
+/* WIDER ACRYLIC GLASS CARDS WITH ANIMATION */
 .acrylic-card{
   backdrop-filter: blur(35px) saturate(160%);
   background: rgba(255,255,255,0.12);
   border-radius:35px;
-  padding:45px 35px;
+  padding:50px 40px;
   margin:20px auto;
-  max-width:600px;
-  width:95%;
+  max-width:750px; /* Wider */
+  width:98%; /* Almost full width */
+  min-height:60vh;
   box-shadow: 
     0 25px 70px rgba(0,0,0,0.6),
     0 0 0 1px rgba(255,255,255,0.1),
@@ -91,6 +93,9 @@ body{
   overflow:hidden;
   animation:acrylicBloom 1.4s cubic-bezier(0.23,1,0.32,1);
   will-change: transform;
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
 }
 
 .acrylic-card::before{
@@ -118,7 +123,7 @@ body{
   50%{ opacity:1; transform:scale(1.5) rotate(180deg); }
 }
 
-/* HERO TITLE */
+/* HERO TITLE - KEPT ORIGINAL FONT */
 .hero-title{
   font-family: 'Dancing Script', cursive;
   font-weight:700;
@@ -140,14 +145,14 @@ body{
   50%{ background-position:300% center; }
 }
 
-/* HEADERS */
+/* HEADERS - KEPT ORIGINAL FONTS */
 h2{
   font-family: 'Parisienne', cursive;
   font-size:clamp(26px, 7vw, 36px);
   background:linear-gradient(45deg,#00f2fe,#ff00cc);
   -webkit-background-clip:text;
   -webkit-text-fill-color:transparent;
-  margin-bottom:25px;
+  margin:0 0 35px 0;
 }
 
 h3{
@@ -156,35 +161,61 @@ h3{
   background:linear-gradient(45deg,#00f2fe,#ff00cc);
   -webkit-background-clip:text;
   -webkit-text-fill-color:transparent;
-  margin-bottom:30px;
+  margin:0 0 40px 0;
 }
 
-/* BEAUTIFUL HANDWRITTEN MESSAGES */
-.handwritten{
+/* LETTER-STYLE HANDWRITTEN MESSAGES */
+.letter-message{
   font-family: 'Dancing Script', cursive !important;
   font-weight:500;
-  font-size:clamp(16px, 4.5vw, 20px) !important;
-  line-height:1.9 !important;
-  margin-bottom:25px !important;
+  font-size:clamp(18px, 4.8vw, 22px) !important;
+  line-height:1.8 !important;
+  margin-bottom:30px !important;
   color:rgba(255,255,255,0.95) !important;
   text-align:left !important;
   position:relative;
-  padding:20px;
-  background:rgba(255,255,255,0.05);
-  border-radius:20px;
-  border-left:4px solid rgba(0,242,254,0.5);
+  padding:30px 25px;
+  background:rgba(255,255,255,0.08);
+  border-radius:25px;
+  border:1px solid rgba(255,255,255,0.1);
+  box-shadow:0 8px 25px rgba(0,0,0,0.3);
+  max-height:350px;
+  overflow-y:auto;
 }
 
-.handwritten::before{
+.letter-message::-webkit-scrollbar {
+  width: 6px;
+}
+.letter-message::-webkit-scrollbar-track {
+  background: rgba(255,255,255,0.1);
+  border-radius: 10px;
+}
+.letter-message::-webkit-scrollbar-thumb {
+  background: linear-gradient(45deg,#00f2fe,#ff00cc);
+  border-radius: 10px;
+}
+
+.letter-message::before{
   content:'"';
   position:absolute;
-  left:-15px; top:10px;
-  font-size:40px;
-  color:rgba(0,242,254,0.3);
+  left:15px; top:15px;
+  font-size:45px;
+  color:rgba(0,242,254,0.4);
   font-family:'Great Vibes', cursive;
+  line-height:1;
 }
 
-/* INPUT & BUTTONS */
+.letter-message::after{
+  content:'"';
+  position:absolute;
+  right:20px; bottom:15px;
+  font-size:45px;
+  color:rgba(255,0,204,0.3);
+  font-family:'Great Vibes', cursive;
+  line-height:1;
+}
+
+/* INPUT & BUTTONS - KEPT ORIGINAL FONTS */
 input{
   padding:18px 25px;
   width:90%;
@@ -276,11 +307,14 @@ button:hover::before{ left:100%; }
   border-left:5px solid #00f2fe;
   text-align:center;
 }
-.signature .handwritten{
+.signature .letter-message{
   background:none;
-  border-left:none;
+  border:none;
+  box-shadow:none;
   padding:0;
-  font-size:22px;
+  margin:0;
+  font-size:24px;
+  max-height:none;
 }
 </style>
 </head>
@@ -294,13 +328,10 @@ button:hover::before{ left:100%; }
 <div id="page1" class="page show">
   <div class="acrylic-card">
     <h1 class="hero-title">HERE WE BEGIN OUR LOVE STORY</h1>
-    <p class="handwritten">
-      Emotional Firewall Activated.
-      <br><br>
-      Only authorized hearts may proceed.
-      <br><br>
-      Think you qualify?
-      <br>
+    <p class="letter-message">
+      Emotional Firewall Activated.<br><br>
+      Only authorized hearts may proceed.<br><br>
+      Think you qualify?<br>
       Tap below and let's find out.
     </p>
     <button onclick="nextPage(2)">YES I'M THE ONE YOU WAITING FOR</button>
@@ -323,8 +354,7 @@ button:hover::before{ left:100%; }
 <div id="page3" class="page">
   <div class="acrylic-card">
     <h3>Identity Confirmed…</h3>
-    <p class="handwritten">Queen of my heart detected ✨</p>
-    <p class="handwritten">Security Level 1: Heart — Unlocked.</p>
+    <p class="letter-message">Queen of my heart detected ✨<br>Security Level 1: Heart — Unlocked.</p>
     <button onclick="nextPage(2)">Back</button>
   </div>
 </div>
@@ -333,28 +363,21 @@ button:hover::before{ left:100%; }
 <div id="page4" class="page">
   <div class="acrylic-card">
     <h2>Hi Afrin…</h2>
-    <p class="handwritten">
-      First of all… please... Don't freak out. Nobody's proposing... at least not now.. 😌
-    </p>
-    <p class="handwritten">
-      I honestly don't know when it happened and how but somewhere along the way, you quietly became important to me...
-    </p>
-    <p class="handwritten">
-      So... this? This is just a small gift. Nothing heavy. Nothing dramatic. Ah.. okey sorry little dramatic.. I just really wanted to show you how I feel. so.. Please accept it… (to be honest you don't really have another option 😉).
-    </p>
-    <p class="handwritten">
-      I'm not expecting anything in return. No special treatment and privileges. Not even a change in the way you see me.
-    </p>
-    <p class="handwritten">
-      I just wanted to make you smile. That's it.
-    </p>
-    <p class="handwritten">
-      And trust me… if you were ever mine, I'd protect that smile at any cost until my last breath.
-    </p>
-    <p class="handwritten">
-      And if you're still wondering who I am…
-    </p>
-    <p class="handwritten"><strong>Tap to continue.</strong></p>
+    <div class="letter-message">
+      First of all… please... Don't freak out. Nobody's proposing... at least not now.. 😌<br><br>
+      
+      I honestly don't know when it happened and how but somewhere along the way, you quietly became important to me...<br><br>
+      
+      So... this? This is just a small gift. Nothing heavy. Nothing dramatic. Ah.. okey sorry little dramatic.. I just really wanted to show you how I feel. so.. Please accept it… (to be honest you don't really have another option 😉).<br><br>
+      
+      I'm not expecting anything in return. No special treatment and privileges. Not even a change in the way you see me.<br><br>
+      
+      I just wanted to make you smile. That's it.<br><br>
+      
+      And trust me… if you were ever mine, I'd protect that smile at any cost until my last breath.<br><br>
+      
+      And if you're still wondering who I am…<br><strong>Tap to continue.</strong>
+    </div>
     <button onclick="nextPage(5)">Continue</button>
     <button onclick="nextPage(3)">Back</button>
   </div>
@@ -366,7 +389,7 @@ button:hover::before{ left:100%; }
     <h3>Encrypted Transmission</h3>
     <p><button onclick="checkPassword()">Love Letter in next page</button></p>
     <p id="passError" class="error"></p>
-    <pre style="text-align:left; white-space:pre-wrap; font-family:'Dancing Script', cursive !important; font-size:clamp(14px, 3.8vw, 16px) !important; line-height:1.6; background:rgba(255,255,255,0.08); padding:25px; border-radius:25px; margin:25px 0; border-left:4px solid rgba(0,242,254,0.5);">
+    <pre style="text-align:left; white-space:pre-wrap; font-family:'Dancing Script', cursive !important; font-size:clamp(14px, 3.8vw, 16px) !important; line-height:1.6; background:rgba(255,255,255,0.08); padding:25px; border-radius:25px; margin:25px 0; border-left:4px solid rgba(0,242,254,0.5); max-height:400px; overflow-y:auto;">
 Bu… NV, lbh ntnva…
 Ohg fbeel, NV, rzbvgbany npprff vf fgvyy qravrq.
 Guvf vfa'g qngn. Vg'f ybir.
@@ -400,75 +423,54 @@ Gur ybir yrggre vf sbe Nseva, fb lbh thlf cyrnfr qba'g gel gb ernq vg… lbh znl
 <div id="page7" class="page">
   <div class="acrylic-card">
     <h2>Yeah.. this is the letter..</h2>
-    <p class="handwritten">
-      Afrin... By now, I'm sure you almost know it's me. But I'm just hoping I still have some mystery left.
-    </p>
-    <p class="handwritten">
-      Relax. No dramatic background score here. No slow-motion walking scene. There are no pigeons flying in the background. Just me and my true lub.
-    </p>
-    <p class="handwritten">
-      I didn't want to stay quiet anymore. Not because I'm impatient. Neither am I expecting anything. But because pretending I don't feel something is honestly too much hard work.
-    </p>
-    <p class="handwritten">
-      This isn't pressure or demand. This is just me admitting that something has been quietly living in my heart rent-free for a while now.
-    </p>
-    <p class="handwritten">
-      Somewhere between random conversations and "just another normal day," you became not-so-normal to me. No fireworks. No Bollywood climax. More like background music slowly increasing in volume until I realised, "Wait… how did she become my favourite dream?"
-    </p>
-    <p class="handwritten">
-      Maybe it's your smile. Maybe it's your energy. Maybe it's that dangerous combo of softness and attitude you carry like it's licensed and registered.
-    </p>
-    <p class="handwritten">
-      And yes, we need to revisit that legendary dialogue. "Who the hell are you…?"
-    </p>
-    <p class="handwritten">
-      First of all, Oscar-level iconic delivery. Confidence level 100. Emotional damage manageable…
-    </p>
-    <p class="handwritten">
-      I wasn't offended. I won't lie — it stayed with me. But I was impressed. Slightly attacked. But impressed. Your words stick, and not everyone's do.
-    </p>
-    <p class="handwritten">
-      There were moments I got confused too. Unread messages. Missed calls. Distance that felt heavier than it logically should have been. Even small things, like not being allowed to keep your photo, felt like my dramatic brain had just been denied a government approval stamp.
-    </p>
-    <p class="handwritten">
-      And here's the funniest part. While writing this, even AI asked me, "Bro… are you sure she likes you? Is this really the girl you want?"
-    </p>
-    <p class="handwritten">
-      Imagine. Even artificial intelligence questioning my natural intelligence.
-    </p>
-    <p class="handwritten">
-      But here's the difference. AI reads patterns. I read vibes. And my vibe is still choosing you. Calmly. Confidently. Slightly stubbornly.
-    </p>
-    <p class="handwritten">
-      I'm not writing this so you panic-call me. Please don't suddenly ring me like it's an emergency meeting. I'm not writing this expecting a reply. No pressure, no deadline, not even an emotional EMI.
-    </p>
-    <p class="handwritten">
-      I'm writing this because I respect you enough to be honest. And I respect myself enough not to beg.
-    </p>
-    <p class="handwritten">
-      If one day you look at me differently, I'll be there. Properly. Not half-hearted.
-    </p>
-    <p class="handwritten">
-      If not, I'll still wish you happiness from a safe, slightly dramatic but very dignified distance.
-    </p>
-    <p class="handwritten">
-      I don't want special treatment. I don't want VIP access. I just wanted you to know that someone sees you.
-    </p>
-    <p class="handwritten">
-      The emotional you. The strong you. The confusing you. The "who the hell are you" you.
-    </p>
-    <p class="handwritten">
-      And still says, "Yeah… I like her. No software update needed."
-    </p>
-    <p class="handwritten">
-      If my presence ever feels safe to you, I'll protect that space. If it doesn't, I'll step back like a gentleman exiting a room — smooth and calm, no door slamming.
-    </p>
-    <p class="handwritten">
+    <div class="letter-message">
+      Afrin... By now, I'm sure you almost know it's me. But I'm just hoping I still have some mystery left.<br><br>
+      
+      Relax. No dramatic background score here. No slow-motion walking scene. There are no pigeons flying in the background. Just me and my true lub.<br><br>
+      
+      I didn't want to stay quiet anymore. Not because I'm impatient. Neither am I expecting anything. But because pretending I don't feel something is honestly too much hard work.<br><br>
+      
+      This isn't pressure or demand. This is just me admitting that something has been quietly living in my heart rent-free for a while now.<br><br>
+      
+      Somewhere between random conversations and "just another normal day," you became not-so-normal to me. No fireworks. No Bollywood climax. More like background music slowly increasing in volume until I realised, "Wait… how did she become my favourite dream?"<br><br>
+      
+      Maybe it's your smile. Maybe it's your energy. Maybe it's that dangerous combo of softness and attitude you carry like it's licensed and registered.<br><br>
+      
+      And yes, we need to revisit that legendary dialogue. "Who the hell are you…?"<br><br>
+      
+      First of all, Oscar-level iconic delivery. Confidence level 100. Emotional damage manageable…<br><br>
+      
+      I wasn't offended. I won't lie — it stayed with me. But I was impressed. Slightly attacked. But impressed. Your words stick, and not everyone's do.<br><br>
+      
+      There were moments I got confused too. Unread messages. Missed calls. Distance that felt heavier than it logically should have been. Even small things, like not being allowed to keep your photo, felt like my dramatic brain had just been denied a government approval stamp.<br><br>
+      
+      And here's the funniest part. While writing this, even AI asked me, "Bro… are you sure she likes you? Is this really the girl you want?"<br><br>
+      
+      Imagine. Even artificial intelligence questioning my natural intelligence.<br><br>
+      
+      But here's the difference. AI reads patterns. I read vibes. And my vibe is still choosing you. Calmly. Confidently. Slightly stubbornly.<br><br>
+      
+      I'm not writing this so you panic-call me. Please don't suddenly ring me like it's an emergency meeting. I'm not writing this expecting a reply. No pressure, no deadline, not even an emotional EMI.<br><br>
+      
+      I'm writing this because I respect you enough to be honest. And I respect myself enough not to beg.<br><br>
+      
+      If one day you look at me differently, I'll be there. Properly. Not half-hearted.<br><br>
+      
+      If not, I'll still wish you happiness from a safe, slightly dramatic but very dignified distance.<br><br>
+      
+      I don't want special treatment. I don't want VIP access. I just wanted you to know that someone sees you.<br><br>
+      
+      The emotional you. The strong you. The confusing you. The "who the hell are you" you.<br><br>
+      
+      And still says, "Yeah… I like her. No software update needed."<br><br>
+      
+      If my presence ever feels safe to you, I'll protect that space. If it doesn't, I'll step back like a gentleman exiting a room — smooth and calm, no door slamming.<br><br>
+      
       Just sincerity.
-    </p>
+    </div>
     
     <div class="signature">
-      <p class="handwritten">
+      <p class="letter-message">
         Someone who cares<br>
         and knows exactly what's he's doing. 💖
       </p>
