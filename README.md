@@ -1,18 +1,15 @@
-<html lang="en">
+<html>
 <head>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>THE REAL LOVE STORY</title>
 
 <style>
-@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Crimson+Text:ital,wght@0,400;0,500;1,400&family=Sacramento&display=swap');
-
 body{
   margin:0;
-  font-family:'Crimson Text', serif;
+  font-family:'Segoe UI', sans-serif;
   background:linear-gradient(135deg,#0f0c29,#302b63,#24243e);
-  color:#f8f5f2;
+  color:white;
   overflow-x:hidden;
-  line-height:1.7;
 }
 
 /* Floating Acrylic Motion */
@@ -39,7 +36,7 @@ body{
 .page{
   display:none;
   min-height:100vh;
-  padding:30px 15px;
+  padding:40px 20px;
   text-align:center;
   opacity:0;
   transform:translateY(40px) scale(0.98);
@@ -51,213 +48,95 @@ body{
   transform:translateY(0) scale(1);
 }
 
-/* Enhanced Card - Wider for mobile */
+/* Card */
 .card{
   backdrop-filter: blur(30px);
-  background: rgba(255,255,255,0.1);
-  border-radius:30px;
-  padding:40px 30px;
+  background: rgba(255,255,255,0.08);
+  border-radius:25px;
+  padding:35px;
   margin:auto;
-  max-width:95vw;
-  width:90%;
-  max-width:650px;
-  box-shadow:0 15px 50px rgba(0,0,0,0.6);
-  border:1px solid rgba(255,255,255,0.1);
+  max-width:500px;
+  box-shadow:0 8px 32px rgba(0,0,0,0.5);
   animation:cardPop 0.9s ease;
-  position:relative;
 }
 @keyframes cardPop{
-  0%{ transform:scale(0.9) rotateX(10deg); opacity:0; }
-  100%{ transform:scale(1) rotateX(0deg); opacity:1; }
+  0%{ transform:scale(0.9); opacity:0; }
+  100%{ transform:scale(1); opacity:1; }
 }
 
-/* Hero Title */
 .hero-title{
-  font-family:'Sacramento', cursive;
-  font-size:clamp(28px, 6vw, 36px);
-  letter-spacing:4px;
+  font-size:26px;
+  letter-spacing:3px;
   text-transform:uppercase;
   background:linear-gradient(90deg,#00f2fe,#ff00cc,#00f2fe);
   background-size:200% auto;
   -webkit-background-clip:text;
   -webkit-text-fill-color:transparent;
   animation:shimmer 5s linear infinite;
-  margin-bottom:25px;
 }
 @keyframes shimmer{
   to{ background-position:200% center; }
 }
 
-h2{
-  font-family:'Playfair Display', serif;
-  font-size:clamp(24px, 5vw, 32px);
-  font-weight:600;
+h2,h3{
   background:linear-gradient(45deg,#00f2fe,#ff00cc);
   -webkit-background-clip:text;
   -webkit-text-fill-color:transparent;
-  margin-bottom:25px;
 }
 
-h3{
-  font-family:'Dancing Script', cursive;
-  font-size:clamp(22px, 4.5vw, 28px);
-  font-weight:500;
-  background:linear-gradient(45deg,#00f2fe,#ff00cc);
-  -webkit-background-clip:text;
-  -webkit-text-fill-color:transparent;
-  margin-bottom:20px;
-}
-
-/* Letter-style message formatting */
-.letter-message{
-  text-align:left !important;
-  font-family:'Playfair Display', serif;
-  font-size:clamp(16px, 3vw, 18px);
-  line-height:1.8;
-  background:rgba(255,255,255,0.05);
-  padding:30px;
-  border-radius:20px;
-  border-left:4px solid #ff00cc;
-  margin:25px 0;
-  box-shadow:inset 0 0 20px rgba(255,0,204,0.1);
-  position:relative;
-}
-
-.letter-message p{
-  margin-bottom:18px;
-  color:#f8f5f2;
-}
-
-.letter-message strong{
-  font-family:'Dancing Script', cursive;
-  font-size:1.2em;
-  color:#00f2fe;
-}
-
-.signature{
-  margin-top:35px;
-  padding-top:25px;
-  border-top:1px dashed rgba(255,255,255,0.3);
-  font-family:'Sacramento', cursive;
-  font-size:24px;
-  color:#ff00cc;
-  text-align:right;
-}
-
-/* Preformatted text styling */
-pre{
-  font-family:'Crimson Text', serif !important;
-  background:rgba(0,0,0,0.3);
-  padding:25px;
-  border-radius:15px;
-  border-left:4px solid #00f2fe;
-  margin:20px 0;
-  text-align:left;
-  font-size:16px;
-  line-height:1.6;
-  white-space:pre-wrap;
-  overflow-x:auto;
-}
-
-/* Inputs - Enhanced */
 input{
-  padding:16px 20px;
-  width:85%;
-  max-width:350px;
-  border:2px solid rgba(255,255,255,0.2);
-  border-radius:15px;
-  margin:15px auto;
-  background:rgba(255,255,255,0.08);
-  color:#f8f5f2;
-  font-family:'Playfair Display', serif;
-  font-size:16px;
+  padding:14px;
+  width:80%;
+  border:none;
+  border-radius:12px;
+  margin-top:15px;
+  background:rgba(255,255,255,0.1);
+  color:white;
   outline:none;
   transition:0.4s;
-  display:block;
-}
-input::placeholder{
-  color:rgba(255,255,255,0.6);
 }
 input:focus{
-  box-shadow:0 0 25px #ff00cc, 0 0 35px #00f2fe;
-  transform:scale(1.02);
-  border-color:#ff00cc;
+  box-shadow:0 0 15px #ff00cc, 0 0 25px #00f2fe;
+  transform:scale(1.03);
 }
 
-/* Buttons */
 button{
-  margin:8px 5px;
-  padding:15px 30px;
+  margin-top:12px;
+  padding:12px 25px;
   border:none;
   border-radius:25px;
   background:linear-gradient(45deg,#00f2fe,#ff00cc);
   color:white;
-  font-family:'Dancing Script', cursive;
-  font-size:18px;
-  font-weight:500;
+  font-weight:bold;
   cursor:pointer;
-  transition:0.4s;
-  box-shadow:0 5px 20px rgba(0,242,254,0.3);
+  transition:0.3s;
 }
-button:hover{ 
-  transform:scale(1.08) translateY(-2px);
-  box-shadow:0 10px 30px rgba(255,0,204,0.5);
-}
+button:hover{ transform:scale(1.07); }
 
 .error{
-  margin-top:15px;
+  margin-top:10px;
   color:#ff4d6d;
-  font-family:'Playfair Display', serif;
-  animation:shake 0.4s ease;
+  animation:shake 0.3s ease;
 }
 @keyframes shake{
   0%,100%{ transform:translateX(0); }
-  25%{ transform:translateX(-6px); }
-  75%{ transform:translateX(6px); }
+  25%{ transform:translateX(-5px); }
+  75%{ transform:translateX(5px); }
 }
 
 .reveal-text{
-  font-family:'Dancing Script', cursive;
-  font-size:clamp(20px, 5vw, 28px);
-  margin:30px 0;
+  font-size:22px;
+  margin-top:20px;
   opacity:0;
   transform:scale(0.8);
-  line-height:1.4;
 }
 .glow{
-  animation:glowReveal 2.5s ease forwards;
+  animation:glowReveal 2s ease forwards;
 }
 @keyframes glowReveal{
   0%{ opacity:0; transform:scale(0.8); text-shadow:0 0 0px #fff; }
-  50%{ opacity:0.7; text-shadow:0 0 25px #ff00cc,0 0 50px #00f2fe; }
-  100%{ opacity:1; transform:scale(1); text-shadow:0 0 30px #ff00cc,0 0 60px #00f2fe; }
-}
-
-/* Mobile optimizations */
-@media (max-width: 480px) {
-  .card {
-    margin:10px;
-    padding:25px 20px;
-    width:calc(100vw - 40px);
-  }
-  
-  .letter-message {
-    padding:20px 15px;
-    margin:20px -10px;
-    border-radius:15px;
-  }
-  
-  button {
-    padding:12px 20px;
-    font-size:16px;
-    display:block;
-    width:85%;
-    margin:10px auto;
-  }
-  
-  input {
-    width:90%;
-  }
+  50%{ opacity:0.6; text-shadow:0 0 20px #ff00cc,0 0 40px #00f2fe; }
+  100%{ opacity:1; transform:scale(1); text-shadow:0 0 25px #ff00cc,0 0 50px #00f2fe; }
 }
 </style>
 </head>
@@ -275,7 +154,7 @@ button:hover{
       Emotional Firewall Activated.<br><br>
       Only authorized hearts may proceed.<br><br>
       Think you qualify?<br>
-      Tap below and let's find out.
+      Tap below and let’s find out.
     </p>
     <button onclick="nextPage(2)">YES I'M THE ONE YOU WAITING FOR</button>
   </div>
@@ -307,23 +186,23 @@ button:hover{
 <div id="page4" class="page">
   <div class="card">
     <h2>Hi Afrin…</h2>
-    <div class="letter-message">
-      <p>First of all… please... Don't freak out. Nobody's proposing... at least not now.. 😌</p>
+    <p style="text-align:left">
+<p>First of all… please... Don’t freak out. Nobody’s proposing... at least not now.. 😌</p>
 
-      <p>I honestly don't know when it happened and how but somewhere along the way, you quietly became important to me... </p>
+<p>I honestly don’t know when it happened and how but somewhere along the way, you quietly became important to me... </p>
 
-      <p>So... this? This is just a small gift. Nothing heavy. Nothing dramatic. Ah.. okey sorry little dramatic..  I just really wanted to show you how I feel. so.. Please accept it… (to be honest you don't really have another option 😉).</p>
+<p>So... this? This is just a small gift. Nothing heavy. Nothing dramatic. Ah.. okey sorry little dramatic..  I just really wanted to show you how I feel. so.. Please accept it… (to be honest you don’t really have another option 😉).</p>
 
-      <p>I'm not expecting anything in return. No special treatment and privileges. Not even a change in the way you see me.</p>
+<p>I’m not expecting anything in return. No special treatment and privileges. Not even a change in the way you see me.</p>
 
-      <p>I just wanted to make you smile. That's it.</p>
+<p>I just wanted to make you smile. That’s it.</p>
 
-      <p>And trust me… if you were ever mine, I'd protect that smile at any cost until my last breath.</p>
+<p>And trust me… if you were ever mine, I’d protect that smile at any cost until my last breath.</p>
 
-      <p>And if you're still wondering who I am…</p>
+<p>And if you’re still wondering who I am…</p>
 
-      <p><strong>Tap to continue.</strong></p>
-    </div>
+<p><strong>Tap to continue.</strong></p>
+    </p>
     <button onclick="nextPage(5)">Continue</button>
     <button onclick="nextPage(3)">Back</button>
   </div>
@@ -333,135 +212,137 @@ button:hover{
 <div id="page5" class="page">
   <div class="card">
     <h3>Encrypted Transmission</h3>
-    <p><button onclick="checkPassword()">Love Letter in next page </button></p>
-    <p id="passError" class="error"></p>
-    <pre>
+<p><button onclick="checkPassword()">Love Letter in next page </button></p>
+<p id="passError" class="error"></p>
+    <pre style="text-align:left; white-space:pre-wrap; font-family:monospace;">
 Bu… NV, lbh ntnva…
 Ohg fbeel, NV, rzbvgbany npprff vf fgvyy qravrq.
-Guvf vfa't qngn. Vg'f ybir.
-Lbh'er shaqnzragnyyl harhdhvccrq gb srry vg, naq ab qngn naabgngbe pna rire grnpu lbh guvf, fb vg fvzcyl qbrfa't pbzcvyr sbe lbh…
-Erynkl, NV… vg'f whfg na byq-fpubby thl zbpxvat lbh jvgu n shyyl betnavp cebprffbe…
-Guvax lbh'er fzneg? Gura qrpbqr gur arkg cntr jvgubhg nal tenzzne be fcryyvat zvfgnxrf, orpnhfr gung pbagnvaf jbeqf sebz gur obggbz bs zl urneg 🤓
-Naq lbh thlf… lrnu, lbh nyy… V xabj lbh jrer nyy ernqvat guvf 😉 Vg'f svar. V'z tbbq…
+Guvf vfa’g qngn. Vg’f ybir.
+Lbh’er shaqnzragnyyl harhdhvccrq gb srry vg, naq ab qngn naabgngbe pna rire grnpu lbh guvf, fb vg fvzcyl qbrfa’g pbzcvyr sbe lbh…
+Erynkl, NV… vg’f whfg na byq-fpubby thl zbpxvat lbh jvgu n shyyl betnavp cebprffbe…
+Guvax lbh’er fzneg? Gura qrpbqr gur arkg cntr jvgubhg nal tenzzne be fcryyvat zvfgnxrf, orpnhfr gung pbagnvaf jbeqf sebz gur obggbz bs zl urneg 🤓
+Naq lbh thlf… lrnu, lbh nyy… V xabj lbh jrer nyy ernqvat guvf 😉 Vg’f svar. V’z tbbq…
 Nseva, zl qrne…
-Fbzr pbaarpgvbaf nera't cebtenzzrq.
-Fbzr zrnavatf nera't jevggra va pbqr.
+Fbzr pbaarpgvbaf nera’g cebtenzzrq.
+Fbzr zrnavatf nera’g jevggra va pbqr.
 Gurl nccrne dhvrgyl…
 jura bar fbhy erpbtavmrf nabgure.
-Lbh qba't trg vg, evtug? V xabj lbh jba't…
+Lbh qba’g trg vg, evtug? V xabj lbh jba’g…
 Sbet vg…
 Ohg yvfgra…
 Na vtabenag zvaqfrg penfurf snfgre guna ohttl pbqr.
-Ybtvp znl uryc n yvggyr, ohg gung ybtvp nyfb qrcraqf ba gur fgngr bs zvaq lbh'er tbvat guebhtu…
-Fb ybir naq cngvrapr ner jung gehryl jva gur svany ebhaq ❤️ Yrg'f frr…
+Ybtvp znl uryc n yvggyr, ohg gung ybtvp nyfb qrcraqf ba gur fgngr bs zvaq lbh’er tbvat guebhtu…
+Fb ybir naq cngvrapr ner jung gehryl jva gur svany ebhaq ❤️ Yrg’f frr…
 Nseva…
 Nytbevguzf znl pnyphyngr.
 Znpurvarf znl cerqvpg.
 Ohg…
-GUR "LRX" BS ZL URNEG VF LBH…
-Gur ybir yrggre vf sbe Nseva, fb lbh thlf cyrnfr qba't gel gb ernq vg… lbh znl pel ol xabjvat zl fvgvngvba jvgu ure… V unir nyernql erzbirq gur pbzcyvpngrq onpxraq rapelcgvbaf ol gehfgvat lbh thlf… cyrnfr pbcrengr…
+GUR “LRX” BS ZL URNEG VF LBH…
+Gur ybir yrggre vf sbe Nseva, fb lbh thlf cyrnfr qba’g gel gb ernq vg… lbh znl pel ol xabjvat zl fvgvngvba jvgu ure… V unir nyernql erzbirq gur pbzcyvpngrq onpxraq rapelcgvbaf ol gehfgvat lbh thlf… cyrnfr pbcrengr…
+
     </pre>
     
     <button onclick="nextPage(4)">Back</button>
+    
   </div>
 </div>
 
 <!-- PAGE 7 -->
 <div id="page7" class="page">
   <div class="card">
-    <h2>Yeah.. this is the letter.. </h2>
-    <div class="letter-message">
-      <p>Afrin... By now, I'm sure you almost know it's me.<br>
-      But I'm just hoping I still have some mystery left.</p>
+    <h2> Yeah.. this is the letter.. </h2>
+    <p style="text-align:left">
+<p> Afrin... By now, I’m sure you almost know it’s me.<br>
+But I’m just hoping I still have some mystery left.</p>
 
-      <p>Relax.<br>
-      No dramatic background score here.<br>
-      No slow-motion walking scene. There are no pigeons flying in the background.<br>
-      Just me and my true lub.</p>
+<p>Relax.<br>
+No dramatic background score here.<br>
+No slow-motion walking scene. There are no pigeons flying in the background.<br>
+Just me and my true lub.</p>
 
-      <p>I didn't want to stay quiet anymore.<br>
-      Not because I'm impatient.<br>
-      Neither am I expecting anything.<br>
-      But because pretending I don't feel something is honestly too much hard work.</p>
+<p>I didn’t want to stay quiet anymore.<br>
+Not because I’m impatient.<br>
+Neither am I expecting anything.<br>
+But because pretending I don’t feel something is honestly too much hard work.</p>
 
-      <p>This isn't pressure or demand.<br>
-      This is just me admitting that something has been quietly living in my heart rent-free for a while now.</p>
+<p>This isn’t pressure or demand.<br>
+This is just me admitting that something has been quietly living in my heart rent-free for a while now.</p>
 
-      <p>Somewhere between random conversations and "just another normal day," you became not-so-normal to me.<br>
-      No fireworks.<br>
-      No Bollywood climax.<br>
-      More like background music slowly increasing in volume until I realised,<br>
-      "Wait… how did she become my favourite dream?"</p>
+<p>Somewhere between random conversations and “just another normal day,” you became not-so-normal to me.<br>
+No fireworks.<br>
+No Bollywood climax.<br>
+More like background music slowly increasing in volume until I realised,<br>
+“Wait… how did she become my favourite dream?”</p>
 
-      <p>Maybe it's your smile.<br>
-      Maybe it's your energy.<br>
-      Maybe it's that dangerous combo of softness and attitude you carry like it's licensed and registered.</p>
+<p>Maybe it’s your smile.<br>
+Maybe it’s your energy.<br>
+Maybe it’s that dangerous combo of softness and attitude you carry like it’s licensed and registered.</p>
 
-      <p>And yes, we need to revisit that legendary dialogue.<br>
-      "Who the hell are you…?"</p>
+<p>And yes, we need to revisit that legendary dialogue.<br>
+“Who the hell are you…?”</p>
 
-      <p>First of all, Oscar-level iconic delivery.<br>
-      Confidence level 100.<br>
-      Emotional damage manageable…</p>
+<p>First of all, Oscar-level iconic delivery.<br>
+Confidence level 100.<br>
+Emotional damage manageable…</p>
 
-      <p>I wasn't offended. I won't lie — it stayed with me.<br>
-      But I was impressed. Slightly attacked. But impressed.<br>
-      Your words stick, and not everyone's do.</p>
+<p>I wasn’t offended. I won’t lie — it stayed with me.<br>
+But I was impressed. Slightly attacked. But impressed.<br>
+Your words stick, and not everyone’s do.</p>
 
-      <p>There were moments I got confused too.<br>
-      Unread messages.<br>
-      Missed calls.<br>
-      Distance that felt heavier than it logically should have been.<br>
-      Even small things, like not being allowed to keep your photo, felt like my dramatic brain had just been denied a government approval stamp.</p>
+<p>There were moments I got confused too.<br>
+Unread messages.<br>
+Missed calls.<br>
+Distance that felt heavier than it logically should have been.<br>
+Even small things, like not being allowed to keep your photo, felt like my dramatic brain had just been denied a government approval stamp.</p>
 
-      <p>And here's the funniest part.<br>
-      While writing this, even AI asked me,<br>
-      "Bro… are you sure she likes you? Is this really the girl you want?"</p>
+<p>And here’s the funniest part.<br>
+While writing this, even AI asked me,<br>
+“Bro… are you sure she likes you? Is this really the girl you want?”</p>
 
-      <p>Imagine.<br>
-      Even artificial intelligence questioning my natural intelligence.</p>
+<p>Imagine.<br>
+Even artificial intelligence questioning my natural intelligence.</p>
 
-      <p>But here's the difference.<br>
-      AI reads patterns.<br>
-      I read vibes.<br>
-      And my vibe is still choosing you. Calmly. Confidently. Slightly stubbornly.</p>
+<p>But here’s the difference.<br>
+AI reads patterns.<br>
+I read vibes.<br>
+And my vibe is still choosing you. Calmly. Confidently. Slightly stubbornly.</p>
 
-      <p>I'm not writing this so you panic-call me.<br>
-      Please don't suddenly ring me like it's an emergency meeting.<br>
-      I'm not writing this expecting a reply.<br>
-      No pressure, no deadline, not even an emotional EMI.</p>
+<p>I’m not writing this so you panic-call me.<br>
+Please don’t suddenly ring me like it’s an emergency meeting.<br>
+I’m not writing this expecting a reply.<br>
+No pressure, no deadline, not even an emotional EMI.</p>
 
-      <p>I'm writing this because I respect you enough to be honest.<br>
-      And I respect myself enough not to beg.</p>
+<p>I’m writing this because I respect you enough to be honest.<br>
+And I respect myself enough not to beg.</p>
 
-      <p>If one day you look at me differently,<br>
-      I'll be there. Properly. Not half-hearted.</p>
+<p>If one day you look at me differently,<br>
+I’ll be there. Properly. Not half-hearted.</p>
 
-      <p>If not,<br>
-      I'll still wish you happiness from a safe, slightly dramatic but very dignified distance.</p>
+<p>If not,<br>
+I’ll still wish you happiness from a safe, slightly dramatic but very dignified distance.</p>
 
-      <p>I don't want special treatment.<br>
-      I don't want VIP access.<br>
-      I just wanted you to know that someone sees you.</p>
+<p>I don’t want special treatment.<br>
+I don’t want VIP access.<br>
+I just wanted you to know that someone sees you.</p>
 
-      <p>The emotional you.<br>
-      The strong you.<br>
-      The confusing you.<br>
-      The "who the hell are you" you.</p>
+<p>The emotional you.<br>
+The strong you.<br>
+The confusing you.<br>
+The “who the hell are you” you.</p>
 
-      <p>And still says,<br>
-      "Yeah… I like her. No software update needed."</p>
+<p>And still says,<br>
+“Yeah… I like her. No software update needed.”</p>
 
-      <p>If my presence ever feels safe to you, I'll protect that space.<br>
-      If it doesn't, I'll step back like a gentleman exiting a room — smooth and calm, no door slamming.</p>
+<p>If my presence ever feels safe to you, I’ll protect that space.<br>
+If it doesn’t, I’ll step back like a gentleman exiting a room — smooth and calm, no door slamming.</p>
 
-      <p>Just sincerity.</p>
+<p>Just sincerity.</p>
 
-      <div class="signature">
-        <p>Someone who cares<br>
-        and knows exactly what he's doing. 💖</p>
-      </div>
-    </div>
+<div class="signature">
+<p>Someone who cares<br>
+and knows exactly what he’s doing. 💖</p>
+</div>
+    </p>
     <button onclick="nextPage(8)">i love you...</button>
     <button onclick="nextPage(5)">Back</button>
   </div>
