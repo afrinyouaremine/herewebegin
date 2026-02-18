@@ -365,7 +365,7 @@ and knows exactly what he’s doing. 💖</p>
   <div class="card">
     <h2>Revealing something...</h2>
     <div id="hintText" class="reveal-text">
-      Nooki irunno ipo varum...
+      Thanks for the camara access I can see you now...
     </div>
     <button onclick="nextPage(8)">Back</button>
   </div>
