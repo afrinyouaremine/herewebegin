@@ -7,228 +7,248 @@
 body{
   margin:0;
   font-family:'Segoe UI', sans-serif;
-  background:linear-gradient(135deg,#0f0c29,#302b63,#24243e);
-  color:white;
-  overflow-x:hidden; /* Prevent horizontal scroll */
+  background: 
+    /* Romantic heart particles */
+    radial-gradient(circle at 20% 80%, rgba(255,182,193,0.3) 0%, transparent 50%),
+    radial-gradient(circle at 80% 20%, rgba(255,105,180,0.25) 0%, transparent 50%),
+    radial-gradient(circle at 40% 40%, rgba(255,20,147,0.2) 0%, transparent 50%),
+    radial-gradient(circle at 60% 60%, rgba(255,192,203,0.25) 0%, transparent 50%),
+    
+    /* Romantic gradient base */
+    linear-gradient(135deg, #ff9a9e 0%, #fecfef 25%, #fecfef 50%, #fad0c4 75%, #ffd1ff 100%),
+    
+    /* Soft romantic overlay */
+    linear-gradient(45deg, rgba(255,182,193,0.4) 0%, rgba(255,105,180,0.3) 30%, rgba(255,20,147,0.2) 70%, rgba(255,192,203,0.3) 100%);
+  
+  color:#4a1a4a;
+  overflow-x:hidden;
   position:relative;
+  
+  /* Romantic floating hearts */
+  animation: heartBeat 20s ease-in-out infinite;
+}
+
+@keyframes heartBeat {
+  0%, 100% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
 }
 
 .page{
   min-height:100vh;
-  padding:20px 15px; /* Reduced padding for mobile */
+  padding:25px 20px;
   text-align:center;
   opacity:0;
-  transform:translateY(40px) scale(0.98);
-  transition:all 0.9s cubic-bezier(.23,1.01,.32,1);
+  transform:translateY(30px);
+  transition:all 0.8s cubic-bezier(.23,1.01,.32,1);
+  position:relative;
+  z-index:2;
 }
 .show{
   opacity:1;
-  transform:translateY(0) scale(1);
+  transform:translateY(0);
 }
 
-/* Enhanced Card - Wider and responsive */
+/* Perfect card for romantic theme */
 .card{
-  backdrop-filter: blur(40px);
-  background: rgba(255,255,255,0.12);
-  border-radius:30px;
-  padding:30px 25px; /* Better mobile padding */
-  margin:auto;
-  max-width:95vw; /* Almost full width on mobile */
+  backdrop-filter: blur(25px) saturate(180%);
+  background: rgba(255,255,255,0.85);
+  border-radius:35px;
+  padding:35px 30px;
+  margin:20px auto;
+  max-width:95vw;
   width:100%;
-  box-shadow:0 20px 60px rgba(0,0,0,0.6), inset 0 1px 0 rgba(255,255,255,0.2);
-  border:1px solid rgba(255,255,255,0.1);
-  animation:cardPop 1s cubic-bezier(.23,1,.32,1);
+  box-shadow:0 25px 70px rgba(255,105,180,0.3), 0 0 0 1px rgba(255,182,193,0.5), inset 0 1px 0 rgba(255,255,255,0.8);
+  border:1px solid rgba(255,192,203,0.6);
+  animation:cardBloom 1.2s cubic-bezier(.23,1,.32,1);
   position:relative;
   overflow:hidden;
   box-sizing:border-box;
 }
 
 .card::before{
-  content:'';
+  content:'💖';
   position:absolute;
-  top:-50%; left:-50%;
-  width:200%; height:200%;
-  background:linear-gradient(45deg, transparent, rgba(0,255,255,0.1), transparent);
-  transform:rotate(45deg) translateX(-200%) scale(0.7);
-  transition:0.8s;
+  top:-20px; right:-20px;
+  font-size:40px;
+  opacity:0.1;
+  animation: floatHeart 6s infinite linear;
+  z-index:0;
 }
-.card:hover::before{
-  transform:rotate(45deg) translateX(200%) scale(0.7);
+
+.card::after{
+  content:'✨';
+  position:absolute;
+  bottom:10px; left:10px;
+  font-size:20px;
+  opacity:0.3;
+  animation: sparkle 3s infinite;
 }
-@keyframes cardPop{
-  0%{ transform:scale(0.8) rotateX(10deg); opacity:0; }
+
+@keyframes cardBloom{
+  0%{ transform:scale(0.7) rotateX(15deg); opacity:0; }
   100%{ transform:scale(1) rotateX(0deg); opacity:1; }
 }
 
-/* Typography improvements for mobile readability */
+@keyframes floatHeart{
+  0%{ transform:translateY(0) rotate(0deg); }
+  100%{ transform:translateY(-20px) rotate(360deg); }
+}
+
 .hero-title{
-  font-size:clamp(24px, 5vw, 32px); /* Responsive font size */
-  letter-spacing:3px;
+  font-size:clamp(28px, 6vw, 36px);
+  letter-spacing:2px;
   text-transform:uppercase;
-  background:linear-gradient(90deg,#00f2fe,#ff00cc,#00f2fe,#4adeff);
+  background:linear-gradient(90deg,#ff1493,#ff69b4,#ffb6c1,#ff1493);
   background-size:300% auto;
   -webkit-background-clip:text;
   -webkit-text-fill-color:transparent;
-  animation:shimmer 4s linear infinite;
+  animation:shimmer 3s linear infinite;
   position:relative;
-  margin-bottom:20px;
+  margin-bottom:25px;
+  text-shadow:0 0 20px rgba(255,105,180,0.5);
 }
 
 h2{
-  font-size:clamp(22px, 6vw, 28px);
+  font-size:clamp(24px, 6vw, 30px);
+  color:#8b008b;
 }
 h3{
-  font-size:clamp(20px, 5vw, 24px);
+  font-size:clamp(22px, 5vw, 26px);
+  color:#c71585;
 }
 
 p {
-  font-size:clamp(14px, 4vw, 16px); /* Responsive text size */
-  line-height:1.6; /* Better readability */
-  margin-bottom:15px;
+  font-size:clamp(15px, 4.2vw, 17px);
+  line-height:1.7;
+  margin-bottom:18px;
+  color:#4a1a4a;
 }
 
-/* Message content specific improvements */
 .card p {
   text-align:left;
-  hyphens:auto; /* Better word breaking */
+  hyphens:auto;
   word-wrap:break-word;
 }
 
-/* Input improvements for mobile */
 input{
-  padding:16px;
-  width:90%;
-  max-width:400px;
-  border:1px solid rgba(255,255,255,0.2);
-  border-radius:16px;
-  margin:15px auto;
+  padding:18px;
+  width:92%;
+  max-width:420px;
+  border:2px solid rgba(255,182,193,0.6);
+  border-radius:25px;
+  margin:18px auto;
   display:block;
-  background:rgba(255,255,255,0.08);
-  color:white;
+  background:rgba(255,255,255,0.9);
+  color:#4a1a4a;
   outline:none;
   transition:all 0.4s;
   font-size:clamp(16px, 4vw, 18px);
   box-sizing:border-box;
+  box-shadow:0 4px 15px rgba(255,105,180,0.2);
 }
 input::placeholder{
-  color:rgba(255,255,255,0.6);
+  color:rgba(139,0,139,0.6);
 }
 input:focus{
-  box-shadow:0 0 25px rgba(0,242,254,0.5), 0 0 40px rgba(255,0,204,0.4);
-  transform:scale(1.02);
-  border-color:rgba(0,242,254,0.6);
-  background:rgba(255,255,255,0.12);
+  box-shadow:0 0 30px rgba(255,105,180,0.6), 0 8px 25px rgba(255,20,147,0.3);
+  transform:scale(1.03);
+  border-color:rgba(255,20,147,0.8);
+  background:rgba(255,255,255,0.95);
 }
 
-/* Button improvements - larger touch targets */
 button{
-  margin:10px 5px;
-  padding:16px 35px; /* Larger padding for easy tapping */
-  min-height:50px; /* Minimum touch target size */
+  margin:12px 8px;
+  padding:18px 40px;
+  min-height:55px;
   border:none;
   border-radius:30px;
-  background:linear-gradient(45deg,#00f2fe,#ff00cc);
+  background:linear-gradient(45deg,#ff1493,#ff69b4,#ffb6c1);
   color:white;
   font-weight:700;
   cursor:pointer;
-  font-size:clamp(16px, 4vw, 18px);
+  font-size:clamp(16px, 4vw, 19px);
   position:relative;
   overflow:hidden;
   transition:all 0.4s;
   display:inline-block;
-  touch-action:manipulation; /* Better mobile interaction */
+  touch-action:manipulation;
+  box-shadow:0 6px 20px rgba(255,105,180,0.4);
 }
 button::before{
   content:'';
   position:absolute;
   top:0; left:-100%;
   width:100%; height:100%;
-  background:linear-gradient(90deg,transparent,rgba(255,255,255,0.4),transparent);
+  background:linear-gradient(90deg,transparent,rgba(255,255,255,0.5),transparent);
   transition:0.6s;
 }
 button:hover, button:active{
-  transform:scale(1.05) translateY(-2px);
-  box-shadow:0 10px 30px rgba(0,242,254,0.4);
+  transform:scale(1.06) translateY(-3px);
+  box-shadow:0 12px 35px rgba(255,105,180,0.6);
 }
 button:active{
-  transform:scale(0.98);
+  transform:scale(0.99);
 }
 
-/* Optimized blobs for mobile performance */
+/* Enhanced romantic blobs (hearts instead of blobs) */
 .blob{
   position:fixed;
-  border-radius:50%;
-  filter:blur(40px); /* Reduced blur for performance */
-  animation:floatBlob 20s infinite ease-in-out; /* Slower animation */
+  border-radius:50% 0 50% 0;
+  filter:blur(10px);
+  animation:floatHeartBlob 25s infinite ease-in-out;
   z-index:-1;
-  opacity:0.4;
+  opacity:0.6;
 }
-.blob1{ width:250px; height:250px; background:linear-gradient(45deg, rgba(0,255,255,0.3), rgba(255,0,255,0.2)); top:-50px; left:-50px; animation-duration:22s; }
-.blob2{ width:200px; height:200px; background:linear-gradient(45deg, rgba(255,100,150,0.25), rgba(100,255,200,0.25)); bottom:-80px; right:-80px; animation-duration:26s, animation-delay:-5s; }
-.blob3{ width:150px; height:150px; background:linear-gradient(45deg, rgba(255,255,100,0.2), rgba(150,0,255,0.2)); top:15%; right:2%; animation-duration:24s, animation-delay:-10s; }
-.blob4{ width:120px; height:120px; background:linear-gradient(45deg, rgba(0,200,255,0.25), rgba(255,150,0,0.25)); bottom:15%; left:5%; animation-duration:28s, animation-delay:-15s; }
+.blob1{ 
+  width:280px; height:280px; 
+  background:linear-gradient(45deg, rgba(255,182,193,0.5), rgba(255,105,180,0.4), rgba(255,20,147,0.3)); 
+  top:-80px; left:-60px; 
+  animation-duration:28s; 
+}
+.blob2{ 
+  width:240px; height:240px; 
+  background:linear-gradient(45deg, rgba(255,192,203,0.45), rgba(255,105,180,0.35), rgba(255,182,193,0.4)); 
+  bottom:-100px; right:-100px; 
+  animation-duration:32s; 
+  animation-delay:-8s; 
+}
+.blob3{ 
+  width:200px; height:200px; 
+  background:linear-gradient(45deg, rgba(255,182,193,0.4), rgba(255,20,147,0.35), rgba(255,192,203,0.3)); 
+  top:20%; right:5%; 
+  animation-duration:30s; 
+  animation-delay:-12s; 
+}
+.blob4{ 
+  width:160px; height:160px; 
+  background:linear-gradient(45deg, rgba(255,105,180,0.45), rgba(255,182,193,0.35), rgba(255,20,147,0.3)); 
+  bottom:20%; left:8%; 
+  animation-duration:34s; 
+  animation-delay:-18s; 
+}
 
-@keyframes floatBlob{
+@keyframes floatHeartBlob{
   0%{ transform:translate(0,0) scale(1) rotate(0deg); }
-  25%{ transform:translate(30px,40px) scale(1.05) rotate(90deg); }
-  50%{ transform:translate(50px,15px) scale(1.1) rotate(180deg); }
-  75%{ transform:translate(15px,50px) scale(1.05) rotate(270deg); }
-  100%{ transform:translate(-10px,25px) scale(1) rotate(360deg); }
+  25%{ transform:translate(40px,50px) scale(1.08) rotate(90deg); }
+  50%{ transform:translate(60px,25px) scale(1.12) rotate(180deg); }
+  75%{ transform:translate(25px,60px) scale(1.08) rotate(270deg); }
+  100%{ transform:translate(0px,35px) scale(1) rotate(360deg); }
 }
 
-/* Reduced particles for mobile */
-.particle{
+/* Romantic floating hearts */
+.floating-heart{
   position:fixed;
-  width:3px; height:3px;
-  background:radial-gradient(circle, #00f2fe, transparent);
-  border-radius:50%;
+  font-size:20px;
+  color:rgba(255,105,180,0.8);
   pointer-events:none;
-  z-index:10;
-  animation:particleFloat 10s infinite linear;
-  will-change:transform; /* Optimize for GPU */
+  z-index:1;
+  animation:heartFloat 15s infinite linear;
 }
-@keyframes particleFloat{
-  0%{ transform:translateY(100vh) scale(0); opacity:1; }
-  50%{ opacity:0.6; }
-  100%{ transform:translateY(-100px) scale(1); opacity:0; }
-}
-
-/* Rest of animations remain the same */
-h2,h3{
-  background:linear-gradient(45deg,#00f2fe,#ff00cc,#4adeff);
-  -webkit-background-clip:text;
-  -webkit-text-fill-color:transparent;
-  font-weight:700;
-}
-
-.error{
-  margin-top:12px;
-  color:#ff4d6d;
-  animation:shake 0.4s ease;
-}
-@keyframes shake{
-  0%,100%{ transform:translateX(0); }
-  20%{ transform:translateX(-8px); }
-  40%{ transform:translateX(8px); }
-  60%{ transform:translateX(-4px); }
-  80%{ transform:translateX(4px); }
-}
-
-.reveal-text{
-  font-size:clamp(20px, 5vw, 26px);
-  margin-top:25px;
-  opacity:0;
-  transform:scale(0.8);
-  font-weight:600;
-}
-.glow{
-  animation:glowReveal 2.5s cubic-bezier(.23,1,.32,1) forwards;
-}
-@keyframes glowReveal{
-  0%{ opacity:0; transform:scale(0.8) rotate(-5deg); text-shadow:0 0 0 #fff; }
-  30%{ opacity:0.7; transform:scale(1.05) rotate(2deg); text-shadow:0 0 20px #ff00cc,0 0 40px #00f2fe; }
-  70%{ opacity:1; transform:scale(0.98); text-shadow:0 0 30px #ff00cc,0 0 60px #00f2fe; }
-  100%{ opacity:1; transform:scale(1) rotate(0deg); text-shadow:0 0 25px #ff00cc,0 0 50px #00f2fe; }
+@keyframes heartFloat{
+  0%{ transform:translateY(100vh) rotate(0deg) scale(0); opacity:1; }
+  20%{ opacity:1; }
+  80%{ opacity:0.4; }
+  100%{ transform:translateY(-100px) rotate(720deg) scale(1); opacity:0; }
 }
 
 @keyframes shimmer{
@@ -237,41 +257,46 @@ h2,h3{
 }
 @keyframes sparkle{
   0%,100%{ opacity:0; transform:scale(0.5) rotate(0deg); }
-  50%{ opacity:1; transform:scale(1.2) rotate(180deg); }
+  50%{ opacity:1; transform:scale(1.3) rotate(180deg); }
 }
 
-/* Fireworks optimized for mobile */
-.fireworks{
-  position:fixed;
-  top:0; left:0;
-  width:100vw; height:100vh;
-  pointer-events:none;
-  z-index:1000;
+.reveal-text{
+  font-size:clamp(22px, 5.5vw, 28px);
+  margin-top:30px;
   opacity:0;
-  transition:opacity 0.5s;
+  transform:scale(0.85);
+  font-weight:700;
+  color:#c71585;
 }
-.fireworks.show{
-  opacity:1;
+.glow{
+  animation:glowReveal 2.8s cubic-bezier(.23,1,.32,1) forwards;
 }
-.firework{
-  position:absolute;
-  width:5px; height:5px;
-  background:#00f2fe;
-  border-radius:50%;
-  pointer-events:none;
-}
-.firework-explosion{
-  position:absolute;
-  border-radius:50%;
-  pointer-events:none;
+@keyframes glowReveal{
+  0%{ opacity:0; transform:scale(0.85) rotate(-8deg); text-shadow:0 0 0 #fff; }
+  30%{ opacity:0.8; transform:scale(1.08) rotate(3deg); text-shadow:0 0 25px #ff69b4,0 0 45px #ff1493; }
+  70%{ opacity:1; transform:scale(1); text-shadow:0 0 35px #ff69b4,0 0 65px #ff1493; }
+  100%{ opacity:1; transform:scale(1) rotate(0deg); text-shadow:0 0 30px #ff69b4,0 0 55px #ff1493; }
 }
 
-/* Hide page transitions on mobile for smoother scroll */
+.error{
+  margin-top:15px;
+  color:#ff1493;
+  animation:shake 0.5s ease;
+}
+@keyframes shake{
+  0%,100%{ transform:translateX(0); }
+  20%{ transform:translateX(-10px); }
+  40%{ transform:translateX(10px); }
+  60%{ transform:translateX(-6px); }
+  80%{ transform:translateX(6px); }
+}
+
+/* Perfect mobile scrolling */
 @media (max-width: 768px) {
   .page {
-    display: block !important; /* Allow natural scrolling */
-    min-height: auto;
-    padding: 15px 10px;
+    min-height:auto;
+    padding:20px 15px;
+    margin-bottom:30px;
   }
   .show {
     opacity: 1;
@@ -279,21 +304,27 @@ h2,h3{
   }
   body {
     overflow-y: auto;
+    padding-bottom:40px;
   }
   .card {
     max-width: 100%;
-    margin: 0 auto 20px;
-    padding: 25px 20px;
+    margin: 15px auto 25px;
+    padding: 30px 25px;
+  }
+  
+  /* Ensure content stays visible */
+  .page:last-child {
+    margin-bottom: 50px;
   }
 }
 
-/* Landscape mobile adjustments */
 @media (max-width: 768px) and (orientation: landscape) {
   .card {
-    padding: 20px 15px;
+    padding: 25px 20px;
+    margin-bottom: 20px;
   }
   body {
-    padding-bottom: 20px;
+    padding-bottom: 30px;
   }
 }
 </style>
@@ -306,7 +337,7 @@ h2,h3{
 <div class="blob blob4"></div>
 <div class="fireworks" id="fireworks"></div>
 
-<!-- All pages now scroll naturally on mobile -->
+<!-- Perfect scrolling pages -->
 <div id="page1" class="page show">
   <div class="card">
     <h1 class="hero-title">HERE WE BEGIN OUR LOVE STORY</h1>
@@ -320,6 +351,7 @@ h2,h3{
   </div>
 </div>
 
+<!-- Rest of your HTML content stays exactly the same -->
 <div id="page2" class="page" style="display:none;">
   <div class="card">
     <h3>May I know your name?</h3>
@@ -368,7 +400,7 @@ h2,h3{
     <h3>Encrypted Transmission</h3>
     <p><button onclick="checkPassword()">Love Letter in next page </button></p>
     <p id="passError" class="error"></p>
-    <pre style="text-align:left; white-space:pre-wrap; font-family:monospace; font-size:clamp(12px, 3vw, 14px); line-height:1.4;">
+    <pre style="text-align:left; white-space:pre-wrap; font-family:monospace; font-size:clamp(12px, 3vw, 14px); line-height:1.4; background:rgba(255,255,255,0.7); padding:15px; border-radius:15px; margin:15px 0;">
 Bu… NV, lbh ntnva…
 Ohg fbeel, NV, rzbvgbany npprff vf fgvyy qravrq.
 Guvf vfa'g qngn. Vg'f ybir.
@@ -488,9 +520,9 @@ Gur ybir yrggre vf sbe Nseva, fb lbh thlf cyrnfr qba'g gel gb ernq vg… lbh znl
 
     <p>Just sincerity.</p>
 
-    <div class="signature">
-    <p>Someone who cares<br>
-    and knows exactly what's he's doing. 💖</p>
+    <div class="signature" style="margin-top:30px; padding:20px; background:rgba(255,182,193,0.2); border-radius:20px; border-left:4px solid #ff1493;">
+    <p style="font-size:18px; margin:0;"><strong>Someone who cares<br>
+    and knows exactly what's he's doing. 💖</strong></p>
     </div>
     <button onclick="nextPage(8)">i love you...</button>
     <button onclick="nextPage(5)">Back</button>
@@ -519,7 +551,7 @@ Gur ybir yrggre vf sbe Nseva, fb lbh thlf cyrnfr qba'g gel gb ernq vg… lbh znl
 </div>
 
 <script>
-// Smooth mobile-friendly page transitions
+// Enhanced page transitions with perfect scrolling
 function nextPage(num){
   const pages = document.querySelectorAll('.page');
   pages.forEach(p => {
@@ -530,12 +562,36 @@ function nextPage(num){
   setTimeout(()=>{
     const targetPage = document.getElementById('page'+num);
     targetPage.style.display = 'block';
-    targetPage.scrollIntoView({behavior: 'smooth', block: 'start'});
+    
+    // Perfect scroll positioning
+    targetPage.scrollIntoView({ 
+      behavior: 'smooth', 
+      block: 'start',
+      inline: 'nearest'
+    });
+    
     targetPage.classList.add('show');
-  }, 300);
+    
+    // Extra padding for perfect visibility
+    setTimeout(() => {
+      window.scrollBy(0, -20);
+    }, 400);
+  }, 250);
 }
 
-// Rest of the JavaScript remains the same with minor optimizations
+// Romantic floating hearts
+function createFloatingHeart() {
+  const heart = document.createElement('div');
+  heart.className = 'floating-heart';
+  heart.innerHTML = ['💖', '💕', '💗', '💝', '🌸'][Math.floor(Math.random() * 5)];
+  heart.style.left = Math.random() * 100 + 'vw';
+  heart.style.animationDuration = (12 + Math.random() * 8) + 's';
+  document.body.appendChild(heart);
+  
+  setTimeout(() => heart.remove(), 20000);
+}
+
+// All your existing JavaScript functions remain the same
 function checkName(){
   let name = document.getElementById("nameInput").value;
   if(name === "afrin" || name === "Afrin" || name === "AFRIN"){
@@ -554,7 +610,7 @@ function createFireworks(){
   const fireworks = document.getElementById('fireworks');
   fireworks.classList.add('show');
   
-  for(let burst=0; burst<6; burst++){ // Reduced bursts for mobile
+  for(let burst=0; burst<6; burst++){
     setTimeout(()=>launchFirework(), burst*500);
   }
   
@@ -566,7 +622,7 @@ function launchFirework(){
   const firework = document.createElement('div');
   firework.className = 'firework';
   
-  const colors = ['#00f2fe', '#ff00cc', '#ffd700', '#ff69b4', '#00ff7f', '#ff1493'];
+  const colors = ['#ff1493', '#ff69b4', '#ffb6c1', '#ff1493', '#ff69b4', '#ffb6c1'];
   const color = colors[Math.floor(Math.random()*colors.length)];
   firework.style.background = color;
   
@@ -579,21 +635,21 @@ function launchFirework(){
   
   let progress = 0;
   const riseInterval = setInterval(()=>{
-    progress += 2.5; // Slower rise for mobile
+    progress += 2.5;
     firework.style.transform = `translateY(-${progress*8}px)`;
     
     if(progress >= 45){
       clearInterval(riseInterval);
       explodeFirework(firework, x, progress*8);
     }
-  }, 35); // Slightly slower interval
+  }, 35);
 }
 
 function explodeFirework(firework, x, height){
   firework.style.width = '4px';
   firework.style.height = '4px';
   
-  for(let i=0; i<18; i++){ // Reduced particles for performance
+  for(let i=0; i<18; i++){
     const particle = document.createElement('div');
     particle.className = 'firework-explosion';
     particle.style.left = x + 'px';
@@ -603,7 +659,7 @@ function explodeFirework(firework, x, height){
     const velocity = 120 + Math.random() * 80;
     const size = 2.5 + Math.random() * 3;
     
-    const color = firework.style.backgroundColor || '#00f2fe';
+    const color = firework.style.backgroundColor || '#ff1493';
     particle.style.background = color;
     particle.style.width = size + 'px';
     particle.style.height = size + 'px';
@@ -659,16 +715,18 @@ function checkLoveMessage(){
   }
 }
 
-// Reduced particle frequency for mobile performance
+// Romantic floating hearts + optimized particles
+setInterval(createFloatingHeart, 2000);
 setInterval(()=>{
   const particle = document.createElement('div');
   particle.className = 'particle';
   particle.style.left = (Math.random() * 100) + 'vw';
   particle.style.animationDuration = (8 + Math.random() * 5) + 's';
+  particle.style.background = 'radial-gradient(circle, #ff69b4, transparent)';
   document.body.appendChild(particle);
   
-  setTimeout(()=>particle.remove(), 12000);
-}, 1200); // Slower particle spawn
+  setTimeout(()=>particle.remove(), 15000);
+}, 1500);
 </script>
 
 </body>
