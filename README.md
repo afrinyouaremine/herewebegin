@@ -4,49 +4,60 @@
 <title>THE REAL LOVE STORY</title>
 
 <style>
-@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;500;600;700&family=Great+Vibes&family=Parisienne&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;500;600;700&family=Great+Vibes&family=Parisienne&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500&display=swap');
 
 body{
   margin:0;
-  font-family:'Segoe UI', sans-serif;
-  background:linear-gradient(135deg,#0f0c29,#302b63,#24243e);
-  color:white;
+  font-family:'Playfair Display', serif;
+  background:linear-gradient(135deg, #ff9a9e 0%, #fecfef 25%, #fecfef 50%, #fad0c4 75%, #ffd1ff 100%);
+  background-size:400% 400%;
+  animation:romanticGradient 15s ease infinite;
+  color:#3a1c2e;
   overflow-x:hidden;
   padding-bottom:120px;
+  position:relative;
 }
 
-/* Enhanced Floating Acrylic Blobs */
-.blob{
+@keyframes romanticGradient{
+  0%{ background-position:0% 50%; }
+  50%{ background-position:100% 50%; }
+  100%{ background-position:0% 50%; }
+}
+
+body::before{
+  content:'';
   position:fixed;
-  border-radius:50%;
-  filter:blur(80px);
-  animation:floatBlob 20s infinite alternate ease-in-out;
+  top:0; left:0; right:0; bottom:0;
+  background:radial-gradient(circle at 20% 80%, rgba(255,182,193,0.3) 0%, transparent 50%),
+              radial-gradient(circle at 80% 20%, rgba(255,192,203,0.3) 0%, transparent 50%),
+              radial-gradient(circle at 40% 40%, rgba(255,218,224,0.2) 0%, transparent 50%);
   z-index:-1;
-  opacity:0.8;
-}
-.blob1{
-  width:450px; height:450px;
-  background:linear-gradient(45deg, rgba(0,255,255,0.2), rgba(0,150,255,0.1));
-  top:-120px; left:-120px; 
-  animation-duration:24s;
-}
-.blob2{
-  width:380px; height:380px;
-  background:linear-gradient(45deg, rgba(255,0,150,0.25), rgba(255,100,200,0.15));
-  bottom:-180px; right:-120px; 
-  animation-duration:28s; animation-delay:-8s;
-}
-.blob3{
-  width:320px; height:320px;
-  background:linear-gradient(45deg, rgba(0,255,255,0.15), rgba(255,0,150,0.1));
-  top:20%; right:5%; 
-  animation-duration:26s; animation-delay:-12s;
+  animation:softHearts 20s ease-in-out infinite;
 }
 
-@keyframes floatBlob{
-  0%{ transform:translate(0,0) scale(1) rotate(0deg); }
-  50%{ transform:translate(80px,100px) scale(1.25) rotate(180deg); }
-  100%{ transform:translate(-50px,80px) scale(1.1) rotate(360deg); }
+@keyframes softHearts{
+  0%,100%{ opacity:0.6; transform:scale(1); }
+  50%{ opacity:0.9; transform:scale(1.05); }
+}
+
+/* Romantic Floating Hearts */
+.heart-float{
+  position:fixed;
+  font-size:20px;
+  color:rgba(255,105,180,0.6);
+  animation:heartsFloat 25s infinite linear;
+  z-index:-1;
+  filter:drop-shadow(0 0 10px rgba(255,105,180,0.4));
+}
+.heart1{ top:10%; left:-10%; animation-delay:0s; }
+.heart2{ top:30%; right:-10%; animation-delay:-8s; font-size:16px; }
+.heart3{ bottom:20%; left:10%; animation-delay:-15s; font-size:18px; }
+
+@keyframes heartsFloat{
+  0%{ transform:translateX(-100px) translateY(0) rotate(0deg); opacity:0; }
+  10%{ opacity:1; }
+  90%{ opacity:1; }
+  100%{ transform:translateX(calc(100vw + 100px)) translateY(100vh) rotate(720deg); opacity:0; }
 }
 
 /* ULTRA SMOOTH MOBILE-FRIENDLY PAGES */
@@ -68,30 +79,29 @@ body{
   transform:translate3d(0,0,0) scale3d(1,1,1);
 }
 
-/* WIDER MOBILE-FRIENDLY & SCROLL FRIENDLY */
 @media (max-width:768px){
   .page{ padding:50px 15px; }
   body{ padding-bottom:140px; }
 }
 
-/* WIDER ACRYLIC GLASS CARDS WITH ANIMATION */
+/* ROMANTIC GLASSMORPHISM CARDS */
 .acrylic-card{
-  backdrop-filter: blur(35px) saturate(160%);
-  background: rgba(255,255,255,0.12);
+  backdrop-filter: blur(40px) saturate(180%);
+  background: rgba(255,255,255,0.25);
   border-radius:35px;
   padding:50px 40px;
   margin:20px auto;
-  max-width:750px; /* Wider */
-  width:98%; /* Almost full width */
+  max-width:750px;
+  width:98%;
   min-height:60vh;
   box-shadow: 
-    0 25px 70px rgba(0,0,0,0.6),
-    0 0 0 1px rgba(255,255,255,0.1),
-    inset 0 1px 0 rgba(255,255,255,0.2);
-  border:1px solid rgba(255,255,255,0.15);
+    0 25px 70px rgba(255,105,180,0.3),
+    0 0 0 1px rgba(255,255,255,0.3),
+    inset 0 1px 0 rgba(255,255,255,0.4);
+  border:1px solid rgba(255,255,255,0.35);
   position:relative;
   overflow:hidden;
-  animation:acrylicBloom 1.4s cubic-bezier(0.23,1,0.32,1);
+  animation:romanticBloom 1.4s cubic-bezier(0.23,1,0.32,1);
   will-change: transform;
   display:flex;
   flex-direction:column;
@@ -99,15 +109,15 @@ body{
 }
 
 .acrylic-card::before{
-  content:'✨';
+  content:'💕';
   position:absolute;
   top:20px; right:25px;
   font-size:28px;
-  opacity:0.3;
-  animation:sparkle 4s infinite;
+  opacity:0.4;
+  animation:heartBeat 3s infinite;
 }
 
-@keyframes acrylicBloom{
+@keyframes romanticBloom{
   0%{ 
     transform:scale3d(0.7,0.7,0.7) translateY(40px);
     opacity:0; filter:blur(10px);
@@ -118,89 +128,96 @@ body{
   }
 }
 
-@keyframes sparkle{
-  0%,100%{ opacity:0; transform:scale(0.5) rotate(0deg); }
-  50%{ opacity:1; transform:scale(1.5) rotate(180deg); }
+@keyframes heartBeat{
+  0%,100%{ transform:scale(1) rotate(-5deg); }
+  50%{ transform:scale(1.2) rotate(5deg); }
 }
 
-/* HERO TITLE - KEPT ORIGINAL FONT */
+/* HERO TITLE - ROMANTIC FONT */
 .hero-title{
-  font-family: 'Dancing Script', cursive;
-  font-weight:700;
-  font-size:clamp(28px, 8vw, 40px);
-  letter-spacing:4px;
+  font-family: 'Cormorant Garamond', serif;
+  font-weight:600;
+  font-style:italic;
+  font-size:clamp(32px, 9vw, 48px);
+  letter-spacing:2px;
   text-transform:uppercase;
-  background:linear-gradient(90deg,#00f2fe,#ff00cc,#00f2fe);
+  background:linear-gradient(90deg,#d63384,#ff69b4,#ff1493);
   background-size:300% auto;
   -webkit-background-clip:text;
   -webkit-text-fill-color:transparent;
-  animation:shimmer 6s linear infinite;
+  animation:romanticShimmer 8s linear infinite;
   margin-bottom:35px;
-  text-shadow:0 0 30px rgba(0,242,254,0.6);
+  text-shadow:0 0 30px rgba(255,105,180,0.6);
   line-height:1.3;
 }
 
-@keyframes shimmer{
+@keyframes romanticShimmer{
   0%,100%{ background-position:0% center; }
   50%{ background-position:300% center; }
 }
 
-/* HEADERS - KEPT ORIGINAL FONTS */
+/* HEADERS - ELEGANT ROMANTIC FONTS */
 h2{
-  font-family: 'Parisienne', cursive;
-  font-size:clamp(26px, 7vw, 36px);
-  background:linear-gradient(45deg,#00f2fe,#ff00cc);
+  font-family: 'Playfair Display', serif;
+  font-weight:600;
+  font-style:italic;
+  font-size:clamp(28px, 7.5vw, 38px);
+  background:linear-gradient(45deg,#ff69b4,#ff1493);
   -webkit-background-clip:text;
   -webkit-text-fill-color:transparent;
   margin:0 0 35px 0;
+  letter-spacing:1px;
 }
 
 h3{
-  font-family: 'Great Vibes', cursive;
-  font-size:clamp(24px, 6vw, 32px);
-  background:linear-gradient(45deg,#00f2fe,#ff00cc);
+  font-family: 'Cormorant Garamond', serif;
+  font-weight:500;
+  font-style:italic;
+  font-size:clamp(24px, 6.5vw, 34px);
+  background:linear-gradient(45deg,#ff69b4,#ff1493);
   -webkit-background-clip:text;
   -webkit-text-fill-color:transparent;
   margin:0 0 40px 0;
 }
 
-/* LETTER-STYLE HANDWRITTEN MESSAGES */
+/* ULTRA READING-FRIENDLY LETTER MESSAGES */
 .letter-message{
-  font-family: 'Dancing Script', cursive !important;
-  font-weight:500;
-  font-size:clamp(18px, 4.8vw, 22px) !important;
-  line-height:1.8 !important;
+  font-family: 'Playfair Display', serif !important;
+  font-weight:400;
+  font-size:clamp(20px, 5vw, 24px) !important;
+  line-height:1.9 !important;
   margin-bottom:30px !important;
-  color:rgba(255,255,255,0.95) !important;
+  color:#2d1b2a !important;
   text-align:left !important;
   position:relative;
-  padding:30px 25px;
-  background:rgba(255,255,255,0.08);
-  border-radius:25px;
-  border:1px solid rgba(255,255,255,0.1);
-  box-shadow:0 8px 25px rgba(0,0,0,0.3);
-  max-height:350px;
+  padding:35px 30px;
+  background:rgba(255,255,255,0.45);
+  border-radius:28px;
+  border:1px solid rgba(255,255,255,0.4);
+  box-shadow:0 12px 35px rgba(255,105,180,0.25);
+  max-height:380px;
   overflow-y:auto;
+  letter-spacing:0.3px;
 }
 
 .letter-message::-webkit-scrollbar {
-  width: 6px;
+  width: 8px;
 }
 .letter-message::-webkit-scrollbar-track {
-  background: rgba(255,255,255,0.1);
-  border-radius: 10px;
+  background: rgba(255,182,193,0.3);
+  border-radius: 12px;
 }
 .letter-message::-webkit-scrollbar-thumb {
-  background: linear-gradient(45deg,#00f2fe,#ff00cc);
-  border-radius: 10px;
+  background: linear-gradient(45deg,#ff69b4,#ff1493);
+  border-radius: 12px;
 }
 
 .letter-message::before{
   content:'"';
   position:absolute;
-  left:15px; top:15px;
-  font-size:45px;
-  color:rgba(0,242,254,0.4);
+  left:20px; top:20px;
+  font-size:50px;
+  color:rgba(255,105,180,0.5);
   font-family:'Great Vibes', cursive;
   line-height:1;
 }
@@ -208,73 +225,78 @@ h3{
 .letter-message::after{
   content:'"';
   position:absolute;
-  right:20px; bottom:15px;
-  font-size:45px;
-  color:rgba(255,0,204,0.3);
+  right:25px; bottom:20px;
+  font-size:50px;
+  color:rgba(255,20,147,0.4);
   font-family:'Great Vibes', cursive;
   line-height:1;
 }
 
-/* INPUT & BUTTONS - KEPT ORIGINAL FONTS */
+/* ENHANCED INPUTS & BUTTONS */
 input{
-  padding:18px 25px;
+  padding:20px 28px;
   width:90%;
   max-width:450px;
-  border:2px solid rgba(255,255,255,0.2);
-  border-radius:25px;
+  border:2px solid rgba(255,255,255,0.4);
+  border-radius:28px;
   margin:20px auto;
   display:block;
-  background:rgba(255,255,255,0.1);
-  color:white;
-  font-family: 'Dancing Script', cursive;
-  font-size:clamp(16px, 4.5vw, 19px);
+  background:rgba(255,255,255,0.35);
+  color:#2d1b2a;
+  font-family: 'Playfair Display', serif;
+  font-size:clamp(18px, 4.8vw, 20px);
+  font-weight:400;
   outline:none;
   transition:all 0.5s cubic-bezier(0.23,1,0.32,1);
-  backdrop-filter:blur(15px);
+  backdrop-filter:blur(20px);
+  letter-spacing:0.5px;
 }
 input::placeholder{
-  color:rgba(255,255,255,0.6);
-  font-family: 'Dancing Script', cursive;
+  color:rgba(45,27,42,0.7);
+  font-family: 'Playfair Display', serif;
+  font-weight:400;
 }
 input:focus{
-  box-shadow:0 0 30px rgba(0,242,254,0.6), 0 0 40px rgba(255,0,204,0.4);
-  transform:scale(1.05);
-  border-color:rgba(0,242,254,0.8);
-  background:rgba(255,255,255,0.2);
+  box-shadow:0 0 35px rgba(255,105,180,0.6), 0 0 45px rgba(255,20,147,0.4);
+  transform:scale(1.03);
+  border-color:rgba(255,105,180,0.8);
+  background:rgba(255,255,255,0.5);
 }
 
 button{
   margin:15px 10px;
-  padding:18px 35px;
-  min-height:60px;
+  padding:20px 40px;
+  min-height:65px;
   border:none;
-  border-radius:30px;
-  background:linear-gradient(45deg,#00f2fe,#ff00cc);
-  color:white;
-  font-family: 'Dancing Script', cursive;
-  font-weight:600;
-  font-size:clamp(16px, 4.5vw, 19px);
+  border-radius:32px;
+  background:linear-gradient(45deg,#ff69b4,#ff1493);
+  color:#fff;
+  font-family: 'Playfair Display', serif;
+  font-weight:500;
+  font-size:clamp(18px, 4.8vw, 20px);
   cursor:pointer;
   transition:all 0.5s cubic-bezier(0.23,1,0.32,1);
-  box-shadow:0 10px 30px rgba(0,242,254,0.4);
+  box-shadow:0 12px 35px rgba(255,105,180,0.4);
   position:relative;
   overflow:hidden;
+  letter-spacing:0.5px;
+  text-transform:uppercase;
 }
 button:hover{
-  transform:scale(1.1) translateY(-5px);
-  box-shadow:0 20px 50px rgba(0,242,254,0.6);
+  transform:scale(1.08) translateY(-4px);
+  box-shadow:0 22px 55px rgba(255,105,180,0.6);
 }
 button::before{
   content:''; position:absolute; top:0; left:-100%;
   width:100%; height:100%;
-  background:linear-gradient(90deg,transparent,rgba(255,255,255,0.4),transparent);
+  background:linear-gradient(90deg,transparent,rgba(255,255,255,0.5),transparent);
   transition:0.7s;
 }
 button:hover::before{ left:100%; }
 
 .error{
   margin-top:20px;
-  color:#ff4d6d;
+  color:#e91e63;
   animation:shake 0.5s cubic-bezier(0.36,0.07,0.19,0.97);
 }
 @keyframes shake{
@@ -284,28 +306,31 @@ button:hover::before{ left:100%; }
 }
 
 .reveal-text{
-  font-family: 'Great Vibes', cursive;
-  font-size:clamp(24px, 7vw, 34px);
+  font-family: 'Cormorant Garamond', serif;
+  font-weight:500;
+  font-style:italic;
+  font-size:clamp(26px, 7.5vw, 36px);
   margin-top:30px;
   opacity:0;
   transform:scale3d(0.8,0.8,0.8);
 }
 .glow{
-  animation:glowReveal 2.5s cubic-bezier(0.23,1,0.32,1) forwards;
+  animation:romanticGlow 3s cubic-bezier(0.23,1,0.32,1) forwards;
 }
-@keyframes glowReveal{
+@keyframes romanticGlow{
   0%{ opacity:0; transform:scale3d(0.8,0.8,0.8); text-shadow:0 0 0 #fff; }
-  50%{ opacity:0.7; transform:scale3d(1.1,1.1,1.1); text-shadow:0 0 25px #ff00cc,0 0 45px #00f2fe; }
-  100%{ opacity:1; transform:scale3d(1,1,1); text-shadow:0 0 30px #ff00cc,0 0 60px #00f2fe; }
+  50%{ opacity:0.8; transform:scale3d(1.1,1.1,1.1); text-shadow:0 0 30px #ff69b4,0 0 50px #ff1493; }
+  100%{ opacity:1; transform:scale3d(1,1,1); text-shadow:0 0 35px #ff69b4,0 0 65px #ff1493; }
 }
 
 .signature{
   margin-top:40px;
-  padding:30px;
-  background:rgba(255,255,255,0.08);
-  border-radius:25px;
-  border-left:5px solid #00f2fe;
+  padding:35px;
+  background:rgba(255,255,255,0.35);
+  border-radius:28px;
+  border-left:6px solid #ff69b4;
   text-align:center;
+  box-shadow:0 10px 30px rgba(255,105,180,0.2);
 }
 .signature .letter-message{
   background:none;
@@ -313,16 +338,17 @@ button:hover::before{ left:100%; }
   box-shadow:none;
   padding:0;
   margin:0;
-  font-size:24px;
+  font-size:26px;
   max-height:none;
+  color:#2d1b2a;
 }
 </style>
 </head>
 
 <body>
-<div class="blob blob1"></div>
-<div class="blob blob2"></div>
-<div class="blob blob3"></div>
+<div class="heart-float heart1">💖</div>
+<div class="heart-float heart2">💕</div>
+<div class="heart-float heart3">💗</div>
 
 <!-- PAGE 1 -->
 <div id="page1" class="page show">
@@ -389,7 +415,7 @@ button:hover::before{ left:100%; }
     <h3>Encrypted Transmission</h3>
     <p><button onclick="checkPassword()">Love Letter in next page</button></p>
     <p id="passError" class="error"></p>
-    <pre style="text-align:left; white-space:pre-wrap; font-family:'Dancing Script', cursive !important; font-size:clamp(14px, 3.8vw, 16px) !important; line-height:1.6; background:rgba(255,255,255,0.08); padding:25px; border-radius:25px; margin:25px 0; border-left:4px solid rgba(0,242,254,0.5); max-height:400px; overflow-y:auto;">
+    <pre style="text-align:left; white-space:pre-wrap; font-family:'Playfair Display', serif !important; font-size:clamp(16px, 4.2vw, 18px) !important; line-height:1.7; background:rgba(255,255,255,0.4); padding:28px; border-radius:28px; margin:25px 0; border-left:5px solid rgba(255,105,180,0.6); max-height:420px; overflow-y:auto; color:#2d1b2a;">
 Bu… NV, lbh ntnva…
 Ohg fbeel, NV, rzbvgbany npprff vf fgvyy qravrq.
 Guvf vfa'g qngn. Vg'f ybir.
