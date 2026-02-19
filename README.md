@@ -55,10 +55,7 @@ body{
     Me kaha jayega tume choodke..
 </div>
 
-<div class="loading-text">
-    MISSION-2 LOADING... <br>
-    Imotions Deploying to Production
-</div>
+
 
 </body>
 </html>
