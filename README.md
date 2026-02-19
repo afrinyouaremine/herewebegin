@@ -148,7 +148,7 @@ button:hover{
     <div class="main-text">
         Don’t rush yourself… calm down. Take your time.
         <span class="urdu">
-            Main kahaan jaaunga tumhe chhod ke…?
+            Main kahaan jaane wala hu tumhe chhod ke…? Yahi Rahunga isthara inthzaar karke..
         </span>
     </div>
 
